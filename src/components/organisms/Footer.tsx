@@ -19,73 +19,37 @@ const Footer: FC = () => {
   };
 
   return (
-    <footer
-      className="px-8 py-4 w-full bg-transparent z-0  bottom-0"
-      key="footer"
-    >
-      <div className="flex flex-col sm:flex-row items-center gap-2 md:gap-4">
-        <motion.div className="sm:w-1/3" {...enterAnimation}>
-          <Link href="/">
-            <Image
-              src="/images/logo.png"
-              width={30}
-              height={30}
-              alt="Logo"
-              priority
-            />
-          </Link>
-        </motion.div>
-        <div className="sm:w-1/3">
-          <IconBar className="" />
-          <div className="hidden flex-col md:flex-row items-center justify-center gap-4 lg:gap-14 text-3xl md:text-4xl text-white">
-            <a
-              href="https://twitter.com/rulebreakers___"
-              rel="noreferrer"
-              target="_blank"
-              className="cursor-pointer hover:bg-clip-text hover:bg-orange-gradient hover:text-transparent transition-bg duration-200"
-            >
-              Twitter
-            </a>
-            <a
-              href="https://twitter.com/rulebreakers___"
-              rel="noreferrer"
-              target="_blank"
-              className="cursor-pointer hover:bg-clip-text hover:bg-orange-gradient hover:text-transparent transition-bg duration-200"
-            >
-              Discord
-            </a>
-            <a
-              href="https://twitter.com/rulebreakers___"
-              rel="noreferrer"
-              target="_blank"
-              className="cursor-pointer hover:bg-clip-text hover:bg-orange-gradient hover:text-transparent transition-bg duration-200"
-            >
-              Marketplace
-            </a>
+    <footer className="px-24 w-full bg-black z-0 text-[#CDB7F6] py-20 text-sm" key="footer">
+      <div className="flex max-[1000px]:flex-wrap max-[1000px]:gap-10 gap-36 pl-16 max-[1000px]:pl-0">
+        <div className="flex flex-col">
+          <div className="font-bold mb-4">
+            <a href="">ABOUT</a>
+          </div>
+          <div className="tracking-[2px] font-light">
+            <a href="">MEET THE TEAM</a>
           </div>
         </div>
-        <div className="hidden sm:flex sm:w-1/3  justify-end gap-2">
-          {/* exp */}
-          <motion.div
-            className="flex xl:w-1/4 justify-end "
-            {...enterAnimation}
-          >
-            <a
-              className="relative cursor-pointer whitespace-nowrap"
-              href="https://twitter.com/sol_exp"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <motion.div
-                className="rounded"
-                {...containerAnimation}
-                onMouseEnter={() => setAnimate(true)}
-                onMouseLeave={() => setAnimate(false)}
-              >
-                <ExpIcon color={"white"} />
-              </motion.div>
-            </a>
-          </motion.div>
+
+        <div className="flex flex-col">
+          <div className="font-bold mb-4">
+            <a href="">PORTAL</a>
+          </div>
+          <div className="tracking-[2px] font-light">
+            <a href="">INVESTOR PORTAL</a>
+          </div>
+        </div>
+
+        <div className="flex flex-col">
+          <div className="font-bold mb-4">
+            <a href="">CONTACT</a>
+          </div>
+          <div className="tracking-[2px] font-light">
+            <a href="">INQUIRY FORM</a>
+          </div>
+        </div>
+
+        <div className="flex grow max-[1000px]:justify-start justify-end items-end tracking-[2px] font-bold whitespace-nowrap">
+          <a href="">POWERED BY EXP</a>
         </div>
       </div>
     </footer>
