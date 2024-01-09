@@ -23,33 +23,33 @@ const Footer: FC = () => {
       <div className="flex max-[1000px]:flex-wrap max-[1000px]:gap-10 gap-36 pl-16 max-[1000px]:pl-0">
         <div className="flex flex-col">
           <div className="font-bold mb-4">
-            <a href="">ABOUT</a>
+            <Link href="">ABOUT</Link>
           </div>
           <div className="tracking-[2px] font-light">
-            <a href="">MEET THE TEAM</a>
+            <Link href="">MEET THE TEAM</Link>
           </div>
         </div>
 
         <div className="flex flex-col">
           <div className="font-bold mb-4">
-            <a href="">PORTAL</a>
+            <Link href="">PORTAL</Link>
           </div>
           <div className="tracking-[2px] font-light">
-            <a href="">INVESTOR PORTAL</a>
+            <Link href="">INVESTOR PORTAL</Link>
           </div>
         </div>
 
         <div className="flex flex-col">
           <div className="font-bold mb-4">
-            <a href="">CONTACT</a>
+            <Link href="">CONTACT</Link>
           </div>
           <div className="tracking-[2px] font-light">
-            <a href="">INQUIRY FORM</a>
+            <Link href="">INQUIRY FORM</Link>
           </div>
         </div>
 
         <div className="flex grow max-[1000px]:justify-start justify-end items-end tracking-[2px] font-bold whitespace-nowrap">
-          <a href="">POWERED BY EXP</a>
+          <Link href="">POWERED BY EXP</Link>
         </div>
       </div>
     </footer>

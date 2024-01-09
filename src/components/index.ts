@@ -40,6 +40,9 @@ const Menu = dynamic(() => import("./organisms/Menu"));
 const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
 const AboutView = dynamic(() => import("./templates/AboutView"));
+const MeetTheTeamView = dynamic(() => import("./templates/MeetTheTeamView"));
+const NewsView = dynamic(() => import("./templates/NewsView"));
+
 
 export {
   PageHead,
@@ -76,5 +79,7 @@ export {
   ImageModal,
   HeaderContent,
   AboutView,
+  MeetTheTeamView,
+  NewsView,
   Card
 }

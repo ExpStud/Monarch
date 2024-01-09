@@ -54,7 +54,7 @@ const PageLayout: FC<Props> = (props: Props) => {
       />
       <ViewContext.Provider value={value}>
         {/* header */}
-        <Header pageIndex={props.pageIndex} type={headerType} />
+        <Header pageIndex={props.pageIndex} />
 
         {/* body */}
         <motion.main

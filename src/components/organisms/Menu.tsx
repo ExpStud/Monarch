@@ -9,6 +9,7 @@ import { useOutsideAlerter } from "@hooks";
 interface Props {
   toggleMenu: Dispatch<SetStateAction<boolean>>;
   open: boolean;
+  menuType?: String
 }
 
 const Menu: FC<Props> = (props: Props) => {
@@ -52,7 +53,7 @@ const Menu: FC<Props> = (props: Props) => {
             opacity: 1,
           }}
           transition={{ duration: 0.7 }}
-          className=" bg-custom-black fixed top-0 right-0 z-50 lg:shadow-xl font-daysOne lg:shadow-gray-600"
+          className={(props.menuType == "fixed" ? "absolute" : "absolute") + " top-0 bg-custom-black right-0 z-40 lg:shadow-xl font-daysOne lg:shadow-gray-600"}
           onClick={() => toggleMenu(false)}
           ref={ref}
         >
@@ -63,9 +64,10 @@ const Menu: FC<Props> = (props: Props) => {
             animate="open"
             exit="closed"
           >
-            <div className="absolute left-1/2 top-[45%] transform -translate-x-1/2 -translate-y-1/2  flex flex-col items-center justify-start text-4xl sm:text-6xl gap-2">
-              <NavItem href="/about">About</NavItem>
-              <NavItem href="/more">More</NavItem>
+            <div className="absolute left-1/2 top-[45%] transform whitespace-nowrap -translate-x-1/2 -translate-y-1/2  flex flex-col items-center justify-start text-2xl sm:text-2xl gap-2">
+              <NavItem href="/meet-the-team">MEET THE TEAM</NavItem>
+              <NavItem href="/news">NEWS</NavItem>
+              <NavItem href="/news">INVESTOR PORTAL</NavItem>
             </div>
             <IconBar className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 bottom-3" />
           </motion.div>

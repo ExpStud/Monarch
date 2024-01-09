@@ -1,5 +1,6 @@
 import { PageLayout, LandingView } from "@components";
 import { NextPage } from "next";
+import Link from "next/link";
 import { useState } from "react";
 
 const Article: NextPage = () => {
@@ -7,22 +8,22 @@ const Article: NextPage = () => {
 
     return (
         <PageLayout pageIndex={1} footer={true}>
-            <div className="flex flex-col items-center px-20 max-md:px-10">
+            <div className="mt-10 flex flex-col items-center px-20 max-md:px-6">
                 <div className="w-full text-sm">
-                    <a className="flex items-center" href="/news">
+                    <Link className="flex items-center" href="/news">
                         <div className="mr-2">
                             <img className="w-4" src="images/back.png" />
                         </div>
                         BACK
-                    </a>
+                    </Link>
                 </div>
 
-                <div className="flex flex-col gap-3 pb-[80px] pt-[60px] px-20 max-md:px-10">
+                <div className="flex flex-col gap-3 pb-[80px] pt-[60px] max-md:pt-[30px] px-20 max-md:px-1">
                     <div className="font-bold text-3xl">
                         First came Angel City FC. Now, meet Monarch Collective, a new way to invest in women’s sports
                     </div>
 
-                    <div className="flex max-md:flex-col max-md:gap-2 max-md:justify-start max-md:w-[100%] justify-around w-[90%] self-center mt-6 tracking-[2px] whitespace-nowrap">
+                    <div className="flex max-md:flex-col max-md:text-sm max-md:gap-2 max-md:justify-start max-md:w-[100%] justify-around w-[90%] self-center mt-6 tracking-[2px] whitespace-nowrap">
                         <div className="flex items-center">
                             10 MIN READ
                             <div className="ml-2">
@@ -46,7 +47,7 @@ const Article: NextPage = () => {
                         NJ/NY Gotham FC forward Ifeoma Onumonu, center left, and Angel City FC defender Vanessa Gilles battle for the ball during the second half of a 2022 NWSL soccer match in Los Angeles.
                     </div>
 
-                    <div className="border-x border-x-[1.5px] px-10 max-md:px-4 mt-10 border-black border-opacity-[20%]">
+                    <div className="border-x border-x-[1.5px] px-10 max-md:px-3 mt-10 border-black border-opacity-[20%]">
                         Los Angeles venture capitalist Kar a Nortman spent eight years researching what she saw as a massive missed opportunity — investing in women’s sports.
                         <br />
                         <br />
@@ -118,10 +119,10 @@ const Article: NextPage = () => {
                                 SAMANTHA MASUNGA
                             </div>
                             <div className="flex text-xs max-md:gap-2 gap-8 whitespace-nowrap flex-wrap">
-                                <a href="">TWITTER</a>
-                                <a href="">LINKED-IN</a>
-                                <a href="">INSTAGRAM</a>
-                                <a href="">EMAIL</a>
+                                <Link href="">TWITTER</Link>
+                                <Link href="">LINKED-IN</Link>
+                                <Link href="">INSTAGRAM</Link>
+                                <Link href="">EMAIL</Link>
                             </div>
                         </div>
                     </div>

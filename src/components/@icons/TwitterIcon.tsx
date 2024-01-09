@@ -1,5 +1,6 @@
 import { FC, SVGProps } from "react";
 import Image from "next/image";
+import Link from "next/link";
 interface Props extends SVGProps<SVGSVGElement> {
   color?: string;
   size?: number;
@@ -13,7 +14,7 @@ const TwitterIcon: FC<Props> = (props: Props) => {
     url = "https://twitter.com/expstudio_",
   } = props;
   return (
-    <a
+    <Link
       href={url}
       rel="noreferrer"
       target="_blank"
@@ -25,7 +26,7 @@ const TwitterIcon: FC<Props> = (props: Props) => {
         height={size}
         alt="Twitter"
       />
-    </a>
+    </Link>
   );
 };
 

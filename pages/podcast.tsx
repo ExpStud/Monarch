@@ -1,5 +1,6 @@
 import { PageLayout, LandingView } from "@components";
 import { NextPage } from "next";
+import Link from "next/link";
 import { useState } from "react";
 
 const Podcast: NextPage = () => {
@@ -7,18 +8,18 @@ const Podcast: NextPage = () => {
 
     return (
         <PageLayout pageIndex={1} footer={true}>
-            <div className="flex flex-col items-center px-20 max-md:px-6">
+            <div className="mt-10 flex flex-col items-center px-20 max-md:px-6">
                 <div className="w-full text-sm">
-                    <a className="flex items-center" href="/news">
+                    <Link className="flex items-center" href="/news">
                         <div className="mr-2">
                             <img className="w-4" src="images/back.png" />
                         </div>
                         BACK
-                    </a>
+                    </Link>
                 </div>
 
-                <div className="flex flex-col gap-3 pb-[80px] pt-[60px] w-full px-20 max-md:px-4">
-                    <div className="flex max-md:flex-col max-md:gap-2 max-md:justify-start max-md:w-[100%] justify-around w-[90%] self-center mt-6 tracking-[2px] whitespace-nowrap">
+                <div className="flex flex-col gap-3 pb-[80px] pt-[60px] max-md:pt-[30px] w-full px-20 max-md:px-1">
+                    <div className="flex max-md:flex-col max-md:text-sm max-md:gap-2 max-md:justify-start max-md:w-[100%] justify-around w-[90%] self-center mt-6 tracking-[2px] whitespace-nowrap">
                         <div className="flex items-center">
                             10 MIN PODCAST
                             <div className="ml-2">
@@ -62,7 +63,7 @@ const Podcast: NextPage = () => {
                             </div>
                             <div className="h-[1px] opacity-[10%] bg-black my-3"></div>
                             <div>
-                                Meg is joined by Angel City FC co-founder Kara Nortman to talk about her recent column on Yahoo Sports, "With the Women’s World Cup now over, here are 5 big soccer predictions".
+                                Meg is joined by Angel City FC co-founder Kara Nortman to talk about her recent column on Yahoo Sports, With the Women’s World Cup now over, here are 5 big soccer predictions.
                                 <br />
                                 <br />
                                 Takeaways from the World Cup, the future of the NWSL, and the current situation with the Spanish Football Federation.
@@ -71,16 +72,16 @@ const Podcast: NextPage = () => {
                                 With the Women’s World Cup now over, here are 5 big soccer predictions: https://sports.yahoo.com/op-ed-with-the-womens-world-cup-now-over-here-are-5-big-soccer-predictions-195900905.html Learn more about your ad choices. Visit megaphone.fm/adchoices
                             </div>
                             <div className="h-[1px] opacity-[30%] bg-black my-3"></div>
-                            <a className="text-[#4A0A8A] font-semibold flex items-center">
+                            <Link href={"/"} className="text-[#4A0A8A] font-semibold flex items-center">
                                 Listen on Apple Podcasts
                                 <div className="ml-1">
                                     <img src="images/link.png" alt="" />
                                 </div>
-                            </a>
+                            </Link>
                             <div className="h-[1px] opacity-[30%] bg-black my-3"></div>
-                            <a className="text-[#4A0A8A] font-semibold">
+                            <Link href={"/"} className="text-[#4A0A8A] font-semibold">
                                 More Episodes
-                            </a>
+                            </Link>
 
                             {/* bottom border */}
                             <div className="w-[103%] right-[1.5%] h-[1px] opacity-[10%] bg-black relative top-3"></div>

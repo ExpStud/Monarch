@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import { motion } from "framer-motion";
 
 import SpaceCity from "../assets/SpaceCity.jpg";
 import SpaceCity1 from "../assets/SpaceCity1.jpg";
 
-const CardFlip = ({image, position, name}) => {
+interface Props {
+    image: any, 
+    position: any, 
+    name: any
+  }
+
+const CardFlip: FC<Props>  = ({image, position, name}) => {
     const [isFlipped, setIsFlipped] = useState(false);
     const [isAnimating, setIsAnimating] = useState(false);
 
@@ -15,7 +21,7 @@ const CardFlip = ({image, position, name}) => {
         }
     }
     return (
-        <div className="flip-card w-[360px] rounded-md" onClick={handleFlip}>
+        <div className="flip-card w-[360px] rounded-md cursor-pointer" onClick={handleFlip}>
             <motion.div
                 className="flip-card-inner w-[100%] h-[100%]"
                 initial={false}

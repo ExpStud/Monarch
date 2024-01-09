@@ -8,12 +8,12 @@ import {
 import { HeaderContent } from "@components";
 interface Props {
   showHeader?: boolean;
-  type?: string;
+  menuType?: string;
   pageIndex?: Number
 }
 
 const Header: FC<Props> = (props: Props) => {
-  const { type = "absolute", showHeader = true, pageIndex = -1 } = props;
+  const { menuType = "absolute", showHeader = true, pageIndex = -1 } = props;
 
   const [animateHeader, setAnimateHeader] = useState<boolean>(true);
 
@@ -79,19 +79,17 @@ const Header: FC<Props> = (props: Props) => {
 
   return (
     <header
-      className={`top-0 z-10 transition-all duration-500 bg-[#FAF6EE] z-50 ${
-        type === "scroll" ? "fixed" : type
-      } `}
+      className={`top-0 z-10 transition-all duration-500 bg-[#FAF6EE] z-50`}
     >
-      {type !== "scroll" ? (
-        <HeaderContent pageIndex={props.pageIndex} />
+      {false ? (
+        <HeaderContent menuType={menuType} pageIndex={props.pageIndex} />
       ) : (
         <motion.aside
           variants={headerVariants}
           initial={showHeader ? "show" : "hidden"}
           animate={animateHeader ? "show" : "hidden"}
         >
-          <HeaderContent />
+          <HeaderContent menuType={menuType} pageIndex={props.pageIndex}/>
         </motion.aside>
       )}
     </header>
