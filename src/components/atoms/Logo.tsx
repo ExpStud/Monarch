@@ -13,8 +13,8 @@ const Logo: FC = () => {
       <Link href="/">
         <Image
           src="/images/logo.png"
-          height={35}
-          width={35}
+          height={40}
+          width={120}
           alt="Logo"
           priority
           className="transition-all duration-300 opacity-80 hover:opacity-100"

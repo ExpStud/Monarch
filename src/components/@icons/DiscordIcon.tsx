@@ -1,5 +1,6 @@
 import { FC, SVGProps } from "react";
 import Image from "next/image";
+import Link from "next/link";
 interface Props extends SVGProps<SVGSVGElement> {
   color?: string;
   size?: number;
@@ -8,7 +9,7 @@ interface Props extends SVGProps<SVGSVGElement> {
 const DiscordIcon: FC<Props> = (props: Props) => {
   const { color = "white", size = 30, url = "" } = props;
   return (
-    <a
+    <Link
       href={url}
       rel="noreferrer"
       target="_blank"
@@ -20,7 +21,7 @@ const DiscordIcon: FC<Props> = (props: Props) => {
         height={41}
         alt="discord"
       />
-    </a>
+    </Link>
   );
 };
 

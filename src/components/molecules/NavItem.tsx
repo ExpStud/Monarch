@@ -29,9 +29,9 @@ const NavItem: FC<Props> = (props: Props) => {
       {disabled ? (
         <DisabledItem />
       ) : isExternal ? (
-        <a href={href} rel="noreferrer" target="_blank">
+        <Link href={href} rel="noreferrer" target="_blank">
           <Item isCurrent={isCurrent}>{children}</Item>
-        </a>
+        </Link>
       ) : (
         <Link href={href}>
           <Item isCurrent={isCurrent}>{children}</Item>

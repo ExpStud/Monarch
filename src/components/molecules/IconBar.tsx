@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FC, HTMLAttributes } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { TwitterIcon, DiscordIcon, ExpIcon } from "@components";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
@@ -13,14 +14,14 @@ const IconBar: FC<Props> = (props: Props) => {
       <DiscordIcon url={""} />
       <TwitterIcon url={""} />
       {/* {showExchange && (
-        <a
+        <Link
           href={""}
           rel="noreferrer"
           target="_blank"
           className="cursor-pointer"
         >
           <ExpIcon />
-        </a>
+        </Link>
       )} */}
     </div>
   );

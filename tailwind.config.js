@@ -10,9 +10,7 @@ module.exports = {
         "white-gradient": `linear-gradient(360.58deg, #FFFFFF 43.76%, rgba(255, 255, 255, 0) 106.82%)`,
       },
       fontFamily: {
-        primary: ["Karl"],
-        karl: ["Karl"],
-        "helvetica-neue": "Helvetica Neue",
+        primary: ['Montserrat', "sans-serif"],
       },
       fontWeight: {
         light: 400, //font-helvetica-neue font-light
@@ -37,6 +35,12 @@ module.exports = {
         "3xl": "2160px",
         "4xl": "3000px",
       },
+      keyframes: theme => ({
+        fadeOut: {
+          '0%': { backgroundColor: theme('colors.red.300') },
+          '100%': { backgroundColor: theme('colors.transparent') },
+        },
+      }),
     },
   },
   plugins: [],

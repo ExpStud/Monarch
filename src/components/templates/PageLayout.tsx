@@ -16,6 +16,7 @@ interface Props {
   absolute?: boolean; //allows scroll
   headerType?: string;
   assets?: boolean[];
+  pageIndex?: Number
 }
 
 const PageLayout: FC<Props> = (props: Props) => {
@@ -23,9 +24,10 @@ const PageLayout: FC<Props> = (props: Props) => {
     footer = true,
     fixed = false,
     absolute = false,
-    headerType = "absolute",
+    headerType = "",
     children,
     assets = [],
+    pageIndex = -1
   } = props;
 
   //context for splash screen & modals
@@ -40,7 +42,7 @@ const PageLayout: FC<Props> = (props: Props) => {
 
   return (
     <div
-      className={`flex flex-col min-h-[100svh] h-full justify-between overflow-none ${
+      className={`flex flex-col min-h-[100svh] h-full justify-between overflow-x-hidden ${
         fixed ? "fixed inset-0" : absolute ? "absolute inset-0" : "relative"
       }`}
     >
@@ -52,7 +54,7 @@ const PageLayout: FC<Props> = (props: Props) => {
       />
       <ViewContext.Provider value={value}>
         {/* header */}
-        <Header type={headerType} />
+        <Header pageIndex={props.pageIndex} />
 
         {/* body */}
         <motion.main
