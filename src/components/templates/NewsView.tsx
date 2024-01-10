@@ -9,6 +9,7 @@ import Link from "next/link";
 const MeetTheTeamView: FC= () => {
 
   return (
+    <>
     <div className="flex flex-col items-center mt-6">
       <h1 className="text-3xl tracking-[6px]">NEWS</h1>
 
@@ -105,6 +106,7 @@ const MeetTheTeamView: FC= () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

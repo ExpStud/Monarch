@@ -15,6 +15,7 @@ const Home: NextPage = () => {
 
       render={fullpageApi => {
         return (
+          
           <ReactFullpage.Wrapper>
             <section className="section overflow-hidden">
               <LandingView fullpageApi={fullpageApi} setShowSite={setShowSite}></LandingView>

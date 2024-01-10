@@ -7,6 +7,7 @@ import {Card} from "@components";
 
 const MeetTheTeamView: FC= () => {
   return (
+    <>
     <div className="flex flex-col items-center mt-6">
             <h1 className="text-3xl tracking-[6px]">OUR TEAM</h1>
             
@@ -15,7 +16,9 @@ const MeetTheTeamView: FC= () => {
                 <Card image="/images/woman-2.png" position="Loremip" name="Lorem Ipsum"></Card>
                 <Card image="/images/woman-3.png" position="Managing Partner" name="Jasmine Robinson"></Card>
             </div>
+         {/* Welcome developers! */}
     </div>
+    </>
   );
 };
 
