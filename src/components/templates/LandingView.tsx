@@ -80,7 +80,7 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
   return (
     <div className="h-[100vh] overflow-hidden">
       <div className={(animationEnded ? "opacity-100 " : "opacity-0 ") + "transition-opacity ease-in duration-500"}>
-        <div className="flex text-sm tracking-[1px] z-10 gap-16 max-md:gap-6 max-md:text-[10px] justify-center mt-4 absolute w-screen">
+        <div className="flex text-sm font-light  tracking-[1px] z-10 gap-16 max-md:gap-6 max-md:text-[10px] justify-center mt-4 absolute w-screen">
           <div onClick={() => fullpageApi.fullpageApi.moveTo(2)} className="cursor-pointer">MEET THE TEAM</div>
           <div onClick={() => fullpageApi.fullpageApi.moveTo(2)} className="cursor-pointer">NEWS</div>
           <Link target="_blank" href="https://monarch.arkpes.com/login">

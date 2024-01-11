@@ -10,7 +10,7 @@ const Article: NextPage = () => {
         <PageLayout pageIndex={1} footer={true}>
             <div className="mt-10 flex flex-col items-center px-20 max-md:px-6">
                 <div className="w-full text-sm mt-[2rem]">
-                    <Link className="flex items-center" href="/news">
+                    <Link className="flex items-center font-light" href="/news">
                         <div className="mr-2">
                             <img className="w-4" src="images/back.png" />
                         </div>
@@ -23,8 +23,8 @@ const Article: NextPage = () => {
                         First came Angel City FC. Now, meet Monarch Collective, a new way to invest in women’s sports
                     </div>
 
-                    <div className="flex max-md:flex-col max-md:text-sm max-md:gap-2 max-md:justify-start max-md:w-[100%] justify-around w-[90%] self-center mt-6 tracking-[2px] whitespace-nowrap">
-                        <div className="flex items-center">
+                    <div className="flex max-md:flex-col font-light max-md:text-sm max-md:gap-2 max-md:justify-start max-md:w-[100%] justify-around w-[90%] self-center mt-6 tracking-[2px] whitespace-nowrap">
+                        <div className="flex font-light items-center">
                             10 MIN READ
                             <div className="ml-2">
                                 <img src="images/article-black.png" alt="" />

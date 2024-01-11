@@ -13,7 +13,7 @@ module.exports = {
         primary: ['Montserrat', "sans-serif"],
       },
       fontWeight: {
-        light: 400, //font-helvetica-neue font-light
+        light: 300, //font-helvetica-neue font-light
         medium: 400,
         bold: 700,
       },
