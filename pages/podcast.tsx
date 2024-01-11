@@ -9,7 +9,7 @@ const Podcast: NextPage = () => {
     return (
         <PageLayout pageIndex={1} footer={true}>
             <div className="mt-10 flex flex-col items-center px-20 max-md:px-6">
-                <div className="w-full text-sm">
+                <div className="w-full text-sm mt-[2rem]">
                     <Link className="flex items-center" href="/news">
                         <div className="mr-2">
                             <img className="w-4" src="images/back.png" />

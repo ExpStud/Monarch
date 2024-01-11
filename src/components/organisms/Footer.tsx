@@ -26,7 +26,7 @@ const Footer: FC = () => {
             <Link href="">ABOUT</Link>
           </div>
           <div className="tracking-[2px] font-light">
-            <Link href="">MEET THE TEAM</Link>
+            <Link href="/meet-the-team">MEET THE TEAM</Link>
           </div>
         </div>
 
@@ -35,21 +35,21 @@ const Footer: FC = () => {
             <Link href="">PORTAL</Link>
           </div>
           <div className="tracking-[2px] font-light">
-            <Link href="">INVESTOR PORTAL</Link>
+            <Link target="_blank" href="https://monarch.arkpes.com/login">INVESTOR PORTAL</Link>
           </div>
         </div>
 
         <div className="flex flex-col">
           <div className="font-bold mb-4">
-            <Link href="">CONTACT</Link>
+            <Link href="mailto:info@xyz.dev">CONTACT</Link>
           </div>
           <div className="tracking-[2px] font-light">
-            <Link href="">INQUIRY FORM</Link>
+            <Link href="mailto:info@xyz.dev">INQUIRY FORM</Link>
           </div>
         </div>
 
         <div className="flex grow max-[1000px]:justify-start justify-end items-end tracking-[2px] font-bold whitespace-nowrap">
-          <Link href="">POWERED BY EXP</Link>
+          <Link target="_blank" href="https://twitter.com/expstudio_">POWERED BY EXP</Link>
         </div>
       </div>
     </footer>

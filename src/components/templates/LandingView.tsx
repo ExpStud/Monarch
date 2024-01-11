@@ -33,7 +33,7 @@ interface Props {
   fullpageApi: any
 }
 
-const LandingView: FC<Props> = ({setShowSite, fullpageApi}) => {
+const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
   const [winWidth] = useWindowSize();
   const mobileView = winWidth <= 1024;
   //refs
@@ -48,18 +48,18 @@ const LandingView: FC<Props> = ({setShowSite, fullpageApi}) => {
   const [animationEnded, setAnimationEnded] = useState(false);
   const showLoop = false;
 
-    useEffect(() => {
-      if(animationEnded){
-        setShowSite(true);
-        if(fullpageApi.fullpageApi){
-          fullpageApi.fullpageApi.setAllowScrolling(true);
-        }
-      }else{
-        if(fullpageApi.fullpageApi){
-          fullpageApi.fullpageApi.setAllowScrolling(false);
-        }
+  useEffect(() => {
+    if (animationEnded) {
+      setShowSite(true);
+      if (fullpageApi.fullpageApi) {
+        fullpageApi.fullpageApi.setAllowScrolling(true);
       }
-    });
+    } else {
+      if (fullpageApi.fullpageApi) {
+        fullpageApi.fullpageApi.setAllowScrolling(false);
+      }
+    }
+  });
 
   // useEffect(() => {
   //   setIsInView(isInView);
@@ -83,7 +83,8 @@ const LandingView: FC<Props> = ({setShowSite, fullpageApi}) => {
         <div className="flex text-sm tracking-[1px] z-10 gap-16 max-md:gap-6 max-md:text-[10px] justify-center mt-4 absolute w-screen">
           <div onClick={() => fullpageApi.fullpageApi.moveTo(2)} className="cursor-pointer">MEET THE TEAM</div>
           <div onClick={() => fullpageApi.fullpageApi.moveTo(2)} className="cursor-pointer">NEWS</div>
-          <div onClick={() => fullpageApi.fullpageApi.moveTo(1)} className="cursor-pointer">INVESTOR PORTAL</div>
+          <Link target="_blank" href="https://monarch.arkpes.com/login">
+            <div className="cursor-pointer">INVESTOR PORTAL</div></Link>
         </div>
       </div>
 
@@ -140,7 +141,7 @@ const LandingView: FC<Props> = ({setShowSite, fullpageApi}) => {
                 } md:pt-16 h-3/4 w-screen absolute overflow-visible inset-x-0 top-[55%] transform -translate-y-1/2 -z-10 max-w-[600px] mx-auto ${!showLoop ? "visible" : "invisible"
                 }`}
               style={{ objectFit: "cover" }}
-              onEnded={() =>{
+              onEnded={() => {
                 // setShowLoop(true)
                 setAnimationEnded(true);
               }}

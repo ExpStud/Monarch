@@ -26,7 +26,7 @@ const HeaderContent = ({ pageIndex, menuType }: { pageIndex: Number | undefined,
             <Link href="/news">NEWS</Link>
           </div>
           <div>
-            <Link href="/">INVESTOR PORTAL</Link>
+            <Link target="_blank" href="https://monarch.arkpes.com/login">INVESTOR PORTAL</Link>
           </div>
         </div>
 

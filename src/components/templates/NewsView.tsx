@@ -14,7 +14,7 @@ const MeetTheTeamView: FC= () => {
 
       <div className="w-[90%] flex gap-3 max-[1100px]:flex-col justify-center items-center text-[#FAF6EE] pb-[100px] pt-[45px] text-[#CDB7F6] text-xl">
         <div className="relative">
-          <img className="object-cover max-md:max-w-[400px] w-[100%]" src="images/n-1.png" alt="" />
+          <img className="object-cover max-md:max-w-[500px] w-[100%]" src="images/n-1.png" alt="" />
           <div className="absolute font-semibold top-8 left-8 rounded-[4px] bg-black py-2 px-4 w-[75%]">
             <div className="line-clamp-3">
               Announcing Monarch’s first investment...
@@ -47,10 +47,10 @@ const MeetTheTeamView: FC= () => {
               </div>
             </div>
           </div>
-          <div className="flex gap-3 max-md:flex-wrap justify-center">
+          <div className="flex gap-3 max-md:flex-col w-full justify-center">
             <Link href="/podcast">
               <div className="relative">
-                <img className="grow" src="images/n-3.png" alt="" />
+                <img className="object-cover max-md:max-w-[500px] w-[100%]" src="images/n-3.png" alt="" />
 
                 <div className="absolute font-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4">
                   Podcast
@@ -68,7 +68,7 @@ const MeetTheTeamView: FC= () => {
 
             <Link href="/video">
               <div className="relative">
-                <img className="grow" src="images/n-4.png" alt="" />
+                <img className="object-cover max-md:max-w-[500px] w-[100%]" src="images/n-4.png" alt="" />
 
                 <div className="absolute font-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4">
                   Video
@@ -86,7 +86,7 @@ const MeetTheTeamView: FC= () => {
 
             <Link href="/article">
               <div className="relative">
-                <img className="grow" src="images/n-5.png" alt="" />
+                <img className="object-cover max-md:max-w-[500px] w-[100%]" src="images/n-5.png" alt="" />
 
                 <div className="absolute font-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4">
                   Article

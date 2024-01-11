@@ -67,7 +67,7 @@ const Menu: FC<Props> = (props: Props) => {
             <div className="absolute left-1/2 top-[45%] transform whitespace-nowrap -translate-x-1/2 -translate-y-1/2  flex flex-col items-center justify-start text-2xl sm:text-2xl gap-2">
               <NavItem href="/meet-the-team">MEET THE TEAM</NavItem>
               <NavItem href="/news">NEWS</NavItem>
-              <NavItem href="/news">INVESTOR PORTAL</NavItem>
+              <NavItem isExternal href="https://monarch.arkpes.com/login">INVESTOR PORTAL</NavItem>
             </div>
             <IconBar className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 bottom-3" />
           </motion.div>
