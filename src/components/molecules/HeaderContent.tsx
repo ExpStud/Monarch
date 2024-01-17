@@ -7,9 +7,11 @@ import { AnimatePresence } from "framer-motion";
 const HeaderContent = ({
   pageIndex,
   menuType,
+  fullpageApi,
 }: {
   pageIndex: Number | undefined;
   menuType: any;
+  fullpageApi: any;
 }) => {
   const activePageClasses =
     "text-[#CDB7F6] bg-black px-[16px] py-[3px] rounded-[4px]";
@@ -26,10 +28,18 @@ const HeaderContent = ({
         <Logo />
 
         <div className="max-[680px]:hidden  flex font-light tracking-[0.11rem] justify-center max-md:gap-4 gap-12  text-sm h-[100%]">
-          <div className={pageIndex == 0 ? activePageClasses : ""}>
+          <div
+            className={pageIndex == 0 ? activePageClasses : "cursor-pointer"}
+            onClick={() => fullpageApi.fullpageApi.moveTo(2)}
+          >
             MEET THE TEAM
           </div>
-          <div className={pageIndex == 1 ? activePageClasses : ""}>NEWS</div>
+          <div
+            className={pageIndex == 1 ? activePageClasses : "cursor-pointer"}
+            onClick={() => fullpageApi.fullpageApi.moveTo(3)}
+          >
+            NEWS
+          </div>
           <div>
             <Link target="_blank" href="https://monarch.arkpes.com/login">
               INVESTOR PORTAL

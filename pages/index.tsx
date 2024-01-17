@@ -33,7 +33,11 @@ const Home: NextPage = () => {
               style={{ opacity: showSite ? "1" : "0" }}
               className="section overflow-x-hidden"
             >
-              <Header menuType="fixed" pageIndex={0} />
+              <Header
+                menuType="fixed"
+                pageIndex={0}
+                fullpageApi={fullpageApi}
+              />
               <div className="mt-28 max-md:mt-10" />
               <MeetTheTeamView />
             </div>
