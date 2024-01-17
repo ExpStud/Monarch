@@ -196,7 +196,7 @@ html {
   @apply flex flex-col items-center justify-around;
 }
 
-/* Animations */
+/*  Animations */
 .transition-1000{
   @apply transition-all duration-1000;
 }
