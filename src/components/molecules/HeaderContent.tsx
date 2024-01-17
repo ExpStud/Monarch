@@ -18,7 +18,7 @@ const HeaderContent = ({ pageIndex, menuType }: { pageIndex: Number | undefined,
       <div className="w-screen gap-5 flex items-center justify-between px-5 md:px-10 py-3 z-20 relative">
         <Logo />
 
-        <div className="max-[680px]:hidden font-light flex items-center justify-center max-md:gap-4 gap-12 tracking-[1.6px] text-sm h-[100%]">
+        <div className="max-[680px]:hidden  flex font-light tracking-[0.11rem] justify-center max-md:gap-4 gap-12  text-sm h-[100%]">
           <div className={pageIndex == 0 ? activePageClasses : ""}>
             <Link href="/meet-the-team">MEET THE TEAM</Link>
           </div>

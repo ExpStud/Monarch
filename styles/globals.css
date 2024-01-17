@@ -30,6 +30,9 @@ body{
 .fp-watermark {
   display: none;
 }
+.font-light{
+  font-weight: 100 !important;
+}
 
 a{
   z-index: 1;
@@ -87,6 +90,24 @@ a:hover{
   font-family: 'Helvetica Neue Light Italic';
   src: url('/public/fonts/helveticaneue/HelveticaNeueIt.ttf') format('truetype');
   font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Monsterrat';
+  src: url('/public/fonts/Montserrat-Black.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Monsterrat Light';
+  src: url('/public/fonts/Montserrat-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Monsterrat Extra Light';
+  src: url('/public/fonts/Montserrat-ExtraLight.ttf') format('truetype');
+  font-weight: 100;
   font-style: italic;
 }
 a {
