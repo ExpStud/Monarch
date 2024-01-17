@@ -216,3 +216,9 @@ html {
 .transition-200{
   @apply transition-all duration-300;
 }
+
+/* other */
+
+.hovered-nav { 
+  @apply cursor-pointer px-[16px] py-[3px] rounded-[4px] hover:bg-[#CDB7F6] transition-all duration-300 ;
+}

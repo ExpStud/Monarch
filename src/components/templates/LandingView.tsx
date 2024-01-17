@@ -92,21 +92,34 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
           "transition-opacity  ease-in duration-500 text-xl"
         }
       >
-        <div className="flex text-sm font-light tracking-[0.11rem] z-10 gap-16 max-md:gap-6 max-md:text-[10px] justify-center mt-4 absolute w-screen text-center px-4">
-          <div
+        <div className="flex text-sm font-light tracking-[0.11rem] z-10 gap-12 max-md:gap-6 max-md:text-[10px] justify-center mt-4 absolute w-screen text-center px-4">
+          <motion.div
+            whileHover={{
+              backgroundColor: "#CDB7F6",
+            }}
             onClick={() => fullpageApi.fullpageApi.moveTo(2)}
-            className="cursor-pointer md:ml-5"
+            className="cursor-pointer md:ml-5 px-[16px] py-[3px] rounded-[4px]"
           >
             MEET THE TEAM
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            whileHover={{
+              backgroundColor: "#CDB7F6",
+            }}
             onClick={() => fullpageApi.fullpageApi.moveTo(3)}
-            className="cursor-pointer"
+            className="cursor-pointer px-[16px] py-[3px] rounded-[4px]"
           >
             NEWS
-          </div>
+          </motion.div>
           <Link target="_blank" href="https://monarch.arkpes.com/login">
-            <div className="cursor-pointer">INVESTOR PORTAL</div>
+            <motion.div
+              whileHover={{
+                backgroundColor: "#CDB7F6",
+              }}
+              className="cursor-pointer px-[16px] py-[3px] rounded-[4px]"
+            >
+              INVESTOR PORTAL
+            </motion.div>
           </Link>
         </div>
       </div>
