@@ -2,7 +2,7 @@ import { FC, useState } from "react";
 import { CloseIcon, Logo, Menu, MenuIcon } from "@components";
 import Link from "next/link";
 import { useWindowSize } from "@hooks";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const HeaderContent = ({
   pageIndex,
@@ -25,26 +25,46 @@ const HeaderContent = ({
   return (
     <div>
       <div className="w-screen gap-5 flex items-center justify-between px-5 md:px-10 py-3 z-20 relative">
-        <Logo />
+        <Logo fullpageApi={fullpageApi} />
 
-        <div className="max-[680px]:hidden  flex font-light tracking-[0.11rem] justify-center max-md:gap-4 gap-12  text-sm h-[100%]">
-          <div
-            className={pageIndex == 0 ? activePageClasses : "cursor-pointer"}
+        <div className="max-[680px]:hidden flex font-light tracking-[0.11rem] justify-center max-md:gap-4 gap-12 text-sm h-[100%]">
+          <motion.div
+            className={
+              pageIndex == 0
+                ? activePageClasses
+                : "cursor-pointer px-[16px] py-[3px] rounded-[4px]"
+            }
             onClick={() => fullpageApi.fullpageApi.moveTo(2)}
+            whileHover={{
+              backgroundColor: pageIndex !== 0 ? "#CDB7F6" : "",
+            }}
           >
             MEET THE TEAM
-          </div>
-          <div
-            className={pageIndex == 1 ? activePageClasses : "cursor-pointer"}
+          </motion.div>
+          <motion.div
+            className={
+              pageIndex == 1
+                ? activePageClasses
+                : "cursor-pointer px-[16px] py-[3px] rounded-[4px]"
+            }
             onClick={() => fullpageApi.fullpageApi.moveTo(3)}
+            whileHover={{
+              backgroundColor: pageIndex !== 1 ? "#CDB7F6" : "",
+              border: pageIndex !== 1 ? "black" : "",
+            }}
           >
             NEWS
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              backgroundColor: pageIndex !== 2 ? "#CDB7F6" : "",
+            }}
+            className="px-[16px] py-[3px] rounded-[4px]"
+          >
             <Link target="_blank" href="https://monarch.arkpes.com/login">
               INVESTOR PORTAL
             </Link>
-          </div>
+          </motion.div>
         </div>
 
         <AnimatePresence mode="wait">

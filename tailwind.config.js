@@ -10,7 +10,7 @@ module.exports = {
         "white-gradient": `linear-gradient(360.58deg, #FFFFFF 43.76%, rgba(255, 255, 255, 0) 106.82%)`,
       },
       fontFamily: {
-        primary: ['Monsterrat Light, sans-serrif'],
+        primary: ["Monsterrat Light, sans-serrif"],
       },
       fontWeight: {
         light: 100, //font-helvetica-neue font-light
@@ -21,6 +21,7 @@ module.exports = {
         italic: "italic", // Add "italic" style to the font family
       },
       colors: {
+        "mon-purple": "#CDB7F6",
         //template
         "custom-black": "#121212",
         "custom-white": "#F3F1EA",
@@ -35,10 +36,10 @@ module.exports = {
         "3xl": "2160px",
         "4xl": "3000px",
       },
-      keyframes: theme => ({
+      keyframes: (theme) => ({
         fadeOut: {
-          '0%': { backgroundColor: theme('colors.red.300') },
-          '100%': { backgroundColor: theme('colors.transparent') },
+          "0%": { backgroundColor: theme("colors.red.300") },
+          "100%": { backgroundColor: theme("colors.transparent") },
         },
       }),
     },

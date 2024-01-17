@@ -31,10 +31,10 @@ const Home: NextPage = () => {
 
             <div
               style={{ opacity: showSite ? "1" : "0" }}
-              className="section overflow-x-hidden"
+              className="section overflow-x-hidden "
             >
               <Header
-                menuType="fixed"
+                menuType="absolute"
                 pageIndex={0}
                 fullpageApi={fullpageApi}
               />

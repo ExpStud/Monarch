@@ -16,7 +16,7 @@ interface Props {
   absolute?: boolean; //allows scroll
   headerType?: string;
   assets?: boolean[];
-  pageIndex?: Number
+  pageIndex?: Number;
 }
 
 const PageLayout: FC<Props> = (props: Props) => {
@@ -27,7 +27,7 @@ const PageLayout: FC<Props> = (props: Props) => {
     headerType = "",
     children,
     assets = [],
-    pageIndex = -1
+    pageIndex = -1,
   } = props;
 
   //context for splash screen & modals
@@ -54,7 +54,7 @@ const PageLayout: FC<Props> = (props: Props) => {
       />
       <ViewContext.Provider value={value}>
         {/* header */}
-        <Header pageIndex={props.pageIndex} />
+        {/* <Header pageIndex={props.pageIndex} /> */}
 
         {/* body */}
         <motion.main
