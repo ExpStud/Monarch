@@ -4,7 +4,7 @@ import { Card } from "@components";
 const MeetTheTeamView: FC = () => {
   return (
     <div className="flex flex-col items-center mt-6">
-      <h1 className="text-3xl tracking-[6px]">OUR TEAM</h1>
+      <h1 className="text-3xl tracking-[6px] pb-16">OUR TEAM</h1>
 
       <div className="flex w-[90%] gap-10 mt-8 text-[#FAF6EE] justify-center flex-wrap pb-20">
         <Card

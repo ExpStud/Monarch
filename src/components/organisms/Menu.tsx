@@ -10,10 +10,11 @@ interface Props {
   toggleMenu: Dispatch<SetStateAction<boolean>>;
   open: boolean;
   menuType?: String;
+  fullpageApi: any;
 }
 
 const Menu: FC<Props> = (props: Props) => {
-  const { toggleMenu, open } = props;
+  const { toggleMenu, open, fullpageApi } = props;
   const [winWidth, winHeight] = useWindowSize();
   const timeoutRef = useRef<NodeJS.Timeout>();
   const ref = useRef(null);
@@ -23,22 +24,24 @@ const Menu: FC<Props> = (props: Props) => {
   const isTablet: boolean = winWidth < 900;
   //stop page scroll (when modal or menu open)
   useEffect(() => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    if (open) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "auto";
+    // if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    // if (open) {
+    //   timeoutRef.current = setTimeout(() => {
+    //     document.body.style.overflow = "hidden";
+    //   }, 700);
+    // } else {
+    //   document.body.style.overflow = "auto";
+    // }
 
-    if (open) {
-      timeoutRef.current = setTimeout(() => {
-        document.body.style.overflow = "hidden";
-      }, 700);
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-    };
+    // return () => {
+    //   if (timeoutRef.current) {
+    //     clearTimeout(timeoutRef.current);
+    //   }
+    // };
   }, [open]);
+
   return (
     <AnimatePresence mode="wait" initial={false}>
       {open && (
@@ -68,8 +71,10 @@ const Menu: FC<Props> = (props: Props) => {
             exit="closed"
           >
             <div className="absolute left-1/2 top-[45%] transform whitespace-nowrap -translate-x-1/2 -translate-y-1/2  flex flex-col items-center justify-start text-2xl sm:text-2xl gap-2">
-              <NavItem href="/meet-the-team">MEET THE TEAM</NavItem>
-              <NavItem href="/news">NEWS</NavItem>
+              {/* <NavItem href="/meet-the-team">MEET THE TEAM</NavItem>
+              <NavItem href="/news">NEWS</NavItem> */}
+              <div>MEET THE TEAM</div>
+              <div>NEWS</div>
               <NavItem isExternal href="https://monarch.arkpes.com/login">
                 INVESTOR PORTAL
               </NavItem>

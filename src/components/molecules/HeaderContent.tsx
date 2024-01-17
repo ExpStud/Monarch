@@ -94,6 +94,7 @@ const HeaderContent = ({
           menuType={menuType}
           toggleMenu={setNavbarActive}
           open={navbarActive}
+          fullpageApi={fullpageApi}
         />
       </div>
       <div className="h-[1.5px] bg-black opacity-[20%] mx-10 mt-2"></div>

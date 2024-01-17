@@ -11,10 +11,13 @@ module.exports = {
       },
       fontFamily: {
         primary: ["Monsterrat Light, sans-serrif"],
+        "mon-bold": ["Monsterrat Bold"],
+        "mon-semibold": ["Monsterrat SemiBold"],
       },
       fontWeight: {
         light: 100, //font-helvetica-neue font-light
         medium: 400,
+        semibold: 600,
         bold: 700,
       },
       fontStyle: {

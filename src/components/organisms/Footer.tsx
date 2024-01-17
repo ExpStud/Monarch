@@ -19,37 +19,38 @@ const Footer: FC = () => {
   };
 
   return (
-    <footer className="px-24 w-full bg-black z-0 text-[#CDB7F6] py-20 text-sm" key="footer">
+    <footer
+      className="px-24 w-full bg-black z-0 text-[#CDB7F6] py-20 text-sm"
+      key="footer"
+    >
       <div className="flex max-[1000px]:flex-wrap max-[1000px]:gap-10 gap-36 pl-16 max-[1000px]:pl-0">
         <div className="flex flex-col">
-          <div className="font-bold mb-4">
-            <Link href="">ABOUT</Link>
-          </div>
+          <div className="font-mon-bold mb-4">ABOUT </div>
           <div className="tracking-[2px] font-light">
             <Link href="/meet-the-team">MEET THE TEAM</Link>
           </div>
         </div>
 
         <div className="flex flex-col">
-          <div className="font-bold mb-4">
-            <Link href="">PORTAL</Link>
-          </div>
+          <div className="font-mon-bold mb-4">PORTAL</div>
           <div className="tracking-[2px] font-light">
-            <Link target="_blank" href="https://monarch.arkpes.com/login">INVESTOR PORTAL</Link>
+            <Link target="_blank" href="https://monarch.arkpes.com/login">
+              INVESTOR PORTAL
+            </Link>
           </div>
         </div>
 
         <div className="flex flex-col">
-          <div className="font-bold mb-4">
-            <Link href="mailto:info@xyz.dev">CONTACT</Link>
-          </div>
+          <div className="font-mon-bold mb-4">CONTACT</div>
           <div className="tracking-[2px] font-light">
             <Link href="mailto:info@xyz.dev">INQUIRY FORM</Link>
           </div>
         </div>
 
-        <div className="flex grow max-[1000px]:justify-start justify-end items-end tracking-[2px] font-bold whitespace-nowrap">
-          <Link target="_blank" href="https://twitter.com/expstudio_">POWERED BY EXP</Link>
+        <div className="flex grow max-[1000px]:justify-start justify-end items-end tracking-[2px] font-mon-bold whitespace-nowrap">
+          <Link target="_blank" href="https://twitter.com/expstudio_">
+            POWERED BY EXP
+          </Link>
         </div>
       </div>
     </footer>
