@@ -1,6 +1,13 @@
 import { exitAnimation } from "@constants";
 import { AnimatePresence, motion, useInView, useScroll } from "framer-motion";
-import { Dispatch, FC, SetStateAction, useEffect, useRef, useState } from "react";
+import {
+  Dispatch,
+  FC,
+  SetStateAction,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { useWindowSize } from "@hooks";
 import Link from "next/link";
 
@@ -9,7 +16,7 @@ interface Assets {
 }
 const _assets: Assets[] = [
   {
-    src: `/videos/1.mp4`,
+    src: "/videos/landing_animation.mp4", //`/videos/1.mp4`,
   },
   {
     src: `/videos/1.mp4`,
@@ -29,8 +36,8 @@ interface Props {
   // setCurrentPage: Dispatch<SetStateAction<string>>;
   // showLoop: boolean;
   // setShowLoop: Dispatch<SetStateAction<boolean>>;
-  setShowSite: any
-  fullpageApi: any
+  setShowSite: any;
+  fullpageApi: any;
 }
 
 const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
@@ -79,19 +86,36 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
 
   return (
     <div className="h-[100vh] overflow-hidden">
-      <div className={(animationEnded ? "opacity-100 " : "opacity-0 ") + "transition-opacity  ease-in duration-500"}>
-        <div className="flex text-sm font-light tracking-[0.11rem] z-10 gap-16 max-md:gap-6 max-md:text-[10px] justify-center mt-4 absolute w-screen">
-          <div onClick={() => fullpageApi.fullpageApi.moveTo(2)} className="cursor-pointer">MEET THE TEAM</div>
-          <div onClick={() => fullpageApi.fullpageApi.moveTo(2)} className="cursor-pointer">NEWS</div>
+      <div
+        className={
+          (animationEnded ? "opacity-100 " : "opacity-0 ") +
+          "transition-opacity  ease-in duration-500 text-xl"
+        }
+      >
+        <div className="flex text-sm font-light tracking-[0.11rem] z-10 gap-16 max-md:gap-6 max-md:text-[10px] justify-center mt-4 absolute w-screen text-center px-4">
+          <div
+            onClick={() => fullpageApi.fullpageApi.moveTo(2)}
+            className="cursor-pointer md:ml-5"
+          >
+            MEET THE TEAM
+          </div>
+          <div
+            onClick={() => fullpageApi.fullpageApi.moveTo(3)}
+            className="cursor-pointer"
+          >
+            NEWS
+          </div>
           <Link target="_blank" href="https://monarch.arkpes.com/login">
-            <div className="cursor-pointer">INVESTOR PORTAL</div></Link>
+            <div className="cursor-pointer">INVESTOR PORTAL</div>
+          </Link>
         </div>
       </div>
 
       <motion.div
         key="landing"
-        className={`relative w-full ${mobileView ? "h-[82vh]" : "h-screen"} 
-      flex flex-col items-center justify-end`}
+        className={`relative w-full ${
+          mobileView ? "h-[82vh]" : "h-screen"
+        } flex flex-col items-center justify-end`}
         {...exitAnimation}
         ref={scrollRef}
       >
@@ -102,9 +126,9 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
           muted
           playsInline
           key="intro desktop"
-          className={`${mobileView && "hidden"
-            } h-full w-screen absolute inset-0 -z-10 ${!showLoop ? "visible" : "invisible"
-            }`}
+          className={`h-full w-screen absolute inset-0 -z-10 ${
+            !showLoop ? "visible" : "invisible"
+          }`}
           style={{ objectFit: "cover" }}
           onEnded={() => {
             // setShowLoop(true);
@@ -114,22 +138,24 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
         >
           <source src={_assets[0].src} type="video/mp4" />
         </motion.video>
-        <motion.video
+        {/* <motion.video
           ref={loopRef}
           muted
           playsInline
           key="loop desktop"
           loop
-          className={`${mobileView && "hidden"
-            } h-full w-screen absolute inset-0 -z-20 ${showLoop ? "visible" : "invisible"
-            }`}
+          className={`${
+            mobileView && "hidden"
+          } h-full w-screen absolute inset-0 -z-20 ${
+            showLoop ? "visible" : "invisible"
+          }`}
           style={{ objectFit: "cover" }}
         >
           <source src={_assets[1].src} type="video/mp4" />
-        </motion.video>
+        </motion.video> */}
 
         {/* mobile */}
-        <AnimatePresence mode="wait">
+        {/* <AnimatePresence mode="wait">
           {!showLoop && (
             <motion.video
               ref={introRefMobile}
@@ -137,9 +163,11 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
               autoPlay
               playsInline
               key="intro-mobile"
-              className={`${!mobileView && "hidden"
-                } md:pt-16 h-3/4 w-screen absolute overflow-visible inset-x-0 top-[55%] transform -translate-y-1/2 -z-10 max-w-[600px] mx-auto ${!showLoop ? "visible" : "invisible"
-                }`}
+              className={`${
+                !mobileView && "hidden"
+              } md:pt-16 h-3/4 w-screen absolute overflow-visible inset-x-0 top-[55%] transform -translate-y-1/2 -z-10 max-w-[600px] mx-auto ${
+                !showLoop ? "visible" : "invisible"
+              }`}
               style={{ objectFit: "cover" }}
               onEnded={() => {
                 // setShowLoop(true)
@@ -157,16 +185,23 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
           playsInline
           key="loop-mobile"
           loop
-          className={`${!mobileView && "hidden"
-            } h-3/4 w-screen absolute overflow-visible inset-x-0 top-[55%] transform -translate-y-1/2 -z-20 max-w-[600px] mx-auto ${showLoop ? "visible" : "invisible"
-            }`}
+          className={`${
+            !mobileView && "hidden"
+          } h-3/4 w-screen absolute overflow-visible inset-x-0 top-[55%] transform -translate-y-1/2 -z-20 max-w-[600px] mx-auto ${
+            showLoop ? "visible" : "invisible"
+          }`}
           style={{ objectFit: "cover" }}
-        // {...exitAnimation}
+          // {...exitAnimation}
         >
           <source src={_assets[3].src} type="video/mp4" />
-        </motion.video>
+        </motion.video> */}
 
-        <div className={(animationEnded ? "opacity-100 " : "opacity-0 ") + "transition-opacity ease-in duration-500 relative"}>
+        <div
+          className={
+            (animationEnded ? "opacity-100 " : "opacity-0 ") +
+            "transition-opacity ease-in duration-500 relative"
+          }
+        >
           <div className="lg:flex justify-center text-xs tracking-[2px] w-full pb-4 max-md:mt-10 px-4 sm:px-6">
             KEEP SCROLLING
           </div>
