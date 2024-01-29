@@ -39,7 +39,7 @@ const Home: NextPage = () => {
                 section={0}
                 fullpageApi={fullpageApi}
               />
-              <div className="mt-28 max-md:mt-10" />
+              {/* <div className="mt-28 max-md:mt-6" /> */}
               <MeetTheTeamView />
             </div>
             <div
@@ -52,6 +52,7 @@ const Home: NextPage = () => {
                 section={1}
                 fullpageApi={fullpageApi}
               />
+              {/* <div className="mt-28 max-md:mt-6" /> */}
               <NewsView />
               <Footer />
             </div>

@@ -8,10 +8,10 @@ import Link from "next/link";
 
 const MeetTheTeamView: FC = () => {
   return (
-    <div className="flex flex-col items-center mt-6">
-      <h1 className="text-3xl tracking-[6px] pb-10">NEWS</h1>
+    <div className="flex flex-col items-center pb-[100px]">
+      <h1 className="text-3xl tracking-[6px] py-20">NEWS</h1>
 
-      <div className="w-[90%] flex gap-3 max-[1100px]:flex-col justify-center items-center pb-[100px] pt-[45px] text-[#CDB7F6] text-xl lg:text-[28px]">
+      <div className="w-[90%] flex gap-3 max-[1100px]:flex-col justify-center items-center  text-[#CDB7F6] text-xl lg:text-[28px]">
         <div className="relative">
           <img
             className="object-cover max-md:max-w-[500px] w-[100%]"
