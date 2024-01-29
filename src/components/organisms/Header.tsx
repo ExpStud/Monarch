@@ -9,7 +9,8 @@ import { HeaderContent } from "@components";
 interface Props {
   showHeader?: boolean;
   menuType?: string;
-  pageIndex?: Number;
+  pageIndex?: number;
+  section?: number;
   fullpageApi: any;
 }
 
@@ -19,6 +20,7 @@ const Header: FC<Props> = (props: Props) => {
     showHeader = true,
     pageIndex = -1,
     fullpageApi,
+    section,
   } = props;
 
   const [animateHeader, setAnimateHeader] = useState<boolean>(true);
@@ -84,10 +86,20 @@ const Header: FC<Props> = (props: Props) => {
   }, [showHeader]);
 
   return (
-    <header
-      className={`top-0 z-10 transition-all duration-500 bg-[#FAF6EE] z-50`}
-    >
-      {false ? (
+    <header className={`top-0 transition-all duration-500 bg-[#FAF6EE] z-50`}>
+      <motion.aside
+        variants={headerVariants}
+        initial={showHeader ? "show" : "hidden"}
+        animate={animateHeader ? "show" : "hidden"}
+      >
+        <HeaderContent
+          menuType={menuType}
+          pageIndex={props.pageIndex}
+          fullpageApi={fullpageApi}
+          section={section}
+        />
+      </motion.aside>
+      {/* {false ? (
         <HeaderContent
           menuType={menuType}
           pageIndex={props.pageIndex}
@@ -105,7 +117,7 @@ const Header: FC<Props> = (props: Props) => {
             fullpageApi={fullpageApi}
           />
         </motion.aside>
-      )}
+      )} */}
     </header>
   );
 };

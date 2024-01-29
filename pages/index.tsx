@@ -36,6 +36,7 @@ const Home: NextPage = () => {
               <Header
                 menuType="absolute"
                 pageIndex={0}
+                section={0}
                 fullpageApi={fullpageApi}
               />
               <div className="mt-28 max-md:mt-10" />
@@ -45,6 +46,12 @@ const Home: NextPage = () => {
               style={{ opacity: showSite ? "1" : "0" }}
               className="section overflow-x-hidden"
             >
+              <Header
+                menuType="absolute"
+                pageIndex={0}
+                section={1}
+                fullpageApi={fullpageApi}
+              />
               <NewsView />
               <Footer />
             </div>

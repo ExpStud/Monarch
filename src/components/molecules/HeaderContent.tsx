@@ -8,13 +8,17 @@ const HeaderContent = ({
   pageIndex,
   menuType,
   fullpageApi,
+  section,
 }: {
   pageIndex: Number | undefined;
   menuType: any;
   fullpageApi: any;
+  section?: number;
 }) => {
   const activePageClasses =
-    "text-[#CDB7F6] bg-black px-[16px] py-[3px] rounded-[4px]";
+    "px-[16px] py-[3px] rounded-[4px] text-mon-purple bg-black ";
+  const inactivePageClasses =
+    "px-[16px] py-[3px] rounded-[4px] cursor-pointer hover:bg-mon-purple  text-black transition-500";
   const [navbarActive, setNavbarActive] = useState(false);
   const [winWidth] = useWindowSize();
 
@@ -22,49 +26,56 @@ const HeaderContent = ({
     setNavbarActive(false);
   }
 
+  console.log("page index ", pageIndex);
+  console.log("section ", section);
+
   return (
     <div>
       <div className="w-screen gap-5 flex items-center justify-between px-5 md:px-10 py-3 z-20 relative">
         <Logo fullpageApi={fullpageApi} />
 
-        <div className="max-[680px]:hidden flex font-light tracking-[0.11rem] justify-center max-md:gap-4 gap-10 text-sm h-[100%]">
-          <motion.div
+        <div className="max-[680px]:hidden flex font-light tracking-[0.11rem] justify-center max-md:gap-4 gap-10 text-sm h-[100%] ">
+          <div
             className={
-              pageIndex == 0
+              pageIndex == 0 && section === 0
                 ? activePageClasses
-                : "cursor-pointer px-[16px] py-[3px] rounded-[4px]"
+                : inactivePageClasses
             }
             onClick={() => fullpageApi.fullpageApi.moveTo(2)}
-            whileHover={{
-              backgroundColor: pageIndex !== 0 ? "#CDB7F6" : "",
-            }}
+            // whileHover={{
+            //   backgroundColor: pageIndex !== 0 && section!==0 ? "#CDB7F6" : "",
+            // }}
           >
             MEET THE TEAM
-          </motion.div>
-          <motion.div
+          </div>
+          <div
             className={
-              pageIndex == 1
+              pageIndex == 1 || (pageIndex == 0 && section === 1)
                 ? activePageClasses
-                : "cursor-pointer px-[16px] py-[3px] rounded-[4px]"
+                : inactivePageClasses
             }
             onClick={() => fullpageApi.fullpageApi.moveTo(3)}
-            whileHover={{
-              backgroundColor: pageIndex !== 1 ? "#CDB7F6" : "",
-              border: pageIndex !== 1 ? "black" : "",
-            }}
+            // whileHover={{
+            //   backgroundColor: pageIndex !== 1 ? "#CDB7F6" : "",
+            //   border: pageIndex !== 1 ? "black" : "",
+            // }}
           >
             NEWS
-          </motion.div>
-          <motion.div
-            whileHover={{
-              backgroundColor: pageIndex !== 2 ? "#CDB7F6" : "",
-            }}
-            className="px-[16px] py-[3px] rounded-[4px]"
+          </div>
+          {/* <motion.div
+            // whileHover={{
+            //   backgroundColor: pageIndex !== 2 ? "#CDB7F6" : "",
+            // }}
+            className={inactivePageClasses}
+          > */}
+          <Link
+            target="_blank"
+            href="https://monarch.arkpes.com/login"
+            className={inactivePageClasses}
           >
-            <Link target="_blank" href="https://monarch.arkpes.com/login">
-              INVESTOR PORTAL
-            </Link>
-          </motion.div>
+            INVESTOR PORTAL
+          </Link>
+          {/* </motion.div> */}
         </div>
 
         <AnimatePresence mode="wait">
