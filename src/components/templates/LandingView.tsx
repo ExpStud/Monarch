@@ -10,6 +10,7 @@ import {
 } from "react";
 import { useWindowSize } from "@hooks";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Assets {
   src: string;
@@ -41,26 +42,29 @@ interface Props {
 }
 
 const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
+  const [didRender, setDidRender] = useState<boolean | null>(null);
+
   const [winWidth] = useWindowSize();
   const mobileView = winWidth <= 1024;
   //refs
   const scrollRef = useRef<HTMLDivElement>(null);
   const introRef = useRef<HTMLVideoElement>(null);
-  const loopRef = useRef<HTMLVideoElement>(null);
-  const introRefMobile = useRef<HTMLVideoElement>(null);
-  const loopRefMobile = useRef<HTMLVideoElement>(null);
-  const innerRef = useRef<HTMLDivElement>(null);
 
   // const isInView = useInView(scrollRef);
   const [animationEnded, setAnimationEnded] = useState(false);
   const showLoop = false;
 
+  console.log("fullpageApi ", fullpageApi);
   useEffect(() => {
     if (animationEnded) {
       setShowSite(true);
       if (fullpageApi.fullpageApi) {
         fullpageApi.fullpageApi.setAllowScrolling(true);
+        fullpageApi.fullpageApi.setKeyboardScrolling(true);
+        fullpageApi.fullpageApi.setAutoScrolling(true);
       }
+
+      sessionStorage.setItem("didRender", "true");
     } else {
       if (fullpageApi.fullpageApi) {
         fullpageApi.fullpageApi.setAllowScrolling(false);
@@ -68,9 +72,17 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
     }
   });
 
-  // useEffect(() => {
-  //   setIsInView(isInView);
-  // }, [isInView, setIsInView]);
+  //handles only showing video on first render
+  useEffect(() => {
+    const rendered = sessionStorage.getItem("didRender");
+
+    if (rendered) {
+      setAnimationEnded(true);
+      setDidRender(true);
+    } else {
+      setDidRender(false);
+    }
+  }, []);
 
   // useEffect(() => {
   //   if (showLoop && loopRef.current && introRef.current) {
@@ -97,7 +109,10 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
             whileHover={{
               backgroundColor: "#CDB7F6",
             }}
-            onClick={() => fullpageApi.fullpageApi.moveTo(2)}
+            onClick={() => {
+              setDidRender(true);
+              fullpageApi.fullpageApi.moveTo(2);
+            }}
             className="cursor-pointer md:ml-5 px-[16px] py-[3px] rounded-[4px]"
           >
             MEET THE TEAM
@@ -106,7 +121,10 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
             whileHover={{
               backgroundColor: "#CDB7F6",
             }}
-            onClick={() => fullpageApi.fullpageApi.moveTo(3)}
+            onClick={() => {
+              setDidRender(true);
+              fullpageApi.fullpageApi.moveTo(3);
+            }}
             className="cursor-pointer px-[16px] py-[3px] rounded-[4px]"
           >
             NEWS
@@ -133,24 +151,35 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
         ref={scrollRef}
       >
         {/* desktop */}
-        <motion.video
-          ref={introRef}
-          autoPlay
-          muted
-          playsInline
-          key="intro desktop"
-          className={`h-full w-screen absolute inset-0 -z-10 ${
-            !showLoop ? "visible" : "invisible"
-          }`}
-          style={{ objectFit: "cover" }}
-          onEnded={() => {
-            // setShowLoop(true);
-            setAnimationEnded(true);
-          }}
-          {...exitAnimation}
-        >
-          <source src={_assets[0].src} type="video/mp4" />
-        </motion.video>
+        {!didRender ? (
+          <motion.video
+            ref={introRef}
+            autoPlay
+            muted
+            playsInline
+            key="intro desktop"
+            className={`h-full w-screen absolute inset-0 -z-10 ${
+              !showLoop ? "visible" : "invisible"
+            }`}
+            style={{ objectFit: "cover" }}
+            onEnded={() => {
+              // setShowLoop(true);
+              setAnimationEnded(true);
+            }}
+            {...exitAnimation}
+          >
+            <source src={_assets[0].src} type="video/mp4" />
+          </motion.video>
+        ) : (
+          <Image
+            src="/images/logo-lg.png"
+            width={458 * 1.2}
+            height={354 * 1.2}
+            alt="Monarch Logo"
+            className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 px-10"
+          />
+        )}
+
         {/* <motion.video
           ref={loopRef}
           muted

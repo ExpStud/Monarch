@@ -15,19 +15,12 @@ const HeaderContent = ({
   fullpageApi: any;
   section?: number;
 }) => {
-  const activePageClasses =
-    "px-[16px] py-[3px] rounded-[4px] text-mon-purple bg-black ";
-  const inactivePageClasses =
-    "px-[16px] py-[3px] rounded-[4px] cursor-pointer hover:bg-mon-purple  text-black transition-500";
   const [navbarActive, setNavbarActive] = useState(false);
   const [winWidth] = useWindowSize();
 
   if (winWidth > 680 && navbarActive) {
     setNavbarActive(false);
   }
-
-  console.log("page index ", pageIndex);
-  console.log("section ", section);
 
   return (
     <div>
@@ -37,9 +30,7 @@ const HeaderContent = ({
         <div className="max-[680px]:hidden flex font-light tracking-[0.11rem] justify-center max-md:gap-4 gap-10 text-sm h-[100%] ">
           <div
             className={
-              pageIndex == 0 && section === 0
-                ? activePageClasses
-                : inactivePageClasses
+              pageIndex == 0 && section === 0 ? "active-tab" : "inactive-tab"
             }
             onClick={() => fullpageApi.fullpageApi.moveTo(2)}
             // whileHover={{
@@ -51,8 +42,8 @@ const HeaderContent = ({
           <div
             className={
               pageIndex == 1 || (pageIndex == 0 && section === 1)
-                ? activePageClasses
-                : inactivePageClasses
+                ? "active-tab"
+                : "inactive-tab"
             }
             onClick={() => fullpageApi.fullpageApi.moveTo(3)}
             // whileHover={{
@@ -71,7 +62,7 @@ const HeaderContent = ({
           <Link
             target="_blank"
             href="https://monarch.arkpes.com/login"
-            className={inactivePageClasses}
+            className="inactive-tab"
           >
             INVESTOR PORTAL
           </Link>
