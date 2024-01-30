@@ -11,6 +11,7 @@ import {
 import { useWindowSize } from "@hooks";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 interface Assets {
   src: string;
@@ -53,6 +54,15 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
   // const isInView = useInView(scrollRef);
   const [animationEnded, setAnimationEnded] = useState(false);
   const showLoop = false;
+
+  const { query } = useRouter();
+
+  //stay on news page if from news item
+  useEffect(() => {
+    if (query?.from === "news") {
+      fullpageApi.fullpageApi.moveTo(3);
+    }
+  }, [query]);
 
   // console.log("fullpageApi ", fullpageApi);
 

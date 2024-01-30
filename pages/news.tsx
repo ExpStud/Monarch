@@ -8,9 +8,8 @@ const News: NextPage = () => {
 
   return (
     <PageLayout pageIndex={1}>
-      <NewsView></NewsView>
+      <NewsView />
     </PageLayout>
   );
 };
 export default News;
-

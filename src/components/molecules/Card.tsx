@@ -23,7 +23,8 @@ const CardFlip: FC<Props> = ({ image, position, name }) => {
   return (
     <div
       className="flip-card w-[360px] rounded-md cursor-pointer"
-      onClick={handleFlip}
+      // onClick={handleFlip}
+      onMouseEnter={() => handleFlip()}
     >
       <motion.div
         className="flip-card-inner w-[100%] h-[100%]"

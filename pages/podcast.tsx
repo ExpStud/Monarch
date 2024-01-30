@@ -1,4 +1,4 @@
-import { PageLayout, LandingView } from "@components";
+import { PageLayout, LandingView, BackButton } from "@components";
 import { NextPage } from "next";
 import Link from "next/link";
 import { useState } from "react";
@@ -9,14 +9,7 @@ const Podcast: NextPage = () => {
   return (
     <PageLayout pageIndex={1} footer={true}>
       <div className="mt-10 flex flex-col items-center px-20 max-md:px-6 tracking-widest">
-        <div className="w-full text-sm mt-[2rem]">
-          <Link className="flex items-center" href="/news">
-            <div className="mr-2">
-              <img className="w-4" src="images/back.png" />
-            </div>
-            BACK
-          </Link>
-        </div>
+        <BackButton className="self-start mt-[2rem] " />
 
         <div className="flex flex-col gap-3 pb-[80px] pt-[60px] max-md:pt-[30px] w-full px-20 max-md:px-1 tracking-widest">
           <div className="flex max-md:flex-col max-md:text-sm max-md:gap-2 max-md:justify-start max-md:w-[100%] justify-around w-[90%] self-center mt-6 tracking-[2px] whitespace-nowrap">
