@@ -1,17 +1,60 @@
-import { motion } from "framer-motion";
-import { Dispatch, SetStateAction, FC, useContext } from "react";
-import { ViewContext, slideLeft, slideRight } from "@constants";
-import { handleAssetLoad } from "@utils";
-import Image from "next/image";
-import { Card } from "@components";
+import { FC } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
-const MeetTheTeamView: FC = () => {
+export type NewsLayout = 0 | 1 | 2;
+export type NewsArticleType = "article" | "video" | "podcast";
+export interface NewsArticle {
+  title: string;
+  content: string;
+  type: NewsArticleType;
+  readTime: number;
+}
+export const NEWS_ARTICLES: NewsArticle[] = [
+  {
+    title: "Announcing Monarch's first investment...",
+    content: "",
+    type: "article",
+    readTime: 10,
+  },
+  {
+    title:
+      "First came Angel City FC. Now, meet Monarch Collective, a new way to invest in women's sports",
+    content: "",
+    type: "article",
+    readTime: 10,
+  },
+  {
+    title: "",
+    content: "",
+    type: "podcast",
+    readTime: 15.34,
+  },
+  {
+    title: "",
+    content: "",
+    type: "article",
+    readTime: 10,
+  },
+];
+interface Props {
+  layout: NewsLayout;
+  articleType: NewsArticleType;
+}
+
+const NewsItem: FC<Props> = (props: Props) => {
+  const { layout } = props;
+
+  return <></>;
+};
+
+const NewsView: FC = () => {
   return (
     <div className="flex flex-col items-center pb-[100px]">
       <h1 className="text-3xl tracking-[6px] py-20">NEWS</h1>
 
       <div className="w-[90%] flex gap-3 max-[1100px]:flex-col justify-center items-center  text-[#CDB7F6] text-xl lg:text-[28px]">
+        {/* first square */}
         <div className="relative">
           <img
             className="object-cover max-md:max-w-[500px] w-[100%]"
@@ -32,7 +75,9 @@ const MeetTheTeamView: FC = () => {
             </div>
           </div>
         </div>
+        {/* col of images */}
         <div className="flex flex-col gap-3 items-center relative bottom-1">
+          {/* first column (one img) */}
           <div className="relative max-md:max-w-[500px]">
             <img
               className="max-md:min-h-[300px] object-cover"
@@ -54,6 +99,7 @@ const MeetTheTeamView: FC = () => {
               </div>
             </div>
           </div>
+          {/* second columne (three imgs) */}
           <div className="flex gap-3 max-md:flex-col w-full justify-center">
             <Link href="/podcast">
               <div className="relative">
@@ -127,4 +173,4 @@ const MeetTheTeamView: FC = () => {
   );
 };
 
-export default MeetTheTeamView;
+export default NewsView;

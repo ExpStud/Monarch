@@ -5,6 +5,7 @@ import {
   Header,
   NewsView,
   MeetTheTeamView,
+  PageHead,
 } from "@components";
 import { NextPage } from "next";
 import { useState } from "react";
@@ -15,51 +16,57 @@ const Home: NextPage = () => {
   const [showSite, setShowSite] = useState(false);
 
   return (
-    <ReactFullpage
-      licenseKey={"YOUR_KEY_HERE"}
-      scrollingSpeed={1000}
-      credits={{ enabled: false }}
-      render={(fullpageApi) => {
-        return (
-          <ReactFullpage.Wrapper>
-            <section className="section overflow-hidden">
-              <LandingView
-                fullpageApi={fullpageApi}
-                setShowSite={setShowSite}
-              />
-            </section>
+    <>
+      <PageHead
+        title="Monarch"
+        description="Description"
+        url="https://addurl.xyz" // no backslash at the end
+        twitter="Monarch_Coll"
+      />
+      <ReactFullpage
+        licenseKey={"YOUR_KEY_HERE"}
+        scrollingSpeed={1000}
+        credits={{ enabled: false }}
+        render={(fullpageApi) => {
+          return (
+            <ReactFullpage.Wrapper>
+              <section className="section overflow-hidden">
+                <LandingView
+                  fullpageApi={fullpageApi}
+                  setShowSite={setShowSite}
+                />
+              </section>
 
-            <div
-              style={{ opacity: showSite ? "1" : "0" }}
-              className="section overflow-x-hidden h-[110vh] "
-            >
-              <Header
-                menuType="absolute"
-                pageIndex={0}
-                section={0}
-                fullpageApi={fullpageApi}
-              />
-              {/* <div className="mt-28 max-md:mt-6" /> */}
-              <MeetTheTeamView />
-            </div>
-            <div
-              style={{ opacity: showSite ? "1" : "0" }}
-              className="section overflow-x-hidden"
-            >
-              <Header
-                menuType="absolute"
-                pageIndex={0}
-                section={1}
-                fullpageApi={fullpageApi}
-              />
-              {/* <div className="mt-28 max-md:mt-6" /> */}
-              <NewsView />
-              <Footer />
-            </div>
-          </ReactFullpage.Wrapper>
-        );
-      }}
-    />
+              <div
+                style={{ opacity: showSite ? "1" : "0" }}
+                className="section overflow-x-hidden min-h-screen "
+              >
+                <Header
+                  menuType="absolute"
+                  pageIndex={0}
+                  section={0}
+                  fullpageApi={fullpageApi}
+                />
+                <MeetTheTeamView />
+              </div>
+              <div
+                style={{ opacity: showSite ? "1" : "0" }}
+                className="section overflow-x-hidden"
+              >
+                <Header
+                  menuType="absolute"
+                  pageIndex={0}
+                  section={1}
+                  fullpageApi={fullpageApi}
+                />
+                <NewsView />
+                <Footer />
+              </div>
+            </ReactFullpage.Wrapper>
+          );
+        }}
+      />
+    </>
   );
 };
 export default Home;

@@ -47,10 +47,10 @@ const PageLayout: FC<Props> = (props: Props) => {
       }`}
     >
       <PageHead
-        title="Name"
+        title="Monarch"
         description="Description"
         url="https://addurl.xyz" // no backslash at the end
-        twitter="twitterhandle"
+        twitter="Monarch_Coll"
       />
       <ViewContext.Provider value={value}>
         {/* header */}

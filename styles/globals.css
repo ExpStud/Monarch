@@ -47,7 +47,7 @@ a:hover{
 }
 
 .flip-card-inner {
-  transition: transform 0.6s;
+  transition: transform 0.1s;
   transform-style: preserve-3d;
 }
 
