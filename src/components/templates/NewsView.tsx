@@ -9,6 +9,7 @@ export interface NewsArticle {
   content: string;
   type: NewsArticleType;
   readTime: number;
+  image: string;
 }
 export const NEWS_ARTICLES: NewsArticle[] = [
   {
@@ -16,6 +17,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     content: "",
     type: "article",
     readTime: 10,
+    image: "n-1.png",
   },
   {
     title:
@@ -23,29 +25,61 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     content: "",
     type: "article",
     readTime: 10,
+    image: "n-2.png",
   },
   {
     title: "",
     content: "",
     type: "podcast",
     readTime: 15.34,
+    image: "n-3.png",
+  },
+  {
+    title: "",
+    content: "",
+    type: "video",
+    readTime: 15.34,
+    image: "n-4.png",
   },
   {
     title: "",
     content: "",
     type: "article",
     readTime: 10,
+    image: "n-5.png",
   },
 ];
 interface Props {
   layout: NewsLayout;
-  articleType: NewsArticleType;
+  article: NewsArticle;
 }
 
 const NewsItem: FC<Props> = (props: Props) => {
-  const { layout } = props;
+  const { layout, article } = props;
 
-  return <></>;
+  return (
+    <Link href={`/${article.type}`}>
+      <div className="relative">
+        <img
+          className="object-cover max-md:max-w-[500px] w-[100%]"
+          src={`/images/${article.image}`}
+          alt="Background"
+        />
+
+        <div className="absolute font-mon-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4">
+          {layout === 2 ? article.type : article.title}
+        </div>
+        <div className="flex justify-between absolute w-full bottom-0 rounded-[4px] bg-black py-2 px-4">
+          <div className="text-[15px] font-mon-semibold tracking-[2px]">
+            {article.readTime} MIN
+          </div>
+          <div className="flex items-center">
+            <img src={`images/${article.type}.png`} alt="Icon" />
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
 };
 
 const NewsView: FC = () => {
@@ -101,71 +135,10 @@ const NewsView: FC = () => {
           </div>
           {/* second columne (three imgs) */}
           <div className="flex gap-3 max-md:flex-col w-full justify-center">
-            <Link href="/podcast">
-              <div className="relative">
-                <img
-                  className="object-cover max-md:max-w-[500px] w-[100%]"
-                  src="images/n-3.png"
-                  alt=""
-                />
+            <NewsItem layout={2} article={NEWS_ARTICLES[2]} />
 
-                <div className="absolute font-mon-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4">
-                  Podcast
-                </div>
-                <div className="flex justify-between absolute w-full bottom-0 rounded-[4px] bg-black py-2 px-4">
-                  <div className="text-[15px] font-mon-semibold tracking-[2px]">
-                    15:34 MIN
-                  </div>
-                  <div className="flex items-center">
-                    <img src="images/podcast.png" alt="" />
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/video">
-              <div className="relative">
-                <img
-                  className="object-cover max-md:max-w-[500px] w-[100%]"
-                  src="images/n-4.png"
-                  alt=""
-                />
-
-                <div className="absolute font-mon-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4">
-                  Video
-                </div>
-                <div className="flex justify-between absolute w-full bottom-0 rounded-[4px] bg-black py-2 px-4">
-                  <div className="text-[15px] font-mon-semibold tracking-[2px]">
-                    15:34 MIN
-                  </div>
-                  <div className="flex items-center">
-                    <img src="images/video.png" alt="" />
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/article">
-              <div className="relative">
-                <img
-                  className="object-cover max-md:max-w-[500px] w-[100%]"
-                  src="images/n-5.png"
-                  alt=""
-                />
-
-                <div className="absolute font-mon-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4">
-                  Article
-                </div>
-                <div className="flex justify-between absolute w-full bottom-0 rounded-[4px] bg-black py-2 px-4">
-                  <div className="text-[15px] font-mon-semibold tracking-[2px]">
-                    10 MIN READ
-                  </div>
-                  <div className="flex items-center">
-                    <img src="images/article.png" alt="" />
-                  </div>
-                </div>
-              </div>
-            </Link>
+            <NewsItem layout={2} article={NEWS_ARTICLES[3]} />
+            <NewsItem layout={2} article={NEWS_ARTICLES[4]} />
           </div>
         </div>
       </div>
