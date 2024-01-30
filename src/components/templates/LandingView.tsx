@@ -54,7 +54,8 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
   const [animationEnded, setAnimationEnded] = useState(false);
   const showLoop = false;
 
-  console.log("fullpageApi ", fullpageApi);
+  // console.log("fullpageApi ", fullpageApi);
+
   useEffect(() => {
     if (animationEnded) {
       setShowSite(true);
@@ -82,6 +83,10 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
     } else {
       setDidRender(false);
     }
+
+    return () => {
+      sessionStorage.setItem("didRender", "true");
+    };
   }, []);
 
   // useEffect(() => {
@@ -105,39 +110,26 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
         }
       >
         <div className="flex text-sm font-light tracking-[0.11rem] z-10 gap-12 max-md:gap-6 max-md:text-[10px] justify-center mt-4 absolute w-screen text-center px-4">
-          <motion.div
-            whileHover={{
-              backgroundColor: "#CDB7F6",
-            }}
+          <div
             onClick={() => {
               setDidRender(true);
               fullpageApi.fullpageApi.moveTo(2);
             }}
-            className="cursor-pointer md:ml-5 px-[16px] py-[3px] rounded-[4px]"
+            className="cursor-pointer md:ml-5 inactive-tab"
           >
             MEET THE TEAM
-          </motion.div>
-          <motion.div
-            whileHover={{
-              backgroundColor: "#CDB7F6",
-            }}
+          </div>
+          <div
             onClick={() => {
               setDidRender(true);
               fullpageApi.fullpageApi.moveTo(3);
             }}
-            className="cursor-pointer px-[16px] py-[3px] rounded-[4px]"
+            className="inactive-tab"
           >
             NEWS
-          </motion.div>
+          </div>
           <Link target="_blank" href="https://monarch.arkpes.com/login">
-            <motion.div
-              whileHover={{
-                backgroundColor: "#CDB7F6",
-              }}
-              className="cursor-pointer px-[16px] py-[3px] rounded-[4px]"
-            >
-              INVESTOR PORTAL
-            </motion.div>
+            <div className="inactive-tab">INVESTOR PORTAL</div>
           </Link>
         </div>
       </div>

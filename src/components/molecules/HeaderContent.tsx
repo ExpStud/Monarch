@@ -33,9 +33,6 @@ const HeaderContent = ({
               pageIndex == 0 && section === 0 ? "active-tab" : "inactive-tab"
             }
             onClick={() => fullpageApi.fullpageApi.moveTo(2)}
-            // whileHover={{
-            //   backgroundColor: pageIndex !== 0 && section!==0 ? "#CDB7F6" : "",
-            // }}
           >
             MEET THE TEAM
           </div>
@@ -46,19 +43,9 @@ const HeaderContent = ({
                 : "inactive-tab"
             }
             onClick={() => fullpageApi.fullpageApi.moveTo(3)}
-            // whileHover={{
-            //   backgroundColor: pageIndex !== 1 ? "#CDB7F6" : "",
-            //   border: pageIndex !== 1 ? "black" : "",
-            // }}
           >
             NEWS
           </div>
-          {/* <motion.div
-            // whileHover={{
-            //   backgroundColor: pageIndex !== 2 ? "#CDB7F6" : "",
-            // }}
-            className={inactivePageClasses}
-          > */}
           <Link
             target="_blank"
             href="https://monarch.arkpes.com/login"
@@ -66,7 +53,6 @@ const HeaderContent = ({
           >
             INVESTOR PORTAL
           </Link>
-          {/* </motion.div> */}
         </div>
 
         <AnimatePresence mode="wait">
