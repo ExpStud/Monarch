@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -53,19 +54,38 @@ interface Props {
   layout: NewsLayout;
   article: NewsArticle;
 }
-
+<div className="relative max-md:max-w-[500px]">
+  <div className="absolute top-8 left-8 rounded-[4px] bg-black py-2 px-4 w-[70%]">
+    <div className="line-clamp-3 font-mon-semibold tracking-wider leading-tight">
+      First came Angel City FC. Now, meet Monarch Collective...
+    </div>
+  </div>
+  <div className="flex justify-between absolute w-full bottom-0 rounded-[4px] bg-black py-2 px-4">
+    <div className="text-[15px] font-mon-semibold tracking-[2px]">
+      10 MIN READ
+    </div>
+    <div className="flex items-center">
+      <img src="images/article.png" alt="" />
+    </div>
+  </div>
+</div>;
 const NewsItem: FC<Props> = (props: Props) => {
   const { layout, article } = props;
 
   return (
-    <Link href={`/${article.type}`}>
+    <Link href={`/${article.type}`} className="relative overflow-hidden">
       <div className="relative">
         <img
-          className="object-cover max-md:max-w-[500px] w-[100%]"
+          className={`transition-500 hover:scale-110  ${
+            layout === 0
+              ? "max-md:max-w-[500px] w-[100%]"
+              : layout === 1
+              ? "max-md:min-h-[300px] "
+              : "max-md:max-w-[500px] w-[100%]"
+          }`}
           src={`/images/${article.image}`}
           alt="Background"
         />
-
         <div className="absolute font-mon-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4">
           {layout === 2 ? article.type : article.title}
         </div>
@@ -89,7 +109,9 @@ const NewsView: FC = () => {
 
       <div className="w-[90%] flex gap-3 max-[1100px]:flex-col justify-center items-center  text-[#CDB7F6] text-xl lg:text-[28px]">
         {/* first square */}
-        <div className="relative">
+        <NewsItem layout={1} article={NEWS_ARTICLES[0]} />
+
+        {/* <div className="relative">
           <img
             className="object-cover max-md:max-w-[500px] w-[100%]"
             src="images/n-1.png"
@@ -108,35 +130,15 @@ const NewsView: FC = () => {
               <img src="images/article.png" alt="" />
             </div>
           </div>
-        </div>
+        </div> */}
         {/* col of images */}
         <div className="flex flex-col gap-3 items-center relative bottom-1">
           {/* first column (one img) */}
-          <div className="relative max-md:max-w-[500px]">
-            <img
-              className="max-md:min-h-[300px] object-cover"
-              src="images/n-2.png"
-              alt=""
-            />
+          <NewsItem layout={1} article={NEWS_ARTICLES[1]} />
 
-            <div className="absolute top-8 left-8 rounded-[4px] bg-black py-2 px-4 w-[70%]">
-              <div className="line-clamp-3 font-mon-semibold tracking-wider leading-tight">
-                First came Angel City FC. Now, meet Monarch Collective...
-              </div>
-            </div>
-            <div className="flex justify-between absolute w-full bottom-0 rounded-[4px] bg-black py-2 px-4">
-              <div className="text-[15px] font-mon-semibold tracking-[2px]">
-                10 MIN READ
-              </div>
-              <div className="flex items-center">
-                <img src="images/article.png" alt="" />
-              </div>
-            </div>
-          </div>
           {/* second columne (three imgs) */}
           <div className="flex gap-3 max-md:flex-col w-full justify-center">
             <NewsItem layout={2} article={NEWS_ARTICLES[2]} />
-
             <NewsItem layout={2} article={NEWS_ARTICLES[3]} />
             <NewsItem layout={2} article={NEWS_ARTICLES[4]} />
           </div>
