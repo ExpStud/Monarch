@@ -2,7 +2,7 @@ import { NewsArticle } from "@types";
 
 export const NEWS_ARTICLES: NewsArticle[] = [
   {
-    title: "Announcing Monarch's first investment...",
+    title: "Announcing Monarch's first investment Announcing Monarch's first investment",
     content: "",
     type: "article",
     readTime: 10,

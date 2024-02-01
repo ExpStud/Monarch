@@ -40,10 +40,18 @@ const NewsItem: FC<Props> = (props: Props) => {
         className={`transition-500 ${didHover ? "scale-110" : ""}`}
       />
       <div
-        className={`absolute font-mon-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4 text-ellipsis overflow-hidden text-[28px]  
-          ${layout === 0 ? "w-[80%]" : layout === 1 ? "w-[80%]" : ""}`}
+        className={`absolute font-mon-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4 text-[28px]  
+          ${
+            layout === 0
+              ? "w-[90%] max-h-[721px]"
+              : layout === 1
+              ? "w-[80%] ] max-h-[721px]"
+              : ""
+          }`}
       >
-        {layout === 2 ? capitalizeFirstLetter(article.type) : article.title}
+        <p className="line-clamp-2">
+          {layout === 2 ? capitalizeFirstLetter(article.type) : article.title}
+        </p>
       </div>
       <div className="flex w-full justify-between absolute bottom-0 rounded-[4px] bg-black py-2 px-4">
         <div className="text-[15px] font-mon-semibold tracking-[2px]">

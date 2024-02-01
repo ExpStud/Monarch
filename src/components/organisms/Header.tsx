@@ -86,19 +86,15 @@ const Header: FC<Props> = (props: Props) => {
   }, [showHeader]);
 
   return (
-    <header className={`top-0 transition-all duration-500 bg-[#FAF6EE] z-50`}>
-      <motion.aside
-        variants={headerVariants}
-        initial={showHeader ? "show" : "hidden"}
-        animate={animateHeader ? "show" : "hidden"}
-      >
-        <HeaderContent
-          menuType={menuType}
-          pageIndex={props.pageIndex}
-          fullpageApi={fullpageApi}
-          section={section}
-        />
-      </motion.aside>
+    <header
+      className={`${menuType} top-0 transition-all duration-500 bg-[#FAF6EE] z-50`}
+    >
+      <HeaderContent
+        menuType={menuType}
+        pageIndex={props.pageIndex}
+        fullpageApi={fullpageApi}
+        section={section}
+      />
       {/* {false ? (
         <HeaderContent
           menuType={menuType}

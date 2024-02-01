@@ -55,7 +55,7 @@ const Home: NextPage = () => {
                 className="section overflow-x-hidden"
               >
                 <Header
-                  menuType="absolute"
+                  menuType="relative"
                   pageIndex={0}
                   section={1}
                   fullpageApi={fullpageApi}
