@@ -5,7 +5,8 @@ import {
   useScroll,
   Variants,
 } from "framer-motion";
-import { HeaderContent } from "@components";
+import { HeaderContent, LandingHeader } from "@components";
+import { useWindowSize } from "src/hooks";
 interface Props {
   showHeader?: boolean;
   menuType?: string;
@@ -24,6 +25,7 @@ const Header: FC<Props> = (props: Props) => {
   } = props;
 
   const [animateHeader, setAnimateHeader] = useState<boolean>(true);
+  const [winWidth, winHeight] = useWindowSize();
 
   //scroll variables
   const scrollRef = useRef<number>();
@@ -87,14 +89,20 @@ const Header: FC<Props> = (props: Props) => {
 
   return (
     <header
-      className={`${menuType} top-0 transition-all duration-500 bg-[#FAF6EE] z-50`}
+      className={`max-md:!relative ${menuType} top-0 transition-all duration-500 bg-[#FAF6EE] z-50`}
     >
-      <HeaderContent
-        menuType={menuType}
-        pageIndex={props.pageIndex}
-        fullpageApi={fullpageApi}
-        section={section}
-      />
+      {/* {winWidth < 768 ? (
+        <LandingHeader fullpageApi={fullpageApi} />
+      ) : ( */}
+      {winWidth >= 768 && (
+        <HeaderContent
+          menuType={menuType}
+          pageIndex={props.pageIndex}
+          fullpageApi={fullpageApi}
+          section={section}
+        />
+      )}
+
       {/* {false ? (
         <HeaderContent
           menuType={menuType}

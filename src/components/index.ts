@@ -38,6 +38,7 @@ const Footer = dynamic(() => import("./organisms/Footer"));
 const ImageModal = dynamic(() => import("./organisms/ImageModal"));
 const Menu = dynamic(() => import("./organisms/Menu"));
 const NewsItem = dynamic(() => import("./organisms/NewsItem"));
+const LandingHeader = dynamic(() => import("./organisms/LandingHeader"));
 //templates
 const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
@@ -85,5 +86,6 @@ export {
   NewsView,
   Card,
   BackButton,
-  NewsItem
+  NewsItem,
+  LandingHeader
 }

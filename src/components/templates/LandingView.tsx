@@ -12,6 +12,7 @@ import { useWindowSize } from "@hooks";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { LandingHeader } from "..";
 
 interface Assets {
   src: string;
@@ -32,12 +33,6 @@ const _assets: Assets[] = [
 ];
 
 interface Props {
-  // setAssets?: Dispatch<SetStateAction<boolean[]>>;
-  // setIsInView: Dispatch<SetStateAction<boolean>>;
-  // id: string;
-  // setCurrentPage: Dispatch<SetStateAction<string>>;
-  // showLoop: boolean;
-  // setShowLoop: Dispatch<SetStateAction<boolean>>;
   setShowSite: any;
   fullpageApi: any;
 }
@@ -120,37 +115,13 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
           "transition-opacity  ease-in duration-500 text-xl"
         }
       >
-        <div className="flex text-sm font-light tracking-[0.11rem] z-10  md:gap-12 max-md:gap-0 max-md:text-[10px] justify-center mt-4 absolute w-screen text-center px-4">
-          <div
-            onClick={() => {
-              setDidRender(true);
-              fullpageApi.fullpageApi.moveTo(2);
-            }}
-            className="cursor-pointer md:ml-5 inactive-tab whitespace-nowrap"
-          >
-            MEET THE TEAM
-          </div>
-          <div
-            onClick={() => {
-              setDidRender(true);
-              fullpageApi.fullpageApi.moveTo(3);
-            }}
-            className="inactive-tab"
-          >
-            NEWS
-          </div>
-          <Link target="_blank" href="https://monarch.arkpes.com/login">
-            <div className="inactive-tab whitespace-nowrap">
-              INVESTOR PORTAL
-            </div>
-          </Link>
-        </div>
+        <LandingHeader fullpageApi={fullpageApi} setDidRender={setDidRender} />
       </div>
 
       <motion.div
         key="landing"
         className={`relative w-full ${
-          mobileView ? "h-[82vh]" : "h-screen"
+          mobileView ? "h-[100svh]" : "h-screen"
         } flex flex-col items-center justify-end`}
         {...exitAnimation}
         ref={scrollRef}
@@ -184,64 +155,6 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
             className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 px-10"
           />
         )}
-
-        {/* <motion.video
-          ref={loopRef}
-          muted
-          playsInline
-          key="loop desktop"
-          loop
-          className={`${
-            mobileView && "hidden"
-          } h-full w-screen absolute inset-0 -z-20 ${
-            showLoop ? "visible" : "invisible"
-          }`}
-          style={{ objectFit: "cover" }}
-        >
-          <source src={_assets[1].src} type="video/mp4" />
-        </motion.video> */}
-
-        {/* mobile */}
-        {/* <AnimatePresence mode="wait">
-          {!showLoop && (
-            <motion.video
-              ref={introRefMobile}
-              muted
-              autoPlay
-              playsInline
-              key="intro-mobile"
-              className={`${
-                !mobileView && "hidden"
-              } md:pt-16 h-3/4 w-screen absolute overflow-visible inset-x-0 top-[55%] transform -translate-y-1/2 -z-10 max-w-[600px] mx-auto ${
-                !showLoop ? "visible" : "invisible"
-              }`}
-              style={{ objectFit: "cover" }}
-              onEnded={() => {
-                // setShowLoop(true)
-                setAnimationEnded(true);
-              }}
-              {...exitAnimation}
-            >
-              <source src={_assets[2].src} type="video/mp4" />
-            </motion.video>
-          )}
-        </AnimatePresence>
-        <motion.video
-          ref={loopRefMobile}
-          muted
-          playsInline
-          key="loop-mobile"
-          loop
-          className={`${
-            !mobileView && "hidden"
-          } h-3/4 w-screen absolute overflow-visible inset-x-0 top-[55%] transform -translate-y-1/2 -z-20 max-w-[600px] mx-auto ${
-            showLoop ? "visible" : "invisible"
-          }`}
-          style={{ objectFit: "cover" }}
-          // {...exitAnimation}
-        >
-          <source src={_assets[3].src} type="video/mp4" />
-        </motion.video> */}
 
         <div
           className={
