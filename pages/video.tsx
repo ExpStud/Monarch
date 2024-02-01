@@ -1,40 +1,67 @@
 import { PageLayout, BackButton } from "@components";
 import { NextPage } from "next";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
+import { NEWS_ARTICLES } from "src/constants";
+import { NewsArticle, VideoContent } from "src/types";
+import Image from "next/image";
 
 const Video: NextPage = () => {
+  const [article, setArticle] = useState<NewsArticle | null>(null);
+  const [content, setContent] = useState<VideoContent | null>(null);
+  const { query } = useRouter();
+
+  //set article data
+  useEffect(() => {
+    if (query?.id && !isNaN(query.id as unknown as number)) {
+      setArticle(NEWS_ARTICLES[query.id as unknown as number]);
+    }
+  }, [query.id]);
+
+  //set article content data to avoid TS errors for other content types
+  useEffect(() => {
+    if (article && article?.content) {
+      setContent(article?.content as VideoContent);
+    }
+  }, [article]);
+
   return (
     <PageLayout pageIndex={1} footer={true}>
       <div className="mt-10 flex flex-col items-center px-20 max-md:px-6 tracking-widest">
         <BackButton className="self-start mt-[2rem] " />
 
-        <div className="flex flex-col gap-3 pb-[80px] pt-[60px] max-md:pt-[30px] px-20 max-md:px-1 tracking-widest">
-          <div className="font-mon-bold text-3xl">
-            First came Angel City FC. Now, meet Monarch Collective, a new way to
-            invest in women’s sports
-          </div>
+        {article && content && (
+          <div className="flex flex-col gap-3 pb-[80px] pt-[60px] max-md:pt-[30px] px-20 max-md:px-1 tracking-widest min-w-[85vw]">
+            <div className="font-mon-bold text-3xl">{article.title}</div>
 
-          <div className="flex max-md:flex-col max-md:text-sm max-md:gap-2 max-md:justify-start max-md:w-[100%] justify-around w-[90%] self-center mt-6 tracking-[2px] whitespace-nowrap">
-            <div className="flex items-center">
-              10 MIN READ
-              <div className="ml-2">
-                <img src="images/video-black.png" alt="" />
+            <div className="flex max-md:flex-col max-md:text-sm max-md:gap-2 max-md:justify-start max-md:w-[100%] justify-around w-[90%] self-center mt-6 tracking-[2px] whitespace-nowrap">
+              <div className="flex items-center">
+                {article.readTime} MIN VIDEO
+                <div className="ml-1 mr-2 pb-5 w-4 h-4">
+                  <Image
+                    src="/images/play.png"
+                    alt="Video"
+                    height={17}
+                    width={17}
+                  />
+                </div>
               </div>
+              <div className="flex pl-2">
+                WRITTEN BY:
+                <div className="underline ml-2">{article.content.author}</div>
+              </div>
+              <div className="pl-2">{article.content.date}</div>
             </div>
-            <div className="flex">
-              WRITTEN BY:
-              <div className="underline ml-2">SAMANTHA MASUNAGA</div>
-            </div>
-            <div>03/27/2023</div>
-          </div>
 
-          <iframe
-            className="w-full aspect-[16/8] mt-3"
-            src="https://www.youtube.com/embed/KnumAWWWgUE?si=Sf5Y9SltT-HCZfDz"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
-        </div>
+            <iframe
+              className="w-full aspect-[16/8] mt-3"
+              src="https://www.youtube.com/embed/KnumAWWWgUE?si=Sf5Y9SltT-HCZfDz"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+        )}
       </div>
     </PageLayout>
   );

@@ -17,20 +17,17 @@ const NewsItem: FC<Props> = (props: Props) => {
   const [didHover, setDidHover] = useState(false);
 
   const handleClick = () => {
-    router.push(
-      { pathname: `/${article.type}`, query: { id: article.id } },
-      `/${article.type}`
-    );
+    router.push({ pathname: `/${article.type}`, query: { id: article.id } });
   };
 
   return (
     <div
-      className={`relative overflow-hidden cursor-pointer rounded-[4px] ${
+      className={`relative overflow-hidden cursor-pointer rounded-[4px] w-[80vw] h-[300px] ${
         layout === 0
-          ? "w-[80vw] md:w-[498px] h-[498px]"
+          ? "md:w-[498px] md:h-[498px]"
           : layout === 1
-          ? "w-[80vw] md:w-[759px] h-[243px]"
-          : "w-[80vw] md:w-[243px] h-[243px]"
+          ? "md:w-[759px] md:h-[243px]"
+          : "md:w-[243px] md:h-[243px]"
       }`}
       onClick={() => handleClick()}
       onMouseEnter={() => setDidHover(true)}
