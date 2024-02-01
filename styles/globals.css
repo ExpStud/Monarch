@@ -224,8 +224,8 @@ html {
 }
 
 .active-tab {
-  @apply px-[16px] py-[3px] rounded-[4px] text-mon-purple bg-black ;
+  @apply md:px-[16px] md:py-[3px] rounded-[4px] text-mon-purple bg-black ;
 }
 .inactive-tab {
-  @apply px-[16px] py-[3px] rounded-[4px] cursor-pointer hover:bg-mon-purple  text-black transition-500;
+  @apply md:px-[16px] md:py-[3px] rounded-[4px] cursor-pointer hover:bg-mon-purple  text-black transition-500;
 }

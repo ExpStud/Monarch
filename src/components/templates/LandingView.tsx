@@ -64,9 +64,10 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
     }
   }, [query]);
 
-  // console.log("fullpageApi ", fullpageApi);
+  console.log("fullpageApi ", fullpageApi);
 
   useEffect(() => {
+    // fullpageApi.fullpageApi.destroy("all");
     if (animationEnded) {
       setShowSite(true);
       if (fullpageApi.fullpageApi) {
@@ -119,13 +120,13 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
           "transition-opacity  ease-in duration-500 text-xl"
         }
       >
-        <div className="flex text-sm font-light tracking-[0.11rem] z-10 gap-12 max-md:gap-6 max-md:text-[10px] justify-center mt-4 absolute w-screen text-center px-4">
+        <div className="flex text-sm font-light tracking-[0.11rem] z-10  md:gap-12 max-md:gap-0 max-md:text-[10px] justify-center mt-4 absolute w-screen text-center px-4">
           <div
             onClick={() => {
               setDidRender(true);
               fullpageApi.fullpageApi.moveTo(2);
             }}
-            className="cursor-pointer md:ml-5 inactive-tab"
+            className="cursor-pointer md:ml-5 inactive-tab whitespace-nowrap"
           >
             MEET THE TEAM
           </div>
@@ -139,7 +140,9 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
             NEWS
           </div>
           <Link target="_blank" href="https://monarch.arkpes.com/login">
-            <div className="inactive-tab">INVESTOR PORTAL</div>
+            <div className="inactive-tab whitespace-nowrap">
+              INVESTOR PORTAL
+            </div>
           </Link>
         </div>
       </div>
