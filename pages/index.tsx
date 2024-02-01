@@ -39,7 +39,8 @@ const Home: NextPage = () => {
 
               <div
                 style={{ opacity: showSite ? "1" : "0" }}
-                className="section overflow-x-hidden xl:h-screen xl:overflow-y-hidden"
+                // className="section overflow-x-hidden xl:h-screen xl:overflow-y-hidden"
+                className="section xl:h-screen xl:overflow-hidden"
               >
                 <Header
                   menuType="absolute"

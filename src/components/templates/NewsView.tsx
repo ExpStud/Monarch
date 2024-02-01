@@ -2,6 +2,7 @@
 import { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export type NewsLayout = 0 | 1 | 2;
 export type NewsArticleType = "article" | "video" | "podcast";
@@ -50,11 +51,22 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     image: "n-5.png",
   },
 ];
+
+export const capitalizeFirstLetter = (word: string): string => {
+  // Check if the word is not an empty string
+  if (word.length === 0) {
+    return word;
+  }
+
+  // Capitalize the first letter and concatenate the rest of the word
+  return word.charAt(0).toUpperCase() + word.slice(1);
+};
 interface Props {
   layout: NewsLayout;
   article: NewsArticle;
 }
-<div className="relative max-md:max-w-[500px]">
+{
+  /* <div className="relative max-md:max-w-[500px]">
   <div className="absolute top-8 left-8 rounded-[4px] bg-black py-2 px-4 w-[70%]">
     <div className="line-clamp-3 font-mon-semibold tracking-wider leading-tight">
       First came Angel City FC. Now, meet Monarch Collective...
@@ -68,15 +80,38 @@ interface Props {
       <img src="images/article.png" alt="" />
     </div>
   </div>
-</div>;
+</div>; */
+}
 const NewsItem: FC<Props> = (props: Props) => {
   const { layout, article } = props;
+  const router = useRouter();
 
+  const handleClick = () => {
+    router.push(`/${article.type}`);
+  };
   return (
-    <Link href={`/${article.type}`} className="relative overflow-hidden">
-      <div className="relative">
-        <img
-          className={`transition-500 hover:scale-110  ${
+    <div
+      className={`relative overflow-hidden cursor-pointer rounded-[4px] ${
+        layout === 0
+          ? "w-[498px] h-[498px]"
+          : layout === 1
+          ? "w-[759px] h-[243px]"
+          : "w-[243px] h-[243px]"
+      }`}
+      onClick={() => handleClick()}
+    >
+      <Image
+        src={`/images/${article.image}`}
+        alt="Background"
+        fill
+        //@ts-ignore
+        style={{ objectFit: "cover" }}
+        // width={layout === 0 ? 498 : layout === 1 ? 759 : 234}
+        // height={layout === 0 ? 498 : 234}
+        className="transition-500 hover:scale-110"
+      />
+      {/* <img
+          className={`transition-500 hover:scale-110 ${
             layout === 0
               ? "max-md:max-w-[500px] w-[100%]"
               : layout === 1
@@ -85,20 +120,22 @@ const NewsItem: FC<Props> = (props: Props) => {
           }`}
           src={`/images/${article.image}`}
           alt="Background"
-        />
-        <div className="absolute font-mon-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4">
-          {layout === 2 ? article.type : article.title}
+        /> */}
+      <div
+        className={`absolute font-mon-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4 text-ellipsis overflow-hidden text-[28px]  
+          ${layout === 0 ? "w-[80%]" : layout === 1 ? "w-[80%]" : ""}`}
+      >
+        {layout === 2 ? capitalizeFirstLetter(article.type) : article.title}
+      </div>
+      <div className="flex justify-between absolute bottom-0 rounded-[4px] bg-black py-2 px-4">
+        <div className="text-[15px] font-mon-semibold tracking-[2px]">
+          {article.readTime} MIN
         </div>
-        <div className="flex justify-between absolute w-full bottom-0 rounded-[4px] bg-black py-2 px-4">
-          <div className="text-[15px] font-mon-semibold tracking-[2px]">
-            {article.readTime} MIN
-          </div>
-          <div className="flex items-center">
-            <img src={`images/${article.type}.png`} alt="Icon" />
-          </div>
+        <div className="flex items-center">
+          <img src={`images/${article.type}.png`} alt="Icon" />
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 
@@ -109,7 +146,7 @@ const NewsView: FC = () => {
 
       <div className="w-[90%] flex gap-3 max-[1100px]:flex-col justify-center items-center  text-[#CDB7F6] text-xl lg:text-[28px]">
         {/* first square */}
-        <NewsItem layout={1} article={NEWS_ARTICLES[0]} />
+        <NewsItem layout={0} article={NEWS_ARTICLES[0]} />
 
         {/* <div className="relative">
           <img
