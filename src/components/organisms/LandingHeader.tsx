@@ -39,7 +39,7 @@ interface Props {
 const LandingHeader: FC<Props> = (props: Props) => {
   const { fullpageApi, setDidRender } = props;
   return (
-    <div className="flex font-light tracking-[0.11rem] z-10 gap-2 sm:gap-4 md:gap-8 text-[10px] sm:text-xs justify-center mt-4 absolute w-screen text-center px-4">
+    <div className="flex font-light tracking-[0.11rem] z-10 gap-2 sm:gap-4 md:gap-8  text-[10px] sm:text-xs md:text-sm justify-center mt-4 absolute w-screen text-center px-4">
       <div
         onClick={() => {
           setDidRender && setDidRender(true);
