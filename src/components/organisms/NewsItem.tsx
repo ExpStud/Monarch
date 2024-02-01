@@ -1,0 +1,60 @@
+/* eslint-disable @next/next/no-img-element */
+import { FC, useState } from "react";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import { NewsArticle, NewsLayout } from "@types";
+import { capitalizeFirstLetter } from "@utils";
+
+interface Props {
+  layout: NewsLayout;
+  article: NewsArticle;
+}
+
+const NewsItem: FC<Props> = (props: Props) => {
+  const { layout, article } = props;
+  const router = useRouter();
+
+  const [didHover, setDidHover] = useState(false);
+
+  const handleClick = () => {
+    router.push(`/${article.type}`);
+  };
+  return (
+    <div
+      className={`relative overflow-hidden cursor-pointer rounded-[4px] ${
+        layout === 0
+          ? "w-[80vw] md:w-[498px] h-[498px]"
+          : layout === 1
+          ? "w-[80vw] md:w-[759px] h-[243px]"
+          : "w-[80vw] md:w-[243px] h-[243px]"
+      }`}
+      onClick={() => handleClick()}
+      onMouseEnter={() => setDidHover(true)}
+      onMouseLeave={() => setDidHover(false)}
+    >
+      <Image
+        src={`/images/${article.image}`}
+        alt="Background"
+        fill
+        style={{ objectFit: "cover" }}
+        className={`transition-500 ${didHover ? "scale-110" : ""}`}
+      />
+      <div
+        className={`absolute font-mon-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4 text-ellipsis overflow-hidden text-[28px]  
+          ${layout === 0 ? "w-[80%]" : layout === 1 ? "w-[80%]" : ""}`}
+      >
+        {layout === 2 ? capitalizeFirstLetter(article.type) : article.title}
+      </div>
+      <div className="flex w-full justify-between absolute bottom-0 rounded-[4px] bg-black py-2 px-4">
+        <div className="text-[15px] font-mon-semibold tracking-[2px]">
+          {article.readTime} MIN
+        </div>
+        <div className="flex items-center">
+          <img src={`images/${article.type}.png`} alt="Icon" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default NewsItem;
