@@ -59,7 +59,7 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
     }
   }, [query]);
 
-  console.log("fullpageApi ", fullpageApi);
+  // console.log("fullpageApi ", fullpageApi);
 
   useEffect(() => {
     // fullpageApi.fullpageApi.destroy("all");

@@ -44,12 +44,12 @@ const CardFlip: FC<Props> = ({ image, position, name, description }) => {
         <div className="w-[100%] h-full flip-card-front bg-black px-2.5 py-2.5 rounded-[4px]">
           {/* <img className="w-full" src={image} /> */}
           <Image src={image} width={500} height={500} alt={name} />
-          <div className="mt-4">{position}</div>
+          <div className="mt-4 text-[15px]">{position}</div>
           <div className="flex justify-between items-end mt-[-2px]">
             <div className="font-mon-bold text-xl text-ellipsis overd">
               {name}
             </div>
-            <div className="font-light">more</div>
+            <div className="font-light text-[15px]">more</div>
           </div>
           <div className="h-[1px] bg-white my-2"></div>
           <div className="flex gap-5 mb-3">

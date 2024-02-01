@@ -1,8 +1,9 @@
-import { FC, useState } from "react";
+import { FC, useRef, useState } from "react";
 import { CloseIcon, LandingHeader, Logo, Menu, MenuIcon } from "@components";
 import Link from "next/link";
 import { useWindowSize } from "@hooks";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
+import { enterAnimation } from "src/constants";
 
 const HeaderContent = ({
   pageIndex,
@@ -18,16 +19,22 @@ const HeaderContent = ({
   const [navbarActive, setNavbarActive] = useState(false);
   const [winWidth] = useWindowSize();
 
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
   if (winWidth > 680 && navbarActive) {
     setNavbarActive(false);
   }
 
   return (
-    <div className="relative">
+    <div className="relative" ref={ref}>
       {winWidth < 768 ? (
         <LandingHeader fullpageApi={fullpageApi} />
       ) : (
-        <div className="w-screen gap-5 flex items-center justify-between px-5 md:px-10 py-3 z-20 relative">
+        <motion.div
+          className="w-screen gap-5 flex items-center justify-between px-5 md:px-10 py-3 z-20 relative"
+          {...enterAnimation}
+        >
           <Logo fullpageApi={fullpageApi} />
 
           <div className="max-md:hidden flex font-light tracking-[0.11rem] justify-center max-md:gap-4 gap-10 text-sm h-[100%] ">
@@ -86,7 +93,7 @@ const HeaderContent = ({
             open={navbarActive}
             fullpageApi={fullpageApi}
           /> */}
-        </div>
+        </motion.div>
       )}
       <div className="h-[1.5px] bg-black opacity-[20%] mx-10 mt-2"></div>
     </div>
