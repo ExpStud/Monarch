@@ -5,7 +5,8 @@ import { useState } from "react";
 const MeetTheTeam: NextPage = () => {
   return (
     <PageLayout pageIndex={0}>
-      <MeetTheTeamView />
+      <></>
+      {/* <MeetTheTeamView /> */}
     </PageLayout>
   );
 };
