@@ -1,11 +1,7 @@
-import { PageLayout, LandingView, BackButton } from "@components";
+import { PageLayout, BackButton } from "@components";
 import { NextPage } from "next";
-import Link from "next/link";
-import { useState } from "react";
 
 const Video: NextPage = () => {
-  const [assets, setAssets] = useState<boolean[]>([false]);
-
   return (
     <PageLayout pageIndex={1} footer={true}>
       <div className="mt-10 flex flex-col items-center px-20 max-md:px-6 tracking-widest">
@@ -21,7 +17,7 @@ const Video: NextPage = () => {
             <div className="flex items-center">
               10 MIN READ
               <div className="ml-2">
-                <img src="images/article-black.png" alt="" />
+                <img src="images/video-black.png" alt="" />
               </div>
             </div>
             <div className="flex">

@@ -17,8 +17,12 @@ const NewsItem: FC<Props> = (props: Props) => {
   const [didHover, setDidHover] = useState(false);
 
   const handleClick = () => {
-    router.push(`/${article.type}`);
+    router.push(
+      { pathname: `/${article.type}`, query: { id: article.id } },
+      `/${article.type}`
+    );
   };
+
   return (
     <div
       className={`relative overflow-hidden cursor-pointer rounded-[4px] ${

@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { FC } from "react";
 import { NEWS_ARTICLES } from "@constants";
 import { NewsItem } from "@components";
