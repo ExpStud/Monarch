@@ -10,7 +10,7 @@ module.exports = {
         "white-gradient": `linear-gradient(360.58deg, #FFFFFF 43.76%, rgba(255, 255, 255, 0) 106.82%)`,
       },
       fontFamily: {
-        primary: ["Monsterrat Light, sans-serrif"],
+        primary: ["Monsterrat Light, sans-serif"],
         "mon-bold": ["Monsterrat Bold"],
         "mon-semibold": ["Monsterrat SemiBold"],
       },

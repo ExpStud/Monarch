@@ -12,7 +12,7 @@ interface Props {
   description: string;
 }
 
-const CardFlip: FC<Props> = ({ image, position, name, description }) => {
+const Card: FC<Props> = ({ image, position, name, description }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -25,7 +25,7 @@ const CardFlip: FC<Props> = ({ image, position, name, description }) => {
   return (
     <div
       className="flip-card max-lg:max-w-[300px]  lg:w-[280px] xl:w-[360px] h-[420px] lg:h-[407px] xl:h-[487px] rounded-md cursor-pointer"
-      // onClick={handleFlip}
+      onClick={() => handleFlip()}
       onMouseEnter={() => handleFlip()}
       // onMouseLeave={() => handleFlip()}
     >
@@ -141,4 +141,4 @@ const CardFlip: FC<Props> = ({ image, position, name, description }) => {
   );
 };
 
-export default CardFlip;
+export default Card;

@@ -111,7 +111,7 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
         className={`relative w-full ${
           mobileView ? "h-[100svh]" : "h-screen"
         } flex flex-col items-center justify-end`}
-        {...exitAnimation}
+        // {...exitAnimation}
         ref={scrollRef}
       >
         {/* desktop */}
