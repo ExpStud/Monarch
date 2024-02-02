@@ -1,37 +1,51 @@
-import { FC, useState } from "react";
-import { ExpIcon, IconBar } from "@components";
-import Image from "next/image";
-import { motion } from "framer-motion";
+import { FC } from "react";
 import Link from "next/link";
-import { enterAnimation } from "@constants";
+import { useRouter } from "next/router";
 
-const Footer: FC = () => {
-  const [animate, setAnimate] = useState<boolean>(false);
+interface Props {
+  page?: string;
+  fullpageApi?: any;
+}
 
-  //exp hover animation
-  const containerAnimation = {
-    animate: {
-      opacity: 1,
-      rotate: animate ? -90 : 0,
-    },
-    exit: { opacity: 0 },
-    transition: { duration: 0.5, ease: "easeInOut" },
+const Footer: FC<Props> = (props: Props) => {
+  const { page, fullpageApi } = props;
+
+  const router = useRouter();
+
+  const navigate = (pageId: number) => {
+    if (page === "landing" && fullpageApi) {
+      fullpageApi.fullpageApi.moveTo(pageId);
+    } else {
+      router.push(
+        { pathname: "/", query: { to: pageId === 2 ? "team" : "news" } },
+        "/"
+      );
+    }
   };
 
   return (
     <footer
-      className="px-24 w-full bg-black z-0 text-[#CDB7F6] py-20 text-sm"
+      className="px-10 xl:px-24 w-full bg-black z-0 text-[#CDB7F6] py-20 text-sm"
       key="footer"
     >
-      <div className="flex max-[1000px]:flex-wrap max-[1000px]:gap-10 gap-36 pl-16 max-[1000px]:pl-0">
-        <div className="flex flex-col">
-          <div className="font-mon-bold mb-4">ABOUT </div>
-          <div className="tracking-[2px] font-light">
-            <Link href="/meet-the-team">MEET THE TEAM</Link>
+      <div className="flex max-[1000px]:flex-wrap gap-10 lg:gap-20 xl:gap-36 pl-16 max-[1000px]:pl-0">
+        <div className="flex flex-col gap-2 ">
+          <div className="font-mon-bold mb-2">ABOUT </div>
+          <div
+            className="tracking-[2px] font-light cursor-pointer"
+            onClick={() => navigate(2)}
+          >
+            MEET THE TEAM
+          </div>
+          <div
+            className="tracking-[2px] font-light cursor-pointer"
+            onClick={() => navigate(3)}
+          >
+            NEWS
           </div>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col ">
           <div className="font-mon-bold mb-4">PORTAL</div>
           <div className="tracking-[2px] font-light">
             <Link target="_blank" href="https://monarch.arkpes.com/login">
@@ -40,7 +54,7 @@ const Footer: FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col ">
           <div className="font-mon-bold mb-4">CONTACT</div>
           <div className="tracking-[2px] font-light">
             <Link href="mailto:info@xyz.dev">INQUIRY FORM</Link>
@@ -48,7 +62,7 @@ const Footer: FC = () => {
         </div>
 
         <div className="flex grow max-[1000px]:justify-start justify-end items-end tracking-[2px] font-mon-bold whitespace-nowrap">
-          <Link target="_blank" href="https://twitter.com/expstudio_">
+          <Link target="_blank" href="https://twitter.com/exp_studio_">
             POWERED BY EXP
           </Link>
         </div>

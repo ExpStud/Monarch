@@ -56,7 +56,7 @@ const Home: NextPage = () => {
                     fullpageApi={fullpageApi}
                   />
                   <NewsView />
-                  <Footer />
+                  <Footer page="landing" fullpageApi={fullpageApi} />
                 </div>
               </>
               {/* )} */}

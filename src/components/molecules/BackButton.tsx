@@ -10,7 +10,7 @@ const BackButton: FC<Props> = (props: Props) => {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push({ pathname: "/", query: { from: "news" } }, "/");
+    router.push({ pathname: "/", query: { to: "news" } }, "/");
   };
 
   return (
