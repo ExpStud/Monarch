@@ -62,7 +62,7 @@ const HeaderContent = ({
         <LandingHeader fullpageApi={fullpageApi} />
       ) : (
         <motion.div
-          className="w-screen gap-5 flex items-center justify-between px-5 md:px-10 py-3 z-20 relative"
+          className="w-screen gap-5 flex items-center justify-between px-5 md:px-10 py-6 z-20 relative"
           // {...enterAnimation}
         >
           <Logo fullpageApi={fullpageApi} />
@@ -125,7 +125,7 @@ const HeaderContent = ({
           /> */}
         </motion.div>
       )}
-      <div className="h-[1.5px] bg-black opacity-[20%] mx-10 mt-2"></div>
+      <div className="h-[1px] bg-black opacity-[20%] mx-10"></div>
     </motion.div>
   );
 };
