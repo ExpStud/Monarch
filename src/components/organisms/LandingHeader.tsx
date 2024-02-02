@@ -1,35 +1,7 @@
 import { exitAnimation } from "@constants";
 import { AnimatePresence, motion, useInView, useScroll } from "framer-motion";
-import {
-  Dispatch,
-  FC,
-  SetStateAction,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
-import { useWindowSize } from "@hooks";
+import { Dispatch, FC, SetStateAction } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { useRouter } from "next/router";
-
-interface Assets {
-  src: string;
-}
-const _assets: Assets[] = [
-  {
-    src: "/videos/landing_animation.mp4", //`/videos/1.mp4`,
-  },
-  {
-    src: `/videos/1.mp4`,
-  },
-  {
-    src: `/videos/2.mp4`,
-  },
-  {
-    src: `/videos/2.mp4`,
-  },
-];
 
 interface Props {
   fullpageApi: any;

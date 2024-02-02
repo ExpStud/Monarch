@@ -54,9 +54,7 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
 
   //stay on news page if from news item
   useEffect(() => {
-    console.log("query ", query);
     if (query?.from === "news") {
-      console.log("query ", query);
       fullpageApi.fullpageApi.moveTo(3);
     }
   }, [query]);
@@ -96,18 +94,6 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
       sessionStorage.setItem("didRender", "true");
     };
   }, []);
-
-  // useEffect(() => {
-  //   if (showLoop && loopRef.current && introRef.current) {
-  //     loopRef.current.play();
-  //     introRef.current.pause();
-  //   }
-
-  //   if (showLoop && loopRefMobile.current && introRefMobile.current) {
-  //     loopRefMobile.current.play();
-  //     introRefMobile.current.pause();
-  //   }
-  // }, [showLoop]);
 
   return (
     <div className="h-[100vh] overflow-hidden">
