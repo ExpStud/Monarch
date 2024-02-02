@@ -71,7 +71,7 @@ const Podcast: NextPage = () => {
                 {/* top border */}
                 <div className="w-[103%] right-[1.5%] h-[1px] opacity-[30%] bg-black relative bottom-3"></div>
 
-                <div className="font-mon-bold text-xl">{article.title}</div>
+                <div className="font-mon-bold text-xl ">{article.title}</div>
                 <div className="text-[#4A0A8A] font-mon-semibold">
                   {content.subTitle}
                 </div>

@@ -22,7 +22,7 @@ const _assets: Assets[] = [
     src: "/videos/landing_animation.mp4", //`/videos/1.mp4`,
   },
   {
-    src: `/videos/1.mp4`,
+    src: `/videos/final.mp4`,
   },
   {
     src: `/videos/2.mp4`,

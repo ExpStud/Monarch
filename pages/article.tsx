@@ -33,7 +33,10 @@ const Article: NextPage = () => {
         <BackButton className="self-start mt-[2rem] " />
         {article && content && (
           <div className="flex flex-col gap-3 pb-[80px] pt-[60px] max-md:pt-[30px] px-20 max-md:px-1 tracking-widest">
-            <div className="font-mon-bold text-3xl"> {article.title}</div>
+            <div className="font-mon-bold text-3xl text-center">
+              {" "}
+              {article.title}
+            </div>
 
             <div className="flex max-md:flex-col font-light max-md:text-sm max-md:gap-2 max-md:justify-start max-md:w-[100%] justify-around w-[90%] self-center mt-6 tracking-[2px] whitespace-nowrap">
               <div className="flex font-light items-center">
