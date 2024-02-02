@@ -20,7 +20,7 @@ const HeaderContent = ({
   const [winWidth] = useWindowSize();
 
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  // const isInView = useInView(ref);
 
   if (winWidth > 680 && navbarActive) {
     setNavbarActive(false);

@@ -36,30 +36,30 @@ const Home: NextPage = () => {
                   setShowSite={setShowSite}
                 />
               </section>
-              {showSite && (
-                <>
-                  <div
-                    // style={{ opacity: showSite ? "1" : "0" }}
-                    // className="section overflow-x-hidden xl:h-screen xl:overflow-y-hidden"
-                    className="section"
-                  >
-                    <MeetTheTeamView fullpageApi={fullpageApi} />
-                  </div>
-                  <div
-                    // style={{ opacity: showSite ? "1" : "0" }}
-                    className="section flex flex-col"
-                  >
-                    <Header
-                      menuType="relative"
-                      pageIndex={0}
-                      section={1}
-                      fullpageApi={fullpageApi}
-                    />
-                    <NewsView />
-                    <Footer />
-                  </div>
-                </>
-              )}
+              {/* {showSite && ( */}
+              <>
+                <div
+                  style={{ opacity: showSite ? "1" : "0" }}
+                  // className="section overflow-x-hidden xl:h-screen xl:overflow-y-hidden"
+                  className="section"
+                >
+                  <MeetTheTeamView fullpageApi={fullpageApi} />
+                </div>
+                <div
+                  style={{ opacity: showSite ? "1" : "0" }}
+                  className="section"
+                >
+                  <Header
+                    menuType="relative"
+                    pageIndex={0}
+                    section={1}
+                    fullpageApi={fullpageApi}
+                  />
+                  <NewsView />
+                  <Footer />
+                </div>
+              </>
+              {/* )} */}
             </ReactFullpage.Wrapper>
           );
         }}

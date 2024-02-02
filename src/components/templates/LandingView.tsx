@@ -54,7 +54,9 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
 
   //stay on news page if from news item
   useEffect(() => {
+    console.log("query ", query);
     if (query?.from === "news") {
+      console.log("query ", query);
       fullpageApi.fullpageApi.moveTo(3);
     }
   }, [query]);
