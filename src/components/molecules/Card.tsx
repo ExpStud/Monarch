@@ -46,9 +46,7 @@ const CardFlip: FC<Props> = ({ image, position, name, description }) => {
           <Image src={image} width={500} height={500} alt={name} />
           <div className="mt-4 text-[15px]">{position}</div>
           <div className="flex justify-between items-end mt-[-2px]">
-            <div className="font-mon-bold text-xl text-ellipsis overd">
-              {name}
-            </div>
+            <div className="font-mon-bold text-xl text-ellipsis ">{name}</div>
             <div className="font-light text-[15px]">more</div>
           </div>
           <div className="h-[1px] bg-white my-2"></div>
@@ -70,10 +68,10 @@ const CardFlip: FC<Props> = ({ image, position, name, description }) => {
           <div className="flex">
             <img className="w-[137px]" src={image} />
 
-            <div className="grow flex flex-col items-center justify-center relative">
+            <div className="grow flex flex-col items-start lg:items-center justify-center relative">
               <div className="h-[1px] w-[calc(100%-16px)] bg-white ml-[16px] absolute top-0"></div>
-              <div className="mt-4">{position}</div>
-              <div className="font-mon-bold text-xl">{name}</div>
+              <div className="mt-4 pl-2">{position}</div>
+              <div className="font-mon-bold text-xl pl-2 ">{name}</div>
             </div>
 
             <div className="h-auto mt-2.5 w-[1px] bg-white"></div>

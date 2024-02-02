@@ -16,7 +16,7 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
       />
       <h1 className="text-3xl tracking-[6px] py-10 md:py-20">OUR TEAM</h1>
 
-      <div className="h-full flex flex-col lg:flex-row w-[90%] gap-10 text-[#FAF6EE] justify-center items-start pb-10">
+      <div className="h-full flex flex-col lg:flex-row w-[90%] gap-10 text-[#FAF6EE] justify-center items-center lg:items-start pb-10">
         <Card
           image="/images/woman-1.png"
           position="Founder"
