@@ -64,28 +64,6 @@ a:hover{
   transform: rotateY(180deg);
 }
 
-@font-face {
-  font-family: Karl;
-  src: url('../public/fonts/Karl-Regular.otf') format('truetype');
-}
-@font-face {
-  font-family: 'Helvetica Neue Medium';
-  src: url('/public/fonts/helveticaneue/HelveticaNeue\ Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Helvetica Neue Light';
-  src: url('/public/fonts/helveticaneue/HelveticaNeue\ Light.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Helvetica Neue Light Italic';
-  src: url('/public/fonts/helveticaneue/HelveticaNeueIt.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
-}
 
 @font-face {
   font-family: 'Monsterrat SemiBold';
@@ -109,13 +87,13 @@ a:hover{
   font-family: 'Monsterrat Light';
   src: url('../public/fonts/Montserrat-Light.ttf') format('truetype');
   font-weight: 300;
-  font-style: italic;
+  font-style: normal;
 }
 @font-face {
   font-family: 'Monsterrat Extra Light';
   src: url('../public/fonts/Montserrat-ExtraLight.ttf') format('truetype');
   font-weight: 300;
-  font-style: italic;
+  font-style: normal;
 }
 a {
   color: inherit;
