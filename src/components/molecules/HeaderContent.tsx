@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useWindowSize } from "@hooks";
 import { AnimatePresence, Variants, motion, useInView } from "framer-motion";
 import { enterAnimation } from "src/constants";
+import { useRouter } from "next/router";
 
 const HeaderContent = ({
   pageIndex,
@@ -11,13 +12,15 @@ const HeaderContent = ({
   fullpageApi,
   section,
 }: {
-  pageIndex: Number | undefined;
+  pageIndex: number | undefined;
   menuType: any;
-  fullpageApi: any;
+  fullpageApi?: any;
   section?: number;
 }) => {
   const [navbarActive, setNavbarActive] = useState(false);
   const [winWidth] = useWindowSize();
+
+  const router = useRouter();
 
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -49,6 +52,17 @@ const HeaderContent = ({
     },
   };
 
+  const navigate = (pageId: number) => {
+    if (pageIndex && pageIndex < 3 && fullpageApi) {
+      fullpageApi.fullpageApi.moveTo(pageId);
+    } else {
+      router.push(
+        { pathname: "/", query: { to: pageId === 2 ? "team" : "news" } },
+        "/"
+      );
+    }
+  };
+
   return (
     <motion.div
       className="relative"
@@ -59,20 +73,20 @@ const HeaderContent = ({
       // exit="hidden"
     >
       {winWidth < 768 ? (
-        <LandingHeader fullpageApi={fullpageApi} />
+        <LandingHeader fullpageApi={fullpageApi} callback={navigate} />
       ) : (
         <motion.div
           className="w-screen gap-5 flex items-center justify-between px-5 md:px-10 py-6 z-20 relative"
           // {...enterAnimation}
         >
-          <Logo fullpageApi={fullpageApi} />
+          <Logo fullpageApi={fullpageApi} callback={() => router.push("/")} />
 
           <div className="max-md:hidden flex font-light tracking-[0.11rem] justify-center max-md:gap-4 gap-10 text-sm h-[100%] ">
             <div
               className={
                 pageIndex == 0 && section === 0 ? "active-tab" : "inactive-tab"
               }
-              onClick={() => fullpageApi.fullpageApi.moveTo(2)}
+              onClick={() => navigate(2)}
             >
               MEET THE TEAM
             </div>
@@ -82,7 +96,7 @@ const HeaderContent = ({
                   ? "active-tab"
                   : "inactive-tab"
               }
-              onClick={() => fullpageApi.fullpageApi.moveTo(3)}
+              onClick={() => navigate(3)}
             >
               NEWS
             </div>

@@ -1,4 +1,4 @@
-import { PageLayout, BackButton } from "@components";
+import { PageLayout, BackButton, HeaderContent } from "@components";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
@@ -27,6 +27,7 @@ const Video: NextPage = () => {
 
   return (
     <PageLayout pageIndex={1} footer={true}>
+      <HeaderContent menuType={"relative"} pageIndex={3} section={-1} />
       <div className="mt-10 flex flex-col items-center px-20 max-md:px-6 tracking-widest">
         <BackButton className="self-start mt-[2rem] " />
 
