@@ -23,39 +23,41 @@ const HeaderContent = ({
   const router = useRouter();
 
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  // const isInView = useInView(ref);
 
-  if (winWidth > 680 && navbarActive) {
-    setNavbarActive(false);
-  }
+  // if (winWidth > 680 && navbarActive) {
+  //   setNavbarActive(false);
+  // }
 
   // useEffect(() => {
   //   console.log("isInView ", section, isInView);
   // }, [isInView, section]);
 
-  const headerVariants: Variants = {
-    show: {
-      opacity: 1,
-      transition: {
-        delay: 0.25,
-        duration: 0.5,
-        ease: "easeInOut",
-      },
-    },
-    hidden: {
-      opacity: 0,
-      transition: {
-        delay: 0.25,
-        duration: 0.5,
-        ease: "easeInOut",
-      },
-    },
-  };
+  // const headerVariants: Variants = {
+  //   show: {
+  //     opacity: 1,
+  //     transition: {
+  //       delay: 0.25,
+  //       duration: 0.5,
+  //       ease: "easeInOut",
+  //     },
+  //   },
+  //   hidden: {
+  //     opacity: 0,
+  //     transition: {
+  //       delay: 0.25,
+  //       duration: 0.5,
+  //       ease: "easeInOut",
+  //     },
+  //   },
+  // };
 
   const navigate = (pageId: number) => {
-    if (pageIndex && pageIndex < 3 && fullpageApi) {
+    //from landing page
+    if (pageIndex !== undefined && pageIndex < 3 && fullpageApi) {
       fullpageApi.fullpageApi.moveTo(pageId);
     } else {
+      //from news item page
       router.push(
         { pathname: "/", query: { to: pageId === 2 ? "team" : "news" } },
         "/"

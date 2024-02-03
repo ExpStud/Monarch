@@ -101,7 +101,7 @@ a:hover{
 }
 @font-face {
   font-family: 'Monsterrat';
-  src: url('../public/fonts/Montserrat-Black.ttf') format('truetype');
+  src: url('../public/fonts/Montserrat-Medium.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
 }
@@ -141,6 +141,9 @@ a {
   }
   h4 {
     @apply font-primary uppercase text-2xl md:text-3xl;
+  }
+  div {
+    @apply font-primary;
   }
 }
 
