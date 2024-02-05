@@ -98,7 +98,7 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
   }, []);
 
   return (
-    <div className="h-[100vh] overflow-hidden">
+    <div className="h-[100svh] overflow-hidden">
       <div
         className={
           (animationEnded ? "opacity-100 " : "opacity-0 ") +

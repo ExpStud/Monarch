@@ -24,7 +24,7 @@ const Card: FC<Props> = ({ image, position, name, description }) => {
   }
   return (
     <div
-      className="flip-card max-lg:max-w-[300px]  lg:w-[280px] xl:w-[360px] h-[420px] lg:h-[407px] xl:h-[487px] rounded-md cursor-pointer"
+      className="flip-card min-w-[320px] max-lg:max-w-[340px]  xl:w-[360px] h-[470px]  xl:h-[487px] rounded-md cursor-pointer"
       onClick={() => handleFlip()}
       onMouseEnter={() => handleFlip()}
       // onMouseLeave={() => handleFlip()}
@@ -78,7 +78,8 @@ const Card: FC<Props> = ({ image, position, name, description }) => {
           </div>
           <div className="h-[1px] bg-white my-3"></div>
           <div className="font-light text-sm">BACKSTORY</div>
-          <div className="text-xs mt-3 line-clamp-5 lg:line-clamp-4 xl:line-clamp-none xl:h-[145px]">
+          {/* <div className="text-xs mt-3 line-clamp-6 lg:line-clamp-4 xl:line-clamp-none xl:h-[145px]"> */}
+          <div className="text-xs mt-3 h-[130px] xl:h-[145px]">
             {description}
           </div>
           <div className="h-[1px] bg-white my-5"></div>

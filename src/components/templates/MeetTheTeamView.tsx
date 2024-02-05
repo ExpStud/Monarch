@@ -1,5 +1,7 @@
 import { FC } from "react";
 import { Card, Header } from "@components";
+import { motion } from "framer-motion";
+import { enterAnimation } from "src/constants";
 
 interface Props {
   fullpageApi: any;
@@ -7,7 +9,10 @@ interface Props {
 const MeetTheTeamView: FC<Props> = (props: Props) => {
   const { fullpageApi } = props;
   return (
-    <div className=" flex flex-col items-center min-h-screen lg:h-screen">
+    <motion.div
+      className=" flex flex-col items-center min-h-screen lg:h-screen"
+      {...enterAnimation}
+    >
       <Header
         menuType="relative"
         pageIndex={0}
@@ -46,7 +51,10 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
           eiusmod tempor incididunt ut labore et dolore magna aliqua. "
         />
       </div>
-    </div>
+      <div className="flex justify-center text-xs tracking-[2px] w-full pb-4 max-md:mt-10 px-4 sm:px-6">
+        KEEP SCROLLING
+      </div>
+    </motion.div>
   );
 };
 
