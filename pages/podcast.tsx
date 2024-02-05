@@ -29,11 +29,11 @@ const Podcast: NextPage = () => {
   return (
     <PageLayout pageIndex={1} footer={true}>
       <HeaderContent menuType={"relative"} pageIndex={3} section={-1} />
-      <div className="mt-10 flex flex-col items-center px-20 max-md:px-6 tracking-widest">
+      <div className="mt-10 flex flex-col items-center px-20 max-lg:px-6 tracking-widest">
         <BackButton className="self-start mt-[2rem] " />
         {article && content && (
-          <div className="flex flex-col gap-3 pb-[80px] pt-[60px] max-md:pt-[30px] w-full px-20 max-md:px-1 tracking-widest">
-            <div className="flex max-md:flex-col max-md:text-sm max-md:gap-2 max-md:justify-start max-md:w-[100%] justify-around w-[90%] self-center mt-6 tracking-[2px] whitespace-nowrap">
+          <div className="flex flex-col gap-3 pb-[80px] pt-[60px] max-lg:pt-[30px] w-full px-20 max-lg:px-1 tracking-widest">
+            <div className="flex max-lg:items-center max-lg:flex-col max-lg:text-sm max-lg:gap-2 max-lg:justify-start max-lg:w-[100%] justify-around w-[90%] self-center mt-6 tracking-[2px] whitespace-nowrap">
               <div className="flex items-center">
                 {article.readTime} MIN PODCAST
                 <div className="ml-2">
@@ -47,13 +47,16 @@ const Podcast: NextPage = () => {
               </div>
               <div className="flex">
                 CREATED BY:
-                <div className="underline ml-2"> {article.content.author}</div>
+                <div className="underline ml-2 uppercase">
+                  {" "}
+                  {article.content.author}
+                </div>
               </div>
               <div>{article.content.date}</div>
             </div>
 
-            <div className="flex max-md:flex-col max-md:items-center mt-10 px-6 max-md:px-0 gap-4">
-              <div className="shrink-0 max-md:mb-3">
+            <div className="flex max-lg:flex-col max-lg:items-center mt-10 px-6 max-lg:px-0 gap-4">
+              <div className="shrink-0 max-lg:mb-3">
                 <img
                   className="w-[300px]"
                   src={`/images/${content.image}`}
@@ -68,7 +71,7 @@ const Podcast: NextPage = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col border-x border-black border-opacity-[30%] px-4 max-md:px-2 py-1">
+              <div className="flex flex-col border-x border-black border-opacity-[30%] px-4 max-lg:px-2 py-1">
                 {/* top border */}
                 <div className="w-[103%] right-[1.5%] h-[1px] opacity-[30%] bg-black relative bottom-3"></div>
 
@@ -78,7 +81,7 @@ const Podcast: NextPage = () => {
                 </div>
                 <div className="h-[1px] opacity-[10%] bg-black my-3"></div>
                 <div>
-                  {content.paragraphs.map((p, i) => (
+                  {content?.paragraphs?.map((p, i) => (
                     <p
                       key={i}
                       className="mb-5"

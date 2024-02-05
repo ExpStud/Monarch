@@ -37,7 +37,7 @@ const Video: NextPage = () => {
               {article.title}
             </div>
 
-            <div className="flex max-md:flex-col max-md:text-sm max-md:gap-2 max-md:justify-start max-md:w-[100%] justify-around w-[90%] self-center mt-6 tracking-[2px] whitespace-nowrap">
+            <div className="flex self-center max-lg:flex-col items-start max-md:text-sm max-md:gap-2 max-md:w-[100%] justify-around w-[90%] mt-6 tracking-[2px] whitespace-nowrap">
               <div className="flex items-center">
                 {article.readTime} MIN VIDEO
                 <div className="ml-1 mr-2 pb-5 w-4 h-4">
@@ -49,11 +49,13 @@ const Video: NextPage = () => {
                   />
                 </div>
               </div>
-              <div className="flex pl-2">
+              <div className="flex lg:pl-2">
                 WRITTEN BY:
-                <div className="underline ml-2">{article.content.author}</div>
+                <div className="underline ml-2 uppercase">
+                  {article.content.author}
+                </div>
               </div>
-              <div className="pl-2">{article.content.date}</div>
+              <div className="lg:pl-2">{article.content.date}</div>
             </div>
 
             <iframe

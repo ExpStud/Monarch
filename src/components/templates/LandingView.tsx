@@ -137,13 +137,15 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
             <source src={_assets[0].src} type="video/mp4" />
           </motion.video>
         ) : (
-          <Image
-            src="/images/logo-lg.png"
-            width={458 * 1.2}
-            height={354 * 1.2}
-            alt="Monarch Logo"
-            className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 px-10"
-          />
+          <motion.div {...exitAnimation}>
+            <Image
+              src="/images/logo-lg.png"
+              width={458 * 1.2}
+              height={354 * 1.2}
+              alt="Monarch Logo"
+              className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 px-10"
+            />
+          </motion.div>
         )}
 
         <div

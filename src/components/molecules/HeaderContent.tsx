@@ -65,6 +65,14 @@ const HeaderContent = ({
     }
   };
 
+  const handleLogoClick = () => {
+    if (pageIndex !== undefined && pageIndex < 3 && fullpageApi) {
+      fullpageApi.fullpageApi.moveTo(1);
+    } else {
+      router.push("/");
+    }
+  };
+
   return (
     <motion.div
       className="relative"
@@ -81,7 +89,7 @@ const HeaderContent = ({
           className="w-screen gap-5 flex items-center justify-between px-5 md:px-10 py-6 z-20 relative"
           // {...enterAnimation}
         >
-          <Logo fullpageApi={fullpageApi} callback={() => router.push("/")} />
+          <Logo fullpageApi={fullpageApi} callback={() => handleLogoClick()} />
 
           <div className="max-md:hidden flex font-light tracking-[0.11rem] justify-center max-md:gap-4 gap-10 text-sm h-[100%] ">
             <div

@@ -1,8 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { midClickAnimation, enterAnimation } from "@constants";
-import Link from "next/link";
+import { enterAnimation } from "@constants";
 
 interface Props {
   fullpageApi: any;
@@ -10,6 +9,7 @@ interface Props {
 }
 const Logo: FC<Props> = (props: Props) => {
   const { fullpageApi, callback } = props;
+
   return (
     <motion.div
       className="my-0 flex items-center gap-2 cursor-pointer"

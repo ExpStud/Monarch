@@ -34,7 +34,7 @@ const Article: NextPage = () => {
         <BackButton className="self-start mt-[2rem] " />
         {article && content && (
           <div className="flex flex-col gap-3 pb-[80px] pt-[60px] max-md:pt-[30px] px-20 max-md:px-1 tracking-widest">
-            <div className="font-mon-bold text-3xl text-center">
+            <div className="font-mon-bold text-3xl lg:text-center">
               {" "}
               {article.title}
             </div>
@@ -71,7 +71,7 @@ const Article: NextPage = () => {
             </div>
 
             <div className="border-x-[1.5px] px-10 max-md:px-3 mt-10 border-black border-opacity-[20%]">
-              {content.paragraphs.map((p, i) => (
+              {content?.paragraphs?.map((p, i) => (
                 <p key={i} className="mb-5">
                   {p}
                 </p>
