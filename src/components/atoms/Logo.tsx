@@ -17,7 +17,7 @@ const Logo: FC<Props> = (props: Props) => {
       onClick={() => {
         if (callback) {
           callback();
-        } else fullpageApi.fullpageApi.moveTo(1);
+        } else fullpageApi.fullpageApi.moveTo(0);
       }}
     >
       <Image

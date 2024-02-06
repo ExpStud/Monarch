@@ -74,21 +74,11 @@ const HeaderContent = ({
   };
 
   return (
-    <motion.div
-      className="relative"
-      ref={ref}
-      // variants={headerVariants}
-      // initial="hidden"
-      // animate={isInView ? "show" : "hidden"}
-      // exit="hidden"
-    >
+    <div className="relative" ref={ref}>
       {winWidth < 768 ? (
         <LandingHeader fullpageApi={fullpageApi} callback={navigate} />
       ) : (
-        <motion.div
-          className="w-screen gap-5 flex items-center justify-between px-5 md:px-10 py-6 z-20 relative"
-          // {...enterAnimation}
-        >
+        <div className="w-screen gap-5 flex items-center justify-between px-5 md:px-10 py-6 z-20 relative">
           <Logo fullpageApi={fullpageApi} callback={() => handleLogoClick()} />
 
           <div className="max-md:hidden flex font-light tracking-[0.11rem] justify-center max-md:gap-4 gap-10 text-sm h-[100%] ">
@@ -118,39 +108,10 @@ const HeaderContent = ({
               INVESTOR PORTAL
             </Link>
           </div>
-          {/* {winWidth < 680 && ( */}
-          {/* <div className="md:hidden">
-            <AnimatePresence mode="wait">
-              {!navbarActive ? (
-                <div
-                  key="menu-icon"
-                  onClick={() => setNavbarActive(true)}
-                  className="cursor-pointer"
-                >
-                  <MenuIcon onClick={() => setNavbarActive(true)}></MenuIcon>
-                </div>
-              ) : (
-                <div
-                  onClick={() => setNavbarActive(false)}
-                  className="cursor-pointer z-50 relative"
-                >
-                  <CloseIcon />
-                </div>
-              )}
-            </AnimatePresence>
-          </div> */}
-          {/* )} */}
-
-          {/* <Menu
-            menuType={menuType}
-            toggleMenu={setNavbarActive}
-            open={navbarActive}
-            fullpageApi={fullpageApi}
-          /> */}
-        </motion.div>
+        </div>
       )}
-      <div className="h-[1px] bg-black opacity-[20%] mx-10"></div>
-    </motion.div>
+      <div className="absolute top-12 inset-x-0 lg:block  h-[1px] bg-black opacity-[20%] mx-3 lg:mx-10"></div>
+    </div>
   );
 };
 export default HeaderContent;

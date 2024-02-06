@@ -51,7 +51,7 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
           eiusmod tempor incididunt ut labore et dolore magna aliqua. "
         />
       </div>
-      <div className="flex justify-center text-xs tracking-[2px] w-full pb-4 max-md:mt-10 px-4 sm:px-6">
+      <div className="flex justify-center text-[12px] sm:text-xs md:text-sm tracking-[2px] w-full pb-4 max-md:mt-10 px-4 sm:px-6">
         KEEP SCROLLING
       </div>
     </motion.div>

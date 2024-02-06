@@ -3,10 +3,9 @@ import {
   introVideoAnimation,
   introImageAnimation,
 } from "@constants";
-import { AnimatePresence, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { FC, useEffect, useRef, useState } from "react";
 import { useWindowSize } from "@hooks";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { LandingHeader } from "@components";
 
@@ -157,7 +156,7 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
             "transition-opacity ease-in duration-500 relative"
           }
         >
-          <div className="lg:flex justify-center text-xs tracking-[2px] w-full pb-4 max-md:mt-10 px-4 sm:px-6">
+          <div className="lg:flex justify-center text-[12px] sm:text-xs md:text-sm tracking-[2px] w-full pb-4 max-md:mt-10 px-4 sm:px-6">
             KEEP SCROLLING
           </div>
         </div>
