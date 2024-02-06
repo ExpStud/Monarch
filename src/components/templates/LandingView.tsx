@@ -1,36 +1,18 @@
-import { exitAnimation } from "@constants";
-import { AnimatePresence, motion, useInView, useScroll } from "framer-motion";
 import {
-  Dispatch,
-  FC,
-  SetStateAction,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+  exitAnimation,
+  introVideoAnimation,
+  introImageAnimation,
+} from "@constants";
+import { AnimatePresence, motion, useInView } from "framer-motion";
+import { FC, useEffect, useRef, useState } from "react";
 import { useWindowSize } from "@hooks";
-import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { LandingHeader } from "..";
+import { LandingHeader } from "@components";
 
 interface Assets {
   src: string;
 }
-const _assets: Assets[] = [
-  {
-    src: "/videos/landing_animation.mp4", //`/videos/1.mp4`,
-  },
-  {
-    src: `/videos/final.mp4`,
-  },
-  {
-    src: `/videos/2.mp4`,
-  },
-  {
-    src: `/videos/2.mp4`,
-  },
-];
 
 interface Props {
   setShowSite: any;
@@ -43,10 +25,10 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
   const [winWidth] = useWindowSize();
   const mobileView = winWidth <= 1024;
   //refs
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const mainRef = useRef<HTMLDivElement>(null);
   const introRef = useRef<HTMLVideoElement>(null);
 
-  // const isInView = useInView(scrollRef);
+  const isInView = useInView(mainRef);
   const [animationEnded, setAnimationEnded] = useState(false);
   const showLoop = false;
 
@@ -79,12 +61,13 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
         fullpageApi.fullpageApi.setAllowScrolling(false);
       }
     }
-  });
+  }, [animationEnded, fullpageApi.fullpageApi, setShowSite]);
 
   //handles only showing video on first render
   useEffect(() => {
+    console.log("isInView ", isInView);
     const rendered = sessionStorage.getItem("didRender");
-
+    console.log("didRender ", rendered);
     if (rendered) {
       setAnimationEnded(true);
       setDidRender(true);
@@ -92,13 +75,13 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
       setDidRender(false);
     }
 
-    return () => {
-      sessionStorage.setItem("didRender", "true");
-    };
-  }, []);
+    // return () => {
+    //   sessionStorage.setItem("didRender", "true");
+    // };
+  }, [isInView]);
 
   return (
-    <div className="h-[100svh] overflow-hidden">
+    <div className="h-[100svh] overflow-hidden" ref={mainRef}>
       <div
         className={
           (animationEnded ? "opacity-100 " : "opacity-0 ") +
@@ -114,39 +97,59 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
           mobileView ? "h-[100svh]" : "h-screen"
         } flex flex-col items-center justify-end`}
         // {...exitAnimation}
-        ref={scrollRef}
       >
-        {/* desktop */}
-        {!didRender ? (
+        {/* <AnimatePresence mode="wait"> */}
+        {!didRender && (
           <motion.video
             ref={introRef}
             autoPlay
             muted
             playsInline
-            key="intro desktop"
-            className={`h-full w-screen absolute inset-0 -z-10 ${
-              !showLoop ? "visible" : "invisible"
-            }`}
-            style={{ objectFit: "cover" }}
+            key="video"
+            className={`h-full w-[100vw] inset-0 -z-10 scale-[1.5] absolute `}
+            style={{ objectFit: "contain" }}
             onEnded={() => {
-              // setShowLoop(true);
+              // setDidRender(true);
               setAnimationEnded(true);
             }}
+            // {...introVideoAnimation}
             {...exitAnimation}
           >
-            <source src={_assets[0].src} type="video/mp4" />
-          </motion.video>
-        ) : (
-          <motion.div {...exitAnimation}>
-            <Image
-              src="/images/logo-lg.png"
-              width={458 * 1.2}
-              height={354 * 1.2}
-              alt="Monarch Logo"
-              className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 px-10"
+            <source
+              src={
+                winWidth < 640
+                  ? "/videos/intro/intro-sm.mov"
+                  : "/videos/intro/intro.mov"
+              }
+              type="video/mp4"
             />
+          </motion.video>
+        )}
+        {didRender && (
+          <motion.div
+            className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            key="image"
+            // {...exitAnimation}
+          >
+            <motion.img
+              {...exitAnimation}
+              src="/images/logo-lg.png"
+              width={458 * 1}
+              height={354 * 1}
+              alt="Monarch Logo"
+              className="a px-10 -z-[11]"
+            />
+            {/* <Image
+              // {...introImageAnimation}
+              src="/images/logo-lg.png"
+              width={458 * 1.1}
+              height={354 * 1.1}
+              alt="Monarch Logo"
+              className="a px-10 -z-[11]"
+            /> */}
           </motion.div>
         )}
+        {/* </AnimatePresence> */}
 
         <div
           className={

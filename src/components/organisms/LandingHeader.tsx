@@ -11,11 +11,13 @@ interface Props {
 
 const LandingHeader: FC<Props> = (props: Props) => {
   const { fullpageApi, setDidRender, callback } = props;
+  // console.log("callback ", callback);
   return (
     <div className="flex font-light tracking-[0.11rem] z-10 gap-2 sm:gap-4 md:gap-8  text-[10px] sm:text-xs md:text-sm justify-center mt-4 absolute w-screen text-center px-4">
       <div
         onClick={() => {
-          setDidRender && setDidRender(true);
+          // setDidRender && setDidRender(true);
+          // fullpageApi.fullpageApi.moveTo(2);
           if (callback) {
             callback(2);
           } else {
@@ -28,7 +30,8 @@ const LandingHeader: FC<Props> = (props: Props) => {
       </div>
       <div
         onClick={() => {
-          setDidRender && setDidRender(true);
+          // setDidRender && setDidRender(true);
+          // fullpageApi.fullpageApi.moveTo(3);
           if (callback) {
             callback(3);
           } else {
