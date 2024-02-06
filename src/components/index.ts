@@ -9,6 +9,9 @@ const ExchangeIcon = dynamic(() => import("./@icons/ExchangeIcon"));
 const MenuIcon = dynamic(() => import("./@icons/MenuIcon"));
 const CloseIcon = dynamic(() => import("./@icons/CloseIcon"));
 const DownloadIcon = dynamic(() => import("./@icons/DownloadIcon"));
+const BookIcon = dynamic(() => import("./@icons/BookIcon"));
+const PlayIcon = dynamic(() => import("./@icons/PlayIcon"));
+const PodcastIcon = dynamic(() => import("./@icons/PodcastIcon"));
 //atoms
 const DropdownButton = dynamic(() => import("./atoms/DropdownButton"));
 const DropdownItem = dynamic(() => import("./atoms/DropdownItem"));
@@ -87,5 +90,8 @@ export {
   Card,
   BackButton,
   NewsItem,
-  LandingHeader
+  LandingHeader,
+  BookIcon,
+  PlayIcon,
+  PodcastIcon,
 }

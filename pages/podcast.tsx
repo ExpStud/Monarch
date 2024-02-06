@@ -1,11 +1,15 @@
-import { PageLayout, BackButton, HeaderContent } from "@components";
+import {
+  PageLayout,
+  BackButton,
+  HeaderContent,
+  PodcastIcon,
+  PlayIcon,
+} from "@components";
 import { NextPage } from "next";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { NEWS_ARTICLES } from "src/constants";
 import { NewsArticle, PodcastContent } from "src/types";
-import Image from "next/image";
 
 const Podcast: NextPage = () => {
   const [article, setArticle] = useState<NewsArticle | null>(null);
@@ -37,11 +41,11 @@ const Podcast: NextPage = () => {
               <div className="flex items-center">
                 {article.readTime} MIN PODCAST
                 <div className="ml-2">
-                  <Image
-                    src="/images/podcast-black.png"
-                    alt="Article"
-                    height={17}
-                    width={17}
+                  <PodcastIcon
+                    stroke="black"
+                    strokeWidth={1}
+                    height={18}
+                    width={18}
                   />
                 </div>
               </div>
@@ -55,7 +59,7 @@ const Podcast: NextPage = () => {
               <div>{article.content.date}</div>
             </div>
 
-            <div className="flex max-lg:flex-col max-lg:items-center mt-10 px-6 max-lg:px-0 gap-4">
+            <div className="flex max-lg:flex-col max-lg:items-center mt-10 px-6 max-lg:px-0 gap-4 cursor-pointer">
               <div className="shrink-0 max-lg:mb-3">
                 <img
                   className="w-[300px]"
@@ -66,7 +70,12 @@ const Podcast: NextPage = () => {
                   <div className="grow">10 MIN</div>
                   <div className="flex items-center">
                     PLAY
-                    <img className="h-3 ml-1" src="images/play.png" alt="" />
+                    <PlayIcon
+                      stroke="black"
+                      strokeWidth={1}
+                      height={16}
+                      width={16}
+                    />
                   </div>
                 </div>
               </div>

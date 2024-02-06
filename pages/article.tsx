@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { PageLayout, BackButton, HeaderContent } from "@components";
+import { PageLayout, BackButton, HeaderContent, BookIcon } from "@components";
 import { NextPage } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -43,9 +43,9 @@ const Article: NextPage = () => {
               <div className="flex font-light items-center">
                 {article.readTime} MIN READ
                 <div className="ml-2">
-                  <Image
-                    src="/images/article-black.png"
-                    alt="Article"
+                  <BookIcon
+                    stroke="black"
+                    strokeWidth={1}
                     height={17}
                     width={17}
                   />

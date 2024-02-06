@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { NewsArticle, NewsLayout } from "@types";
 import { capitalizeFirstLetter } from "@utils";
+import { BookIcon, PlayIcon, PodcastIcon } from "@components";
 
 interface Props {
   layout: NewsLayout;
@@ -59,7 +60,9 @@ const NewsItem: FC<Props> = (props: Props) => {
           {article.readTime} MIN
         </div>
         <div className="flex items-center">
-          <img src={`images/${article.type}.png`} alt="Icon" />
+          {article.type === "video" && <PlayIcon />}
+          {article.type === "article" && <BookIcon />}
+          {article.type === "podcast" && <PodcastIcon />}
         </div>
       </div>
     </div>

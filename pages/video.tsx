@@ -1,4 +1,4 @@
-import { PageLayout, BackButton, HeaderContent } from "@components";
+import { PageLayout, BackButton, HeaderContent, PlayIcon } from "@components";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
@@ -41,11 +41,11 @@ const Video: NextPage = () => {
               <div className="flex items-center">
                 {article.readTime} MIN VIDEO
                 <div className="ml-1 mr-2 pb-5 w-4 h-4">
-                  <Image
-                    src="/images/play.png"
-                    alt="Video"
-                    height={17}
-                    width={17}
+                  <PlayIcon
+                    stroke="black"
+                    strokeWidth={1}
+                    height={20}
+                    width={20}
                   />
                 </div>
               </div>
