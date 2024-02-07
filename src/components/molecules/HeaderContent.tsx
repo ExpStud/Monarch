@@ -66,11 +66,13 @@ const HeaderContent = ({
   };
 
   const handleLogoClick = () => {
-    if (pageIndex !== undefined && pageIndex < 3 && fullpageApi) {
-      fullpageApi.fullpageApi.moveTo(1);
-    } else {
-      router.push("/");
-    }
+    if (pageIndex === 3) router.push("/");
+    else fullpageApi.fullpageApi.moveTo(1);
+    // if (pageIndex !== undefined && pageIndex < 3 && fullpageApi) {
+    //   fullpageApi.fullpageApi.moveTo(1);
+    // } else {
+    //   router.push("/");
+    // }
   };
 
   return (
