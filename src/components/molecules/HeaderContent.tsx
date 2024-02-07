@@ -110,7 +110,7 @@ const HeaderContent = ({
           </div>
         </div>
       )}
-      <div className="absolute top-12 inset-x-0 lg:block  h-[1px] bg-black opacity-[20%] mx-3 lg:mx-10"></div>
+      <div className="absolute top-12 inset-x-0 md:top-auto md:relative  h-[1px] bg-black opacity-[20%] mx-3 lg:mx-10"></div>
     </div>
   );
 };
