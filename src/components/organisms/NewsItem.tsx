@@ -4,7 +4,9 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { NewsArticle, NewsLayout } from "@types";
 import { capitalizeFirstLetter } from "@utils";
-import { BookIcon, PlayIcon, PodcastIcon } from "@components";
+import { BookIcon, ImageShimmer, PlayIcon, PodcastIcon } from "@components";
+import { imageLoadAnimation } from "src/constants";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface Props {
   layout: NewsLayout;
@@ -16,6 +18,7 @@ const NewsItem: FC<Props> = (props: Props) => {
   const router = useRouter();
 
   const [didHover, setDidHover] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState<boolean>(false);
 
   const handleClick = () => {
     router.push({ pathname: `/${article.type}`, query: { id: article.id } });
@@ -34,13 +37,38 @@ const NewsItem: FC<Props> = (props: Props) => {
       onMouseEnter={() => setDidHover(true)}
       onMouseLeave={() => setDidHover(false)}
     >
+      <AnimatePresence mode="wait">
+        {!imageLoaded && (
+          <motion.div
+            className="absolute top-0 inset-0 w-full h-full bg-gradient-to-r from-[#f4ecda] via-white to-[#f4ecda]"
+            style={{
+              backgroundSize: "200% 100%",
+              animation: "shimmer 2s ease-in-out infinite",
+            }}
+            {...imageLoadAnimation(!imageLoaded)}
+          />
+        )}
+      </AnimatePresence>
       <Image
-        src={`/images/${article.image}`}
+        src={`/images/news/${article.image}`}
         alt="Background"
         fill
         style={{ objectFit: "cover" }}
-        className={`transition-500 ${didHover ? "scale-110" : ""}`}
+        className={`transition-500 ${didHover ? "scale-110" : ""} ${
+          imageLoaded ? "opacity-100" : "opacity-0"
+        }`}
+        onLoadingComplete={() => setImageLoaded(true)}
       />
+      {/* <ImageShimmer
+        src={`/images/${article.image}`}
+        alt="Background"
+        width={layout === 0 ? 498 : layout === 1 ? 759 : 243}
+        height={layout === 0 ? 498 : layout === 1 ? 243 : 243}
+        // fill={true}
+        // objectFit="cover"
+        // style={{ objectFit: "cover" }}
+        // className={`transition-500 ${didHover ? "scale-110" : ""}`}
+      /> */}
       <div
         className={`absolute font-mon-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4 text-[28px]  
           ${

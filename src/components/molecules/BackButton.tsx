@@ -19,7 +19,7 @@ const BackButton: FC<Props> = (props: Props) => {
       onClick={() => handleClick()}
     >
       <Image
-        src="/images/back.png"
+        src="/images/icons/arrow-narrow-left.svg"
         width={16}
         height={16}
         alt="Arrow"

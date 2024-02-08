@@ -26,6 +26,7 @@ module.exports = {
       },
       colors: {
         "mon-purple": "#CDB7F6",
+        "mon-cream": "#FAF6EE",
         //template
         "custom-black": "#121212",
         "custom-white": "#F3F1EA",

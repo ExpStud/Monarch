@@ -64,9 +64,9 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
 
   //handles only showing video on first render
   useEffect(() => {
-    // console.log("isInView ", isInView);
+    console.log("isInView ", isInView);
     const rendered = sessionStorage.getItem("didRender");
-    // console.log("didRender ", rendered);
+    console.log("didRender ", rendered);
     if (rendered) {
       setAnimationEnded(true);
       setDidRender(true);
@@ -136,7 +136,7 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
               width={458 * 1}
               height={354 * 1}
               alt="Monarch Logo"
-              className="a px-10 -z-[11]"
+              className="px-10 -z-[11]"
             />
             {/* <Image
               // {...introImageAnimation}
