@@ -35,13 +35,14 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
 
   //stay on news page if from news item
   useEffect(() => {
-    fullpageApi.fullpageApi.moveTo(1);
     // console.log("query ", query);
-    // if (query?.to === "team") {
-    //   fullpageApi.fullpageApi.moveTo(2);
-    // } else if (query?.to === "news") {
-    //   fullpageApi.fullpageApi.moveTo(3);
-    // }
+    if (query?.to === "home") {
+      fullpageApi.fullpageApi.moveTo(1);
+    } else if (query?.to === "team") {
+      fullpageApi.fullpageApi.moveTo(2);
+    } else if (query?.to === "news") {
+      fullpageApi.fullpageApi.moveTo(3);
+    }
   }, [query]);
 
   // console.log("fullpageApi ", fullpageApi);

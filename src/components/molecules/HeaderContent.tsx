@@ -66,11 +66,11 @@ const HeaderContent = ({
   };
 
   const handleLogoClick = () => {
-    router.push("/");
-    // if (pageIndex === 3) router.push("/");
-    // else {
-    //   fullpageApi.fullpageApi.moveTo(1);
-    // }
+    if (pageIndex === 3) {
+      router.push({ pathname: "/", query: { to: "home" } }, "/");
+    } else {
+      fullpageApi.fullpageApi.moveTo(1);
+    }
   };
 
   return (
