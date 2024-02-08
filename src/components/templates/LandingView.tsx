@@ -35,11 +35,12 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
 
   //stay on news page if from news item
   useEffect(() => {
-    if (query?.to === "team") {
-      fullpageApi.fullpageApi.moveTo(2);
-    } else if (query?.to === "news") {
-      fullpageApi.fullpageApi.moveTo(3);
-    }
+    // console.log("query ", query);
+    // if (query?.to === "team") {
+    //   fullpageApi.fullpageApi.moveTo(2);
+    // } else if (query?.to === "news") {
+    //   fullpageApi.fullpageApi.moveTo(3);
+    // }
   }, [query]);
 
   // console.log("fullpageApi ", fullpageApi);
