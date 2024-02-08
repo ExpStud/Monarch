@@ -67,12 +67,9 @@ const HeaderContent = ({
 
   const handleLogoClick = () => {
     if (pageIndex === 3) router.push("/");
-    else fullpageApi.fullpageApi.moveTo(0);
-    // if (pageIndex !== undefined && pageIndex < 3 && fullpageApi) {
-    //   fullpageApi.fullpageApi.moveTo(1);
-    // } else {
-    //   router.push("/");
-    // }
+    else {
+      fullpageApi.fullpageApi.moveTo(1);
+    }
   };
 
   return (

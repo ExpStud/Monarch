@@ -91,9 +91,6 @@ const Header: FC<Props> = (props: Props) => {
     <header
       className={`max-md:!relative ${menuType} top-0 transition-all duration-500 bg-[#FAF6EE] z-50`}
     >
-      {/* {winWidth < 768 ? (
-        <LandingHeader fullpageApi={fullpageApi} />
-      ) : ( */}
       {winWidth >= 768 && (
         <HeaderContent
           menuType={menuType}
@@ -102,26 +99,6 @@ const Header: FC<Props> = (props: Props) => {
           section={section}
         />
       )}
-
-      {/* {false ? (
-        <HeaderContent
-          menuType={menuType}
-          pageIndex={props.pageIndex}
-          fullpageApi={fullpageApi}
-        />
-      ) : (
-        <motion.aside
-          variants={headerVariants}
-          initial={showHeader ? "show" : "hidden"}
-          animate={animateHeader ? "show" : "hidden"}
-        >
-          <HeaderContent
-            menuType={menuType}
-            pageIndex={props.pageIndex}
-            fullpageApi={fullpageApi}
-          />
-        </motion.aside>
-      )} */}
     </header>
   );
 };
