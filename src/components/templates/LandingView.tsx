@@ -133,11 +133,11 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
           >
             <motion.img
               {...exitAnimation}
-              src="/images/logo-lg.png"
+              src="/images/logo-lg.svg"
               width={458 * 1}
               height={354 * 1}
               alt="Monarch Logo"
-              className="px-10 -z-[11]"
+              className="px-6  -z-[11]"
             />
             {/* <Image
               // {...introImageAnimation}
