@@ -24,31 +24,42 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
       <div className="h-full flex flex-col lg:flex-row w-[90%] gap-10 text-[#FAF6EE] justify-center items-center lg:items-start pb-10">
         <Card
           image="/images/woman-1.png"
-          position="Founder"
+          position="Managing Partner"
           name="Kara Nortman"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in.
-          Lorem ipsum dolor sit amet, consectetur adipisn."
-        />
-        <Card
-          image="/images/woman-2.png"
-          position="Loremip"
-          name="Lorem Ipsum"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat."
+          description="Kara is Managing Partner of Monarch Collective, an investment platform dedicated to accelerating equity in global sport. Kara is a co-founder of Angel City Football Club, which has quickly risen to become the most valuable women's soccer team in the world. Prior to Monarch, Kara was a Managing Partner at Upfront Ventures, where she worked for eight years. Before joining Upfront, Kara spent close to seven years at IAC where she co-headed the M&A group and later served in operating capacities as the SVP and General Manager of Urbanspoon and Citysearch. She served on the board of IAC's mobile technology incubator (Hatch Labs), where she incubated Tinder in their seed round. Earlier in her career Kara worked at Battery Ventures, Microsoft and Morgan Stanley. Kara is also a founding member of All Raise, a VC-led Nonprofit dedicated to increased diversity in funders and founders, and she advised  the Women's National Soccer Team Players Association during their pay equity fight. Kara earned an AB in Politics from Princeton University and an MBA from Stanford University. Kara resides in Los Angeles with her husband and three daughters."
+          interests={[
+            "Fav new Sneaker",
+            "Current Song",
+            "Favorite Book ",
+            "Best Enneagram Quiz",
+          ]}
+          linkedin="https://www.linkedin.com/in/karanortman/"
         />
         <Card
           image="/images/woman-3.png"
           position="Managing Partner"
           name="Jasmine Robinson"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          description="Christine is an Investor at Monarch Collective, an investment platform dedicated to accelerating equity in global sport. Previously, Christine was Director of Media at Major League Soccer where she supported all aspects of MLS's landmark partnership with Apple TV in her role as lead project manager for broadcast production and content. Prior to that, she worked on MLS's League Growth & Operations team where she focused on league expansion via new teams, stadiums, and properties, including the launch of MLS NEXT Pro, MLS's professional development league. Before MLS, Christine held strategy roles at the Premier Lacrosse League, the Philadelphia 76ers/HBSE, and Bain & Company. Christine received her MBA from Harvard Business School and her BS from MIT, where she was a member of the varsity women's lacrosse team. Originally from Michigan, she now resides in Brooklyn, New York."
+          interests={[
+            "Fav Outdoor Activity - Golf",
+            "Fav Restaurant - Macchialina",
+            "Fav Sport - American Football",
+            "Fav Place to travel - Piedmont, Italy",
+          ]}
+          linkedin="https://www.linkedin.com/in/jasmine-robinson-b3950813/"
+        />
+        <Card
+          image="/images/jiang.png"
+          position="Investor"
+          name="Christine Jiang"
+          description="Jasmine is Managing Partner at Monarch Collective, a fund investing in women's sports teams, leagues, and rights. Prior to Monarch, Jasmine was a Partner at Causeway, a growth stage fund investing in sports, media, gaming and fitness. While at Causeway, Jasmine partnered with companies including Tracksmith, Niantic, Volley, FloSports, and QuintEvents. Prior to Causeway, Jasmine held investing and strategy roles at the San Francisco 49ers, Bain & Company, and The Raine Group. Jasmine received her BA from Harvard University, graduating Magna Cum Laude, and her MBA from Stanford University where she was an Arjay Miller Scholar."
+          interests={[
+            "Fav Sports Movie - Miracle",
+            "Fav Restaurant - Pammy's Cambridge",
+            "Fav Sport to Watch - Soccer",
+            "Fav Place to Travel - Maui, Hawaii",
+          ]}
+          linkedin="https://www.linkedin.com/in/christinejiang0/"
         />
       </div>
       <div className="flex justify-center text-[12px] sm:text-xs md:text-sm tracking-[2px] w-full pb-4 max-md:mt-10 px-4 sm:px-6">

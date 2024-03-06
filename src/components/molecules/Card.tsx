@@ -10,9 +10,18 @@ interface Props {
   position: string;
   name: string;
   description: string;
+  interests: string[];
+  linkedin: string;
 }
 
-const Card: FC<Props> = ({ image, position, name, description }) => {
+const Card: FC<Props> = ({
+  image,
+  position,
+  name,
+  description,
+  interests,
+  linkedin,
+}) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -25,7 +34,7 @@ const Card: FC<Props> = ({ image, position, name, description }) => {
   return (
     <div
       className="flip-card min-w-[320px] max-lg:max-w-[340px]  xl:w-[360px] h-[470px]  xl:h-[487px] rounded-md cursor-pointer"
-      onClick={() => handleFlip()}
+      // onClick={() => handleFlip()}
       onMouseEnter={() => handleFlip()}
       // onMouseLeave={() => handleFlip()}
     >
@@ -47,19 +56,26 @@ const Card: FC<Props> = ({ image, position, name, description }) => {
           <div className="mt-4 text-[15px]">{position}</div>
           <div className="flex justify-between items-end mt-[-2px]">
             <div className="font-mon-bold text-xl text-ellipsis ">{name}</div>
-            <div className="font-light text-[15px]">more</div>
+            <div
+              className="font-light text-[15px]"
+              onClick={() => handleFlip()}
+            >
+              more
+            </div>
           </div>
           <div className="h-[1px] bg-white my-2"></div>
-          <div className="flex gap-5 mb-3">
-            <div className="h-8 w-8 bg-white rounded-full p-1 flex items-center justify-center">
-              <img src="images/linkedIn.png" alt="" />
-            </div>
-            <div className="h-8 w-8 bg-white rounded-full p-1 flex items-center justify-center">
+          <div className="flex gap-5 mt-3">
+            <a href={linkedin} target="_blank" rel="noreferrer">
+              <div className="h-8 w-8 bg-white rounded-full p-1 flex items-center justify-center">
+                <img src="images/linkedIn.png" alt="" />
+              </div>
+            </a>
+            {/* <div className="h-8 w-8 bg-white rounded-full p-1 flex items-center justify-center">
               <img src="images/spotify.png" alt="" />
             </div>
             <div className="h-8 w-8 bg-white rounded-full p-1 flex items-center justify-center">
               <img src="images/heart.png" alt="" />
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -79,62 +95,62 @@ const Card: FC<Props> = ({ image, position, name, description }) => {
           <div className="h-[1px] bg-white my-3"></div>
           <div className="font-light text-sm">BACKSTORY</div>
           {/* <div className="text-xs mt-3 line-clamp-6 lg:line-clamp-4 xl:line-clamp-none xl:h-[145px]"> */}
-          <div className="text-xs mt-3 h-[130px] xl:h-[145px]">
+          <div className="text-xs mt-3 pb-3 h-[240px] lg:h-[252px] overflow-y-auto pr-3">
             {description}
           </div>
           <div className="h-[1px] bg-white my-5"></div>
           <div className="flex gap-2 mb-1">
             {/* 1st box */}
-            <div className="flex">
+            {/* <div className="flex">
               <div className="h-[66] my-[4px] w-[1px] bg-white"></div>
 
-              <div className="border-y border-y-1 py-[4px] mx-1">
+              <div className="border-y border-y-1 py-[4px] mx-1 w-[69px] overflow-hidden">
                 <div className="flex items-center justify-center h-[74px] text-[9px] lg:text-xs text-center bg-[#4A0A8A]">
-                  Lorem ipsum dolro sit amet
+                  {interests[0]}
                 </div>
               </div>
 
               <div className="h-[66] my-[4px] w-[1px] bg-white"></div>
-            </div>
+            </div> */}
 
             {/* 2nd box */}
-            <div className="flex">
+            {/* <div className="flex">
               <div className="h-[66] my-[4px] w-[1px] bg-white"></div>
 
-              <div className="border-y border-y-1 py-[4px] mx-1">
+              <div className="border-y border-y-1 py-[4px] mx-1 w-[69px] overflow-hidden">
                 <div className="flex items-center justify-center h-[74px] text-[9px] lg:text-xs text-center bg-[#87817B]">
-                  Lorem ipsum dolro sit amet
+                  {interests[1]}
                 </div>
               </div>
 
               <div className="h-[66] my-[4px] w-[1px] bg-white"></div>
-            </div>
+            </div> */}
 
             {/* 3rd box */}
-            <div className="flex">
+            {/* <div className="flex">
               <div className="h-[66] my-[4px] w-[1px] bg-white"></div>
 
-              <div className="border-y border-y-1 py-[4px] mx-1">
+              <div className="border-y border-y-1 py-[4px] mx-1 w-[69px] overflow-hidden">
                 <div className="flex items-center justify-center h-[74px] text-[9px] lg:text-xs text-center bg-[#006388]">
-                  Lorem ipsum dolro sit amet
+                  {interests[2]}
                 </div>
               </div>
 
               <div className="h-[66] my-[4px] w-[1px] bg-white"></div>
-            </div>
+            </div> */}
 
             {/* 4th box */}
-            <div className="flex">
+            {/* <div className="flex">
               <div className="h-[66] my-[4px] w-[1px] bg-white"></div>
 
               <div className="border-y border-y-1 py-[4px] mx-1">
                 <div className="flex items-center justify-center h-[74px] text-[9px] lg:text-xs text-center bg-[#87817B]">
-                  Lorem ipsum dolro sit amet
+                  {interests[3]}
                 </div>
               </div>
 
               <div className="h-[66] my-[4px] w-[1px] bg-white"></div>
-            </div>
+            </div> */}
           </div>
         </div>
       </motion.div>
