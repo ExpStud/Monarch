@@ -39,4 +39,5 @@ export interface NewsArticle {
   type: NewsArticleType;
   readTime: number;
   image: string;
+  externalUrl: string;
 }

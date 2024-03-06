@@ -85,7 +85,7 @@ const NewsItem: FC<Props> = (props: Props) => {
       </div>
       <div className="flex w-full justify-between absolute bottom-0 rounded-[4px] bg-black py-2 px-4">
         <div className="text-[15px] font-mon-semibold tracking-[2px]">
-          {article.readTime} MIN
+          {article.readTime} MIN {article.type === "article" && "READ"}
         </div>
         <div className="flex items-center">
           {article.type === "video" && <PlayIcon />}

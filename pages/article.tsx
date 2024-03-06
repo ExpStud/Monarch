@@ -35,8 +35,14 @@ const Article: NextPage = () => {
         {article && content && (
           <div className="flex flex-col gap-3 pb-[80px] pt-[60px] max-md:pt-[30px] px-20 max-md:px-1 tracking-widest">
             <div className="font-mon-bold text-3xl lg:text-center">
-              {" "}
-              {article.title}
+              <a
+                href={article.externalUrl}
+                rel="noreferrer"
+                target="_blank"
+                className="hover:underline"
+              >
+                {article.title}
+              </a>
             </div>
 
             <div className="flex max-md:flex-col font-light max-md:text-sm max-md:gap-2 max-md:justify-start max-md:w-[100%] justify-around w-[90%] self-center mt-6 tracking-[2px] whitespace-nowrap">
@@ -53,9 +59,16 @@ const Article: NextPage = () => {
               </div>
               <div className="flex">
                 WRITTEN BY:
-                <div className="underline ml-2 uppercase">
-                  {article.content.author}
-                </div>
+                <a
+                  href={content.linkedin}
+                  rel="noreferrer"
+                  target="_blank"
+                  className="hover:underline"
+                >
+                  <div className="underline ml-2 uppercase">
+                    {article.content.author}
+                  </div>
+                </a>
               </div>
               <div>{article.content.date}</div>
             </div>
@@ -78,11 +91,11 @@ const Article: NextPage = () => {
               ))}
             </div>
 
-            <div className="flex items-center mt-8 tracking-[2px] w-[90%] self-center">
-              <img className="w-28 h-28" src="images/pfp.png" alt="" />
+            {/* <div className="flex items-center mt-8 tracking-[2px] w-[90%] self-center">
+              <img className="w-28 h-28" src={content.pfp} alt="" />
 
               <div className="flex flex-col justify-center ml-6 gap-4">
-                <div>SAMANTHA MASUNGA</div>
+                <div>{content.author}</div>
                 <div className="flex text-xs max-md:gap-2 gap-8 whitespace-nowrap flex-wrap">
                   {content?.twitter && (
                     <a href={content.twitter} rel="noreferrer" target="_blank">
@@ -112,7 +125,7 @@ const Article: NextPage = () => {
                   )}
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         )}
       </div>

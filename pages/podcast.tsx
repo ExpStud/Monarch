@@ -51,10 +51,17 @@ const Podcast: NextPage = () => {
               </div>
               <div className="flex">
                 CREATED BY:
-                <div className="underline ml-2 uppercase">
-                  {" "}
-                  {article.content.author}
-                </div>
+                <a
+                  href={article.externalUrl}
+                  rel="noreferrer"
+                  target="_blank"
+                  className="hover:underline"
+                >
+                  <div className="underline ml-2 uppercase">
+                    {" "}
+                    {article.content.author}
+                  </div>
+                </a>
               </div>
               <div>{article.content.date}</div>
             </div>
@@ -66,8 +73,17 @@ const Podcast: NextPage = () => {
                   src={`/images/${content.image}`}
                   alt="Podcast"
                 />
+                <iframe
+                  allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+                  frameBorder="0"
+                  height="175"
+                  // style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
+                  className="w-full h-full max-h-[225px]  mt-4"
+                  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                  src="https://embed.podcasts.apple.com/us/podcast/soccer-mom-to-sports-magnate/id1572017407?i=1000630808166"
+                ></iframe>
                 <div className="flex text-xs tracking-[2px] mt-1.5">
-                  <div className="grow">10 MIN</div>
+                  {/* <div className="grow">10 MIN</div>
                   <div className="flex items-center">
                     PLAY
                     <PlayIcon
@@ -76,7 +92,7 @@ const Podcast: NextPage = () => {
                       height={16}
                       width={16}
                     />
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
