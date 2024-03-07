@@ -64,7 +64,7 @@ const articleContent_1: ArticleContent = {
     "With this investment in the NWSL's 15th and newest club, Kara Nortman is hopeful that this is only the beginning of Monarch's reign.",
   ],
   twitter: "https://twitter.com",
-  linkedin: "https://linkedin.com",
+  linkedin: "https://boardroom.tv/author/shlomo-sprung/",
   instagram: "https://instagram.com",  
   email: "example@email.com",  
 }
@@ -187,7 +187,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     title: "Boston's NWSL ownership made 'full sprint' for its bid: An investor explains how it came together",
     content: articleContent_3,
     type: "article",
-    readTime: 15.34,
+    readTime: 7,
     image: "ballon.jpg",
     externalUrl: "https://theathletic.com/4882270/2023/09/20/boston-nwsl-2026/"
   },
