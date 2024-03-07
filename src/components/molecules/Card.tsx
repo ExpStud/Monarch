@@ -60,11 +60,11 @@ const Card: FC<Props> = ({
               className="font-light text-[15px]"
               onClick={() => handleFlip()}
             >
-              more
+              click to flip
             </div>
           </div>
           <div className="h-[1px] bg-white my-2"></div>
-          <div className="flex gap-5 mt-3">
+          <div className="flex gap-5 mt-3.5">
             <a href={linkedin} target="_blank" rel="noreferrer">
               <div className="h-8 w-8 bg-white rounded-full p-1 flex items-center justify-center">
                 <img src="images/linkedIn.png" alt="" />
