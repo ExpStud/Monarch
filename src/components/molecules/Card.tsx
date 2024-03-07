@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import SpaceCity from "../assets/SpaceCity.jpg";
 import SpaceCity1 from "../assets/SpaceCity1.jpg";
@@ -65,11 +65,20 @@ const Card: FC<Props> = ({
           </div>
           <div className="h-[1px] bg-white my-2"></div>
           <div className="flex gap-5 mt-3.5">
-            <a href={linkedin} target="_blank" rel="noreferrer">
-              <div className="h-8 w-8 bg-white rounded-full p-1 flex items-center justify-center">
-                <img src="images/linkedIn.png" alt="" />
-              </div>
-            </a>
+            <AnimatePresence>
+              {!isFlipped && (
+                <motion.a
+                  href={linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  exit={{ opacity: 0, transition: { duration: 1 } }}
+                >
+                  <div className="h-8 w-8 bg-white rounded-full p-1 flex items-center justify-center">
+                    <img src="images/linkedIn.png" alt="" />
+                  </div>
+                </motion.a>
+              )}
+            </AnimatePresence>
             {/* <div className="h-8 w-8 bg-white rounded-full p-1 flex items-center justify-center">
               <img src="images/spotify.png" alt="" />
             </div>
