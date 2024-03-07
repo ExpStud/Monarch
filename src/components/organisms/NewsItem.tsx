@@ -59,16 +59,6 @@ const NewsItem: FC<Props> = (props: Props) => {
         }`}
         onLoadingComplete={() => setImageLoaded(true)}
       />
-      {/* <ImageShimmer
-        src={`/images/${article.image}`}
-        alt="Background"
-        width={layout === 0 ? 498 : layout === 1 ? 759 : 243}
-        height={layout === 0 ? 498 : layout === 1 ? 243 : 243}
-        // fill={true}
-        // objectFit="cover"
-        // style={{ objectFit: "cover" }}
-        // className={`transition-500 ${didHover ? "scale-110" : ""}`}
-      /> */}
       <div
         className={`absolute font-mon-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4 text-[28px]  
           ${
@@ -79,7 +69,7 @@ const NewsItem: FC<Props> = (props: Props) => {
               : ""
           }`}
       >
-        <p className="line-clamp-2">
+        <p className="line-clamp-2 pb-1">
           {layout === 2 ? capitalizeFirstLetter(article.type) : article.title}
         </p>
       </div>
