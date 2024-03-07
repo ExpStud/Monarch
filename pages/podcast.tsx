@@ -33,7 +33,7 @@ const Podcast: NextPage = () => {
   return (
     <PageLayout pageIndex={1} footer={true}>
       <HeaderContent menuType={"relative"} pageIndex={3} section={-1} />
-      <div className="mt-10 flex flex-col items-center px-20 max-lg:px-6 tracking-widest">
+      <div className="mt-10 flex flex-col items-center px-20 max-lg:px-6 tracking-widest max-w-[1800px] self-center">
         <BackButton className="self-start mt-[2rem] " />
         {article && content && (
           <div className="flex flex-col gap-3 pb-[80px] pt-[60px] max-lg:pt-[30px] w-full px-20 max-lg:px-1 tracking-widest">
