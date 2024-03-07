@@ -38,7 +38,7 @@ const articleContent_0: ArticleContent = {
     "“There is tremendous value in women's leagues, teams, and athletes,that can positively impact the bottom line,” says Leighton of the Women's Sports Foundation. “It's high time for women's sports investments to shift from being a ‘trend' to being standard practice—that's just smart business, period.”",
   ],
    twitter: "https://twitter.com/AbigailJHess",
-   linkedin: "https://www.linkedin.com/in/abigail-johnson-hess/",
+   linkedin: "https://www.fastcompany.com/user/ajhess",
 }
 const articleContent_1: ArticleContent = {
   author: "SHLOMO SPRUNG",
@@ -116,7 +116,7 @@ const articleContent_2: ArticleContent = {
     "At Monarch, we plan to show up with capital, a collaborative mindset, and joy to be a part of growing our women's sports community.    ",
   ],
   twitter: "https://twitter.com/karanortman",
-  linkedin: "https://www.linkedin.com/in/karanortman/",
+  linkedin: "https://karanortman.medium.com/",
 }
 const articleContent_3: ArticleContent = {
   author: "STEPH YANG",
@@ -132,7 +132,7 @@ const articleContent_3: ArticleContent = {
     "...",
   ],
   twitter: "https://twitter.com/thrace",
-  linkedin: "https://www.linkedin.com/in/stephanieyangjd/",
+  linkedin: "https://theathletic.com/author/steph-yang/",
 }
 const videoContent: VideoContent = {
   author: "Samantha Musanga",

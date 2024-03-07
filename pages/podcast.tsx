@@ -33,11 +33,11 @@ const Podcast: NextPage = () => {
   return (
     <PageLayout pageIndex={1} footer={true}>
       <HeaderContent menuType={"relative"} pageIndex={3} section={-1} />
-      <div className="mt-10 flex flex-col items-center px-20 max-lg:px-6 tracking-widest max-w-[1800px] self-center">
+      <div className="mt-20 lg:mt-10 flex flex-col items-center px-20 max-lg:px-6 tracking-widest max-w-[1800px] self-center">
         <BackButton className="self-start mt-[2rem] " />
         {article && content && (
           <div className="flex flex-col gap-3 pb-[80px] pt-[60px] max-lg:pt-[30px] w-full px-20 max-lg:px-1 tracking-widest">
-            <div className="flex max-lg:items-center max-lg:flex-col max-lg:text-sm max-lg:gap-2 max-lg:justify-start max-lg:w-[100%] justify-around w-[90%] self-center mt-6 tracking-[2px] whitespace-nowrap">
+            <div className="flex sm:items-center max-lg:flex-col max-lg:text-sm max-lg:gap-2 max-lg:justify-start max-lg:w-[100%] justify-around w-[90%] self-center mt-6 tracking-[2px] whitespace-nowrap">
               <div className="flex items-center">
                 {article.readTime} MIN PODCAST
                 <div className="ml-2">
@@ -69,7 +69,7 @@ const Podcast: NextPage = () => {
             <div className="flex max-lg:flex-col max-lg:items-center mt-10 px-6 max-lg:px-0 gap-4 cursor-pointer">
               <div className="shrink-0 max-lg:mb-3">
                 <img
-                  className="w-[300px]"
+                  className="w-[400px] lg:w-[300px]"
                   src={`/images/${content.image}`}
                   alt="Podcast"
                 />

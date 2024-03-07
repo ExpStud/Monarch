@@ -34,8 +34,8 @@ const Card: FC<Props> = ({
   return (
     <div
       className="flip-card min-w-[320px] max-lg:max-w-[340px]  xl:w-[360px] h-[470px]  xl:h-[487px] rounded-md cursor-pointer"
-      // onClick={() => handleFlip()}
-      onMouseEnter={() => handleFlip()}
+      onClick={() => handleFlip()}
+      // onMouseEnter={() => handleFlip()}
       // onMouseLeave={() => handleFlip()}
     >
       <motion.div
