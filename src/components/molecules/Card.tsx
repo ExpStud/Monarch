@@ -71,7 +71,9 @@ const Card: FC<Props> = ({
                   href={linkedin}
                   target="_blank"
                   rel="noreferrer"
-                  exit={{ opacity: 0, transition: { duration: 1 } }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1, transition: { duration: 0.4 } }}
+                  exit={{ opacity: 0, transition: { duration: 0.4 } }}
                 >
                   <div className="h-8 w-8 bg-white rounded-full p-1 flex items-center justify-center">
                     <img src="images/linkedIn.png" alt="" />
