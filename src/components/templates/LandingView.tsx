@@ -1,13 +1,10 @@
-import {
-  exitAnimation,
-  introVideoAnimation,
-  introImageAnimation,
-} from "@constants";
-import { motion, useInView } from "framer-motion";
+import { exitAnimation, longExitAnimation } from "@constants";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import { FC, useEffect, useRef, useState } from "react";
 import { useWindowSize } from "@hooks";
 import { useRouter } from "next/router";
 import { LandingHeader } from "@components";
+import Image from "next/image";
 
 interface Assets {
   src: string;
@@ -100,57 +97,64 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
         } flex flex-col items-center justify-end`}
         // {...exitAnimation}
       >
-        {/* <AnimatePresence mode="wait"> */}
-        {!didRender && (
-          <motion.video
-            ref={introRef}
-            autoPlay
-            muted
-            playsInline
-            key="video"
-            className={`h-full w-[100vw] inset-0 -z-10 scale-[1.5] absolute `}
-            style={{ objectFit: "contain" }}
-            onEnded={() => {
-              // setDidRender(true);
-              setAnimationEnded(true);
-            }}
-            // {...introVideoAnimation}
-            {...exitAnimation}
-          >
-            <source
-              src={
-                winWidth < 640
-                  ? "/videos/intro/intro-sm.mov"
-                  : "/videos/intro/intro.mov"
-              }
-              type="video/mp4"
-            />
-          </motion.video>
-        )}
-        {didRender && (
-          <motion.div
-            className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
-            key="image"
-            // {...exitAnimation}
-          >
-            <motion.img
+        <AnimatePresence mode="wait">
+          {!animationEnded && (
+            <motion.video
+              ref={introRef}
+              autoPlay
+              muted
+              playsInline
+              key="video"
+              className={`h-full w-[100vw] inset-0 -z-10 scale-[1.5] absolute `}
+              style={{ objectFit: "contain" }}
+              onEnded={() => {
+                // setDidRender(true);
+                setAnimationEnded(true);
+              }}
+              // {...introVideoAnimation}
               {...exitAnimation}
-              src="/images/logo-lg.svg"
+            >
+              <source
+                src={
+                  winWidth < 640
+                    ? "/videos/intro/intro-sm.mov"
+                    : "/videos/intro/intro.mov"
+                }
+                type="video/mp4"
+              />
+            </motion.video>
+          )}
+          {animationEnded && (
+            <motion.div
+              className="absolute left-1/2 top-[54.5%] transform -translate-x-1/2 -translate-y-1/2 col-centered gap-14 lg:gap-8"
+              key="image"
+              {...longExitAnimation}
+            >
+              {/* <motion.img
+              {...exitAnimation}
+              src="/images/logo-mission.svg"
               width={458}
               height={354}
               alt="Monarch Logo"
               className="scale-125 md:scale-100 lg:px-6 -z-[11]"
-            />
-            {/* <Image
-              // {...introImageAnimation}
-              src="/images/logo-lg.png"
-              width={458 * 1.1}
-              height={354 * 1.1}
-              alt="Monarch Logo"
-              className="a px-10 -z-[11]"
             /> */}
-          </motion.div>
-        )}
+              <Image
+                // {...introImageAnimation}
+                src="/images/logo-mission-bold.svg"
+                width={458}
+                height={354}
+                alt="Monarch Logo"
+                className="scale-125 md:scale-100 lg:px-6 -z-[11]"
+              />
+              <p className="text-center text-sm lg:text-[14px]  tracking-[2px] w-full  min-w-[300px] max-w-[750px]">
+                Our mission is to build women&apos;s sports institutions as
+                modern communities with the belief that we can learn from sports
+                best practices while building electrifying experiences that feel
+                different and representative of this time in history.{" "}
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
         {/* </AnimatePresence> */}
 
         <div

@@ -129,7 +129,7 @@ const articleContent_3: ArticleContent = {
     "Robinson spoke to The Athletic before the announcement to discuss why she and Monarch decided to come on board as investors, her view of the evolving women’s soccer landscape and Boston’s next moves as it prepares for its 2026 debut.",
     "This interview has been lightly edited for length and clarity.",
     "How did you get involved with Monarch and then with Boston? ",
-    "...",
+    "(Open article to read more)",
   ],
   twitter: "https://twitter.com/thrace",
   linkedin: "https://theathletic.com/author/steph-yang/",

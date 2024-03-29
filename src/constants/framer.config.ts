@@ -42,6 +42,13 @@ export const tapAnimation = {
 };
 
 //opacity animations
+
+export const longExitAnimation = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+  transition: { duration: 1.2, ease: "easeInOut",  },
+};
 export const exitAnimation = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },

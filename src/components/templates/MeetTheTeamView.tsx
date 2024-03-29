@@ -19,14 +19,7 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
         section={0}
         fullpageApi={fullpageApi}
       />
-      <h1 className="text-3xl tracking-[6px] py-10 md:pt-20">OUR TEAM</h1>
-
-      <p className="text-center lg:w-[950px] pb-12 px-6 lg:px-0">
-        Our mission is to build women’s sports institutions as modern
-        communities with the belief that we can learn from sports best practices
-        while building electrifying experiences that feel different and
-        representative of this time in history.
-      </p>
+      <h1 className="text-3xl tracking-[6px] py-10 md:py-20">OUR TEAM</h1>
 
       <div className="h-full flex flex-col lg:flex-row w-[90%] gap-10 text-[#FAF6EE] justify-center items-center lg:items-start pb-10">
         <Card
