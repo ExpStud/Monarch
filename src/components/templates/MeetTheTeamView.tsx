@@ -19,7 +19,14 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
         section={0}
         fullpageApi={fullpageApi}
       />
-      <h1 className="text-3xl tracking-[6px] py-10 md:py-20">OUR TEAM</h1>
+      <h1 className="text-3xl tracking-[6px] py-10 md:pt-20">OUR TEAM</h1>
+
+      <p className="text-center lg:w-[950px] pb-12 px-6 lg:px-0">
+        Our mission is to build women’s sports institutions as modern
+        communities with the belief that we can learn from sports best practices
+        while building electrifying experiences that feel different and
+        representative of this time in history.
+      </p>
 
       <div className="h-full flex flex-col lg:flex-row w-[90%] gap-10 text-[#FAF6EE] justify-center items-center lg:items-start pb-10">
         <Card
@@ -28,12 +35,19 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
           name="Kara Nortman"
           description="Kara is Managing Partner of Monarch Collective, an investment platform dedicated to accelerating equity in global sport. Kara is a co-founder of Angel City Football Club, which has quickly risen to become the most valuable women's soccer team in the world. Prior to Monarch, Kara was a Managing Partner at Upfront Ventures, where she worked for eight years. Before joining Upfront, Kara spent close to seven years at IAC where she co-headed the M&A group and later served in operating capacities as the SVP and General Manager of Urbanspoon and Citysearch. She served on the board of IAC's mobile technology incubator (Hatch Labs), where she incubated Tinder in their seed round. Earlier in her career Kara worked at Battery Ventures, Microsoft and Morgan Stanley. Kara is also a founding member of All Raise, a VC-led Nonprofit dedicated to increased diversity in funders and founders, and she advised  the Women's National Soccer Team Players Association during their pay equity fight. Kara earned an AB in Politics from Princeton University and an MBA from Stanford University. Kara resides in Los Angeles with her husband and three daughters."
           interests={[
-            "Fav new Sneaker",
-            "Current Song",
+            "Favorite Sneaker",
+            "Favorite Song",
             "Favorite Book ",
-            "Best Enneagram Quiz",
+            "Best Enneagram Test",
+          ]}
+          interestsUrl={[
+            "https://www.nikesb.com/the-vault/sail-box-era/rayssa",
+            "https://open.spotify.com/track/17phhZDn6oGtzMe56NuWvj?si=QqOctg52TmynNQ819ZaL_Q&nd=1&dlsi=91854fe6f37243cb",
+            "https://www.amazon.com/dp/1524854026?_encoding=UTF8&psc=1&ref_=cm_sw_r_cp_ud_dp_98FZZBHN7D2RJYWCMSEN",
+            "https://tests.enneagraminstitute.com/",
           ]}
           linkedin="https://www.linkedin.com/in/karanortman/"
+          spotify="https://open.spotify.com/playlist/0bnRvoIhusZO9nWQwKRQIp"
         />
         <Card
           image="/images/woman-3.png"
@@ -41,12 +55,19 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
           name="Jasmine Robinson"
           description="Christine is an Investor at Monarch Collective, an investment platform dedicated to accelerating equity in global sport. Previously, Christine was Director of Media at Major League Soccer where she supported all aspects of MLS's landmark partnership with Apple TV in her role as lead project manager for broadcast production and content. Prior to that, she worked on MLS's League Growth & Operations team where she focused on league expansion via new teams, stadiums, and properties, including the launch of MLS NEXT Pro, MLS's professional development league. Before MLS, Christine held strategy roles at the Premier Lacrosse League, the Philadelphia 76ers/HBSE, and Bain & Company. Christine received her MBA from Harvard Business School and her BS from MIT, where she was a member of the varsity women's lacrosse team. Originally from Michigan, she now resides in Brooklyn, New York."
           interests={[
-            "Fav Outdoor Activity - Golf",
-            "Fav Restaurant - Macchialina",
-            "Fav Sport - American Football",
-            "Fav Place to travel - Piedmont, Italy",
+            "Favorite Activity",
+            "Favorite Restaurant",
+            "Favorite Sport",
+            "Favorite Travel Destination",
+          ]}
+          interestsUrl={[
+            "https://www.lpga.com/",
+            "https://www.macchialina.com/",
+            "https://nfl.com/",
+            "https://meetpiemonte.com/en/blog/the-piedmont-region-of-italy",
           ]}
           linkedin="https://www.linkedin.com/in/jasmine-robinson-b3950813/"
+          spotify="https://open.spotify.com/playlist/0bnRvoIhusZO9nWQwKRQIp"
         />
         <Card
           image="/images/jiang.png"
@@ -54,12 +75,19 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
           name="Christine Jiang"
           description="Jasmine is Managing Partner at Monarch Collective, a fund investing in women's sports teams, leagues, and rights. Prior to Monarch, Jasmine was a Partner at Causeway, a growth stage fund investing in sports, media, gaming and fitness. While at Causeway, Jasmine partnered with companies including Tracksmith, Niantic, Volley, FloSports, and QuintEvents. Prior to Causeway, Jasmine held investing and strategy roles at the San Francisco 49ers, Bain & Company, and The Raine Group. Jasmine received her BA from Harvard University, graduating Magna Cum Laude, and her MBA from Stanford University where she was an Arjay Miller Scholar."
           interests={[
-            "Fav Sports Movie - Miracle",
-            "Fav Restaurant - Pammy's Cambridge",
-            "Fav Sport to Watch - Soccer",
-            "Fav Place to Travel - Maui, Hawaii",
+            "Favorite Movie",
+            "Favorite Restaurant",
+            "Favorite Sport",
+            "Favorite Travel Destination",
+          ]}
+          interestsUrl={[
+            "https://www.imdb.com/title/tt0349825/",
+            "https://www.pammyscambridge.com/",
+            "https://angelcity.com/",
+            "https://www.gohawaii.com/islands/maui",
           ]}
           linkedin="https://www.linkedin.com/in/christinejiang0/"
+          spotify="https://open.spotify.com/playlist/0bnRvoIhusZO9nWQwKRQIp"
         />
       </div>
       <div className="flex justify-center text-[12px] sm:text-xs md:text-sm tracking-[2px] w-full pb-4 max-md:mt-10 px-4 sm:px-6">
