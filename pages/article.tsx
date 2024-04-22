@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { PageLayout, BackButton, HeaderContent, BookIcon } from "@components";
 import { NextPage } from "next";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { ArticleContent, NewsArticle } from "@types";
@@ -29,9 +28,19 @@ const Article: NextPage = () => {
 
   return (
     <PageLayout pageIndex={1} footer={true}>
-      <HeaderContent menuType={"relative"} pageIndex={3} section={-1} />
-      <div className="mt-10 flex flex-col items-center px-20 max-md:px-6 tracking-widest max-w-[1600px] self-center">
-        <BackButton className="self-start mt-[2rem] " />
+      {/* <HeaderContent pageIndex={3} section={-1} /> */}
+      {content && (
+        <div className="relative w-screen h-auto mt-[77px] aspect-[3.5/1]">
+          <Image
+            src={`/images${content.image}`}
+            alt="Article"
+            fill
+            className="object-cover z-10"
+          />
+        </div>
+      )}
+      <div className="flex flex-col items-center px-20 max-md:px-6 tracking-widest max-w-[1600px] self-center">
+        {/* <BackButton className="self-start mt-[2rem] " /> */}
         {article && content && (
           <div className="flex flex-col gap-3 pb-[80px] pt-[60px] max-md:pt-[30px] px-20 max-md:px-1 tracking-widest">
             <div className="font-mon-bold text-3xl lg:text-center">
@@ -45,7 +54,7 @@ const Article: NextPage = () => {
               </a>
             </div>
 
-            <div className="flex max-md:flex-col font-light max-md:text-sm max-md:gap-2 max-md:justify-start max-md:w-[100%] justify-around w-[90%] self-center mt-6 tracking-[2px] whitespace-nowrap">
+            <div className="flex max-md:flex-col font-light max-md:text-sm max-md:gap-2 max-md:justify-start  w-[100%] justify-around  self-center mt-6 tracking-[2px] whitespace-nowrap">
               <div className="flex font-light items-center">
                 {article.readTime} MIN READ
                 <div className="ml-2">
@@ -73,15 +82,9 @@ const Article: NextPage = () => {
               <div>{article.content.date}</div>
             </div>
 
-            <img
-              className="mt-3"
-              src={`/images/${content.image}`}
-              alt="Article"
-            />
-
-            <div className="text-xs font-light mt-[-2px]">
+            {/* <div className="text-xs font-light mt-[-2px]">
               {content.imageCaption}
-            </div>
+            </div> */}
 
             <div className="border-x-[1.5px] px-10 max-md:px-3 mt-10 border-black border-opacity-[20%]">
               {content?.paragraphs?.map((p, i) => (

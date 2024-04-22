@@ -124,7 +124,7 @@ const LandingView: FC<Props> = ({ setShowSite }) => {
         </AnimatePresence>
         {/* </AnimatePresence> */}
 
-        <div
+        {/* <div
           className={
             (animationEnded ? "opacity-100 " : "opacity-0 ") +
             "transition-opacity ease-in duration-500 relative"
@@ -133,7 +133,7 @@ const LandingView: FC<Props> = ({ setShowSite }) => {
           <div className="lg:flex justify-center text-[12px] sm:text-xs md:text-sm tracking-[2px] w-full pb-4 max-md:mt-10 px-4 sm:px-6">
             SCROLL
           </div>
-        </div>
+        </div> */}
       </motion.div>
     </div>
   );
