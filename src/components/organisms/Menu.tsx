@@ -1,6 +1,6 @@
 import { Dispatch, FC, SetStateAction, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { IconBar, NavItem } from "@components";
+import { CloseIcon, IconBar, NavItem } from "@components";
 import Link from "next/link";
 import { useWindowSize } from "@hooks";
 import { fadeVariants } from "@constants";
@@ -9,37 +9,21 @@ import { useOutsideAlerter } from "@hooks";
 interface Props {
   toggleMenu: Dispatch<SetStateAction<boolean>>;
   open: boolean;
-  menuType?: String;
-  fullpageApi: any;
+  navigate: (pageId: number) => void;
+  currentPage: "team" | "news" | "home";
 }
 
 const Menu: FC<Props> = (props: Props) => {
-  const { toggleMenu, open, fullpageApi } = props;
-  const [winWidth, winHeight] = useWindowSize();
-  const timeoutRef = useRef<NodeJS.Timeout>();
+  const { toggleMenu, open, navigate, currentPage } = props;
+
+  const [winWidth] = useWindowSize();
   const ref = useRef(null);
 
   useOutsideAlerter(ref, () => toggleMenu(false));
-
-  const isTablet: boolean = winWidth < 900;
   //stop page scroll (when modal or menu open)
   useEffect(() => {
     if (open) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "auto";
-    // if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    // if (open) {
-    //   timeoutRef.current = setTimeout(() => {
-    //     document.body.style.overflow = "hidden";
-    //   }, 700);
-    // } else {
-    //   document.body.style.overflow = "auto";
-    // }
-
-    // return () => {
-    //   if (timeoutRef.current) {
-    //     clearTimeout(timeoutRef.current);
-    //   }
-    // };
   }, [open]);
 
   return (
@@ -47,22 +31,25 @@ const Menu: FC<Props> = (props: Props) => {
       {open && (
         <motion.aside
           key="main-menu"
-          // onMouseLeave={() => toggleMenu(false)}
-          initial={{ width: 0, opacity: 0 }}
-          animate={{ width: isTablet ? winWidth - 15 : 669, opacity: 1 }}
+          initial={{ width: 0, opacity: 1 }}
+          animate={{ width: winWidth, opacity: 1 }}
           exit={{
             width: 0,
             transition: { duration: 0.5 },
             opacity: 1,
           }}
           transition={{ duration: 0.7 }}
-          className={
-            (props.menuType == "fixed" ? "absolute" : "absolute") +
-            " top-0 bg-custom-black right-0 z-40 lg:shadow-xl font-daysOne lg:shadow-gray-600"
-          }
+          className="fixed top-0 left-0 z-50 max-w-screen h-screen overflow-y-hidden bg-custom-black"
           onClick={() => toggleMenu(false)}
           ref={ref}
         >
+          <div
+            key="close-icon"
+            onClick={() => toggleMenu(false)}
+            className="cursor-pointer absolute right-4 top-3"
+          >
+            <CloseIcon />
+          </div>
           <motion.div
             className={`px-4 sm:px-6 lg:px-10 py-6 h-screen relative`}
             variants={fadeVariants}
@@ -70,16 +57,31 @@ const Menu: FC<Props> = (props: Props) => {
             animate="open"
             exit="closed"
           >
-            <div className="absolute left-1/2 top-[45%] transform whitespace-nowrap -translate-x-1/2 -translate-y-1/2  flex flex-col items-center justify-start text-2xl sm:text-2xl gap-2">
-              {/* <NavItem href="/meet-the-team">MEET THE TEAM</NavItem>
-              <NavItem href="/news">NEWS</NavItem> */}
-              <div>MEET THE TEAM</div>
-              <div>NEWS</div>
-              <NavItem isExternal href="https://monarch.arkpes.com/login">
+            <div className="flex flex-col items-center text-2xl mt-32 gap-10 h-full w-full">
+              <div
+                onClick={() => navigate(2)}
+                className={
+                  currentPage === "team" ? "text-mon-cream" : "text-mon-purple"
+                }
+              >
+                MEET THE TEAM
+              </div>
+              <div
+                onClick={() => navigate(3)}
+                className={
+                  currentPage === "news" ? "text-mon-cream" : "text-mon-purple"
+                }
+              >
+                NEWS
+              </div>
+              <Link
+                target="_blank"
+                href="https://monarch.arkpes.com/login"
+                className="text-mon-purple"
+              >
                 INVESTOR PORTAL
-              </NavItem>
+              </Link>
             </div>
-            <IconBar className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 bottom-3" />
           </motion.div>
         </motion.aside>
       )}

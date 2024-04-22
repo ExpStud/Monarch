@@ -16,8 +16,6 @@ interface Props {
 }
 
 const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
-  const [didRender, setDidRender] = useState<boolean | null>(null);
-
   const [winWidth] = useWindowSize();
   const mobileView = winWidth <= 1024;
   //refs
@@ -26,7 +24,6 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
 
   const isInView = useInView(mainRef);
   const [animationEnded, setAnimationEnded] = useState(false);
-  const showLoop = false;
 
   const { query } = useRouter();
 
@@ -42,10 +39,7 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
     }
   }, [query]);
 
-  // console.log("fullpageApi ", fullpageApi);
-
   useEffect(() => {
-    // fullpageApi.fullpageApi.destroy("all");
     if (animationEnded) {
       setShowSite(true);
       if (fullpageApi.fullpageApi) {
@@ -64,19 +58,15 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
 
   //handles only showing video on first render
   useEffect(() => {
-    console.log("isInView ", isInView);
     const rendered = sessionStorage.getItem("didRender");
     console.log("didRender ", rendered);
     if (rendered) {
       setAnimationEnded(true);
-      setDidRender(true);
-    } else {
-      setDidRender(false);
     }
 
-    // return () => {
-    //   sessionStorage.setItem("didRender", "true");
-    // };
+    return () => {
+      // sessionStorage.setItem("didRender", "true");
+    };
   }, [isInView]);
 
   return (
@@ -87,7 +77,7 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
           "transition-opacity  ease-in duration-500 text-xl"
         }
       >
-        <LandingHeader fullpageApi={fullpageApi} setDidRender={setDidRender} />
+        <LandingHeader fullpageApi={fullpageApi} />
       </div>
 
       <motion.div

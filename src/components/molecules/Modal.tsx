@@ -17,10 +17,10 @@ const Modal: FC<Props> = (props: Props) => {
   } = props;
 
   //stop page scroll (when modal or menu open)
-  useEffect(() => {
-    if (show) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "auto";
-  }, [show]);
+  // useEffect(() => {
+  //   if (show) document.body.style.overflow = "hidden";
+  //   else document.body.style.overflow = "auto";
+  // }, [show]);
 
   return (
     <motion.div

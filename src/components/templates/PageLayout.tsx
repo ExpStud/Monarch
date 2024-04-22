@@ -41,6 +41,7 @@ const PageLayout: FC<Props> = (props: Props) => {
   };
 
   return (
+    <>
     <div
       className={`flex flex-col min-h-[100svh] h-full justify-between overflow-x-hidden ${
         fixed ? "fixed inset-0" : absolute ? "absolute inset-0" : "relative"
@@ -80,6 +81,7 @@ const PageLayout: FC<Props> = (props: Props) => {
         </AnimatePresence>
       </ViewContext.Provider>
     </div>
+    </>
   );
 };
 export default PageLayout;

@@ -42,10 +42,10 @@ const SplashScreen: FC<Props> = (props: Props) => {
   }, [setShowView, showAnimation]);
 
   //stop page scroll (when modal or menu open)
-  useEffect(() => {
-    if (showAnimation) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "auto";
-  }, [showAnimation]);
+  // useEffect(() => {
+  //   if (showAnimation) document.body.style.overflow = "hidden";
+  //   else document.body.style.overflow = "auto";
+  // }, [showAnimation]);
 
   return (
     <AnimatePresence mode="wait">

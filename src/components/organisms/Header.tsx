@@ -31,24 +31,6 @@ const Header: FC<Props> = (props: Props) => {
   const scrollRef = useRef<number>();
   const { scrollY, scrollYProgress } = useScroll();
   const height = 104;
-  const headerVariants: Variants = {
-    show: {
-      y: 0,
-      transition: {
-        delay: 0.25,
-        duration: 0.4,
-        ease: "easeInOut",
-      },
-    },
-    hidden: {
-      y: -height,
-      transition: {
-        delay: 0.25,
-        duration: 0.4,
-        ease: "easeInOut",
-      },
-    },
-  };
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     // if (latest > 0.95) setAnimateHeader(true);
@@ -91,14 +73,14 @@ const Header: FC<Props> = (props: Props) => {
     <header
       className={`max-md:!relative ${menuType} top-0 transition-all duration-500 bg-[#FAF6EE] z-50`}
     >
-      {winWidth >= 768 && (
-        <HeaderContent
-          menuType={menuType}
-          pageIndex={props.pageIndex}
-          fullpageApi={fullpageApi}
-          section={section}
-        />
-      )}
+      {/* {winWidth >= 768 && ( */}
+      <HeaderContent
+        menuType={menuType}
+        pageIndex={props.pageIndex}
+        fullpageApi={fullpageApi}
+        section={section}
+      />
+      {/* )} */}
     </header>
   );
 };
