@@ -45,7 +45,7 @@ const LandingView: FC<Props> = ({ setShowSite }) => {
   //handles only showing video on first render
   useEffect(() => {
     const rendered = sessionStorage.getItem("didRender");
-    console.log("didRender ", rendered);
+    // console.log("didRender ", rendered);
     if (rendered) {
       setAnimationEnded(true);
     }
@@ -57,15 +57,6 @@ const LandingView: FC<Props> = ({ setShowSite }) => {
 
   return (
     <div className="h-[100svh] overflow-hidden" ref={mainRef}>
-      <div
-        className={
-          (animationEnded ? "opacity-100 " : "opacity-0 ") +
-          "transition-opacity  ease-in duration-500 text-xl"
-        }
-      >
-        <LandingHeader />
-      </div>
-
       <motion.div
         key="landing"
         className={`relative w-full ${

@@ -2,14 +2,14 @@ import { FC } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { enterAnimation } from "@constants";
+import { useRouter } from "next/router";
 
 interface Props {
-  fullpageApi: any;
   callback?: () => void;
 }
 const Logo: FC<Props> = (props: Props) => {
-  const { fullpageApi, callback } = props;
-
+  const { callback } = props;
+  const router = useRouter();
   return (
     <motion.div
       className="my-0 flex items-center gap-2 cursor-pointer"
@@ -17,7 +17,9 @@ const Logo: FC<Props> = (props: Props) => {
       onClick={() => {
         if (callback) {
           callback();
-        } else fullpageApi.fullpageApi.moveTo(1);
+        } else {
+          router.push("/");
+        }
       }}
     >
       <Image

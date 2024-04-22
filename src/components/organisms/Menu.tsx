@@ -61,7 +61,7 @@ const Menu: FC<Props> = (props: Props) => {
               <div
                 onClick={() => navigate(2)}
                 className={
-                  currentPage === "team" ? "text-mon-cream" : "text-mon-purple"
+                  currentPage === "team" ? "text-mon-purple" : "text-mon-purple"
                 }
               >
                 MEET THE TEAM
@@ -69,7 +69,7 @@ const Menu: FC<Props> = (props: Props) => {
               <div
                 onClick={() => navigate(3)}
                 className={
-                  currentPage === "news" ? "text-mon-cream" : "text-mon-purple"
+                  currentPage === "news" ? "text-mon-purple" : "text-mon-purple"
                 }
               >
                 NEWS
