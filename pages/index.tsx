@@ -1,5 +1,4 @@
 import {
-  PageLayout,
   LandingView,
   Footer,
   Header,
@@ -9,7 +8,6 @@ import {
 } from "@components";
 import { NextPage } from "next";
 import { useState } from "react";
-import ReactFullpage from "@fullpage/react-fullpage";
 
 const Home: NextPage = () => {
   const [assets, setAssets] = useState<boolean[]>([false]);
@@ -23,47 +21,25 @@ const Home: NextPage = () => {
         url="https://addurl.xyz" // no backslash at the end
         twitter="Monarch_Coll"
       />
-      <ReactFullpage
-        licenseKey={"YOUR_KEY_HERE"}
-        scrollingSpeed={1000}
-        credits={{ enabled: false }}
-        render={(fullpageApi) => {
-          return (
-            <ReactFullpage.Wrapper>
-              <section className="section overflow-hidden">
-                <LandingView
-                  fullpageApi={fullpageApi}
-                  setShowSite={setShowSite}
-                />
-              </section>
-              {/* {showSite && ( */}
-              <>
-                <div
-                  style={{ opacity: showSite ? "1" : "0" }}
-                  // className="section overflow-x-hidden xl:h-screen xl:overflow-y-hidden"
-                  className="section"
-                >
-                  <MeetTheTeamView fullpageApi={fullpageApi} />
-                </div>
-                <div
-                  style={{ opacity: showSite ? "1" : "0" }}
-                  className="section"
-                >
-                  <Header
-                    menuType="relative"
-                    pageIndex={0}
-                    section={1}
-                    fullpageApi={fullpageApi}
-                  />
-                  <NewsView />
-                  <Footer page="landing" fullpageApi={fullpageApi} />
-                </div>
-              </>
-              {/* )} */}
-            </ReactFullpage.Wrapper>
-          );
-        }}
-      />
+      <section className="section overflow-hidden">
+        <LandingView setShowSite={setShowSite} />
+      </section>
+      <div
+        style={{ opacity: showSite ? "1" : "0" }}
+        className="section"
+        id="team"
+      >
+        <MeetTheTeamView />
+      </div>
+      <div
+        style={{ opacity: showSite ? "1" : "0" }}
+        className="section"
+        id="news"
+      >
+        <Header menuType="relative" pageIndex={0} section={1} />
+        <NewsView />
+        <Footer page="landing" />
+      </div>
     </>
   );
 };

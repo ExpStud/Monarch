@@ -3,22 +3,16 @@ import { Card, Header } from "@components";
 import { motion } from "framer-motion";
 import { enterAnimation } from "src/constants";
 
-interface Props {
-  fullpageApi: any;
-}
+interface Props {}
+
 const MeetTheTeamView: FC<Props> = (props: Props) => {
-  const { fullpageApi } = props;
+  const {} = props;
   return (
     <motion.div
       className=" flex flex-col items-center min-h-screen lg:h-screen"
       {...enterAnimation}
     >
-      <Header
-        menuType="relative"
-        pageIndex={0}
-        section={0}
-        fullpageApi={fullpageApi}
-      />
+      <Header menuType="relative" pageIndex={0} section={0} />
       <h1 className="text-3xl tracking-[6px] py-10 md:py-20">OUR TEAM</h1>
 
       <div className="h-full flex flex-col lg:flex-row w-[90%] gap-10 text-[#FAF6EE] justify-center items-center lg:items-start pb-10">

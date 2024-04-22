@@ -1,20 +1,25 @@
 import { FC } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { scrollToSection } from "@utils";
 
 interface Props {
   page?: string;
-  fullpageApi?: any;
 }
 
 const Footer: FC<Props> = (props: Props) => {
-  const { page, fullpageApi } = props;
+  const { page } = props;
 
   const router = useRouter();
 
   const navigate = (pageId: number) => {
-    if (page === "landing" && fullpageApi) {
-      fullpageApi.fullpageApi.moveTo(pageId);
+    if (page === "landing") {
+      if (pageId === 1) {
+      } else if (pageId === 2) {
+        scrollToSection("team");
+      } else if (pageId === 3) {
+        scrollToSection("news");
+      }
     } else {
       router.push(
         { pathname: "/", query: { to: pageId === 2 ? "team" : "news" } },
@@ -56,13 +61,6 @@ const Footer: FC<Props> = (props: Props) => {
             <Link href="mailto:info@xyz.dev">INQUIRY FORM</Link>
           </div>
         </div>
-
-        {/* <div className="flex flex-col ">
-          <div className="font-mon-bold mb-4 tracking-[2px]">CONTACT</div>
-          <div className="tracking-[2px] font-light">
-            <Link href="mailto:info@xyz.dev">INQUIRY FORM</Link>
-          </div>
-        </div> */}
 
         <div className="flex grow justify-center md:justify-end items-end tracking-[2px] font-mon-bold whitespace-nowrap mt-10 lg:mt-0">
           <Link target="_blank" href="https://twitter.com/exp_studio_">

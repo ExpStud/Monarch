@@ -1,13 +1,13 @@
-import { Dispatch, FC, SetStateAction } from "react";
+import { FC } from "react";
 import Link from "next/link";
+import { scrollToSection } from "@utils";
 
 interface Props {
-  fullpageApi: any;
   callback?: (id: number) => void;
 }
 
 const LandingHeader: FC<Props> = (props: Props) => {
-  const { fullpageApi, callback } = props;
+  const { callback } = props;
 
   return (
     <div className="flex font-light tracking-[0.11rem] z-10 gap-2 sm:gap-4 md:gap-8  text-[12px] sm:text-xs md:text-sm justify-center mt-4 absolute w-screen text-center px-4">
@@ -16,7 +16,7 @@ const LandingHeader: FC<Props> = (props: Props) => {
           if (callback) {
             callback(2);
           } else {
-            fullpageApi.fullpageApi.moveTo(2);
+            scrollToSection("team");
           }
         }}
         className="cursor-pointer md:ml-5 inactive-tab whitespace-nowrap"
@@ -28,7 +28,7 @@ const LandingHeader: FC<Props> = (props: Props) => {
           if (callback) {
             callback(3);
           } else {
-            fullpageApi.fullpageApi.moveTo(3);
+            scrollToSection("news");
           }
         }}
         className="inactive-tab"

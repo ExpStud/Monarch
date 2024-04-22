@@ -10,7 +10,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@fullpage/react-fullpage": "^0.1.40",
     "@metaplex-foundation/js": "^0.18.1",
     "@metaplex-foundation/mpl-token-metadata": "^2.8.3",
     "@particle-network/auth": "^1.2.2",

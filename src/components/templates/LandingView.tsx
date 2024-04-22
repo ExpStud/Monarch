@@ -5,17 +5,13 @@ import { useWindowSize } from "@hooks";
 import { useRouter } from "next/router";
 import { LandingHeader } from "@components";
 import Image from "next/image";
-
-interface Assets {
-  src: string;
-}
+import { scrollToSection } from "@utils";
 
 interface Props {
   setShowSite: any;
-  fullpageApi: any;
 }
 
-const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
+const LandingView: FC<Props> = ({ setShowSite }) => {
   const [winWidth] = useWindowSize();
   const mobileView = winWidth <= 1024;
   //refs
@@ -29,32 +25,22 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
 
   //stay on news page if from news item
   useEffect(() => {
-    // console.log("query ", query);
     if (query?.to === "home") {
-      fullpageApi.fullpageApi.moveTo(1);
+      // fullpageApi.fullpageApi.moveTo(1);
     } else if (query?.to === "team") {
-      fullpageApi.fullpageApi.moveTo(2);
+      scrollToSection("team");
     } else if (query?.to === "news") {
-      fullpageApi.fullpageApi.moveTo(3);
+      scrollToSection("news");
     }
   }, [query]);
 
   useEffect(() => {
     if (animationEnded) {
       setShowSite(true);
-      if (fullpageApi.fullpageApi) {
-        fullpageApi.fullpageApi.setAllowScrolling(true);
-        fullpageApi.fullpageApi.setKeyboardScrolling(true);
-        fullpageApi.fullpageApi.setAutoScrolling(true);
-      }
 
       sessionStorage.setItem("didRender", "true");
-    } else {
-      if (fullpageApi.fullpageApi) {
-        fullpageApi.fullpageApi.setAllowScrolling(false);
-      }
     }
-  }, [animationEnded, fullpageApi.fullpageApi, setShowSite]);
+  }, [animationEnded, setShowSite]);
 
   //handles only showing video on first render
   useEffect(() => {
@@ -77,7 +63,7 @@ const LandingView: FC<Props> = ({ setShowSite, fullpageApi }) => {
           "transition-opacity  ease-in duration-500 text-xl"
         }
       >
-        <LandingHeader fullpageApi={fullpageApi} />
+        <LandingHeader />
       </div>
 
       <motion.div
