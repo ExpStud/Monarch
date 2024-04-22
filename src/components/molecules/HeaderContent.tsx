@@ -9,7 +9,6 @@ const HeaderContent = ({
   section,
 }: {
   pageIndex: number | undefined;
-  menuType: any;
   fullpageApi?: any;
   section?: number;
 }) => {
@@ -40,7 +39,7 @@ const HeaderContent = ({
   };
 
   return (
-    <div className="relative" ref={ref}>
+    <div className="relative bg-mon-cream " ref={ref}>
       <div className="w-screen gap-5 flex items-center justify-between px-5 md:px-10 py-3 md:py-6 z-20 relative">
         <Logo fullpageApi={fullpageApi} callback={() => handleLogoClick()} />
 

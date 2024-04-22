@@ -5,25 +5,29 @@ import {
   NewsView,
   MeetTheTeamView,
   PageHead,
+  PageLayout,
 } from "@components";
+import { useInView } from "framer-motion";
 import { NextPage } from "next";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { useScrollDirection } from "src/hooks";
 
 const Home: NextPage = () => {
-  const [assets, setAssets] = useState<boolean[]>([false]);
   const [showSite, setShowSite] = useState(false);
 
+  const inViewRef = useRef(null);
+  const isInView = useInView(inViewRef);
+  const scrollDirection = useScrollDirection();
+
   return (
-    <>
-      <PageHead
-        title="Monarch"
-        description="Accelerating Equity in Global Sports"
-        url="https://addurl.xyz" // no backslash at the end
-        twitter="Monarch_Coll"
-      />
-      <section className="section overflow-hidden">
+    <PageLayout
+      // header={!isInView && scrollDirection === "up"}
+      // header={true}
+      headerType="scroll"
+    >
+      <div ref={inViewRef}>
         <LandingView setShowSite={setShowSite} />
-      </section>
+      </div>
       <div
         style={{ opacity: showSite ? "1" : "0" }}
         className="section"
@@ -36,11 +40,11 @@ const Home: NextPage = () => {
         className="section"
         id="news"
       >
-        <Header menuType="relative" pageIndex={0} section={1} />
+        {/* <Header menuType="relative" pageIndex={0} section={1} /> */}
         <NewsView />
-        <Footer page="landing" />
+        {/* <Footer page="landing" /> */}
       </div>
-    </>
+    </PageLayout>
   );
 };
 export default Home;

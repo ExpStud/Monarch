@@ -39,7 +39,7 @@ const Menu: FC<Props> = (props: Props) => {
             opacity: 1,
           }}
           transition={{ duration: 0.7 }}
-          className="fixed top-0 left-0 z-50 max-w-screen h-screen overflow-y-hidden bg-custom-black"
+          className="fixed top-0 right-0 z-50 max-w-screen h-screen overflow-y-hidden bg-custom-black"
           onClick={() => toggleMenu(false)}
           ref={ref}
         >

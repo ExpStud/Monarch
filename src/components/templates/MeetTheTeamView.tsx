@@ -9,13 +9,13 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
   const {} = props;
   return (
     <motion.div
-      className=" flex flex-col items-center min-h-screen lg:h-screen"
+      className=" flex flex-col items-center mt-10"
       {...enterAnimation}
     >
-      <Header menuType="relative" pageIndex={0} section={0} />
+      {/* <Header menuType="relative" pageIndex={0} section={0} /> */}
       <h1 className="text-3xl tracking-[6px] py-10 md:py-20">OUR TEAM</h1>
 
-      <div className="h-full flex flex-col lg:flex-row w-[90%] gap-10 text-[#FAF6EE] justify-center items-center lg:items-start pb-10">
+      <div className="h-full flex flex-col lg:flex-row w-[90%] gap-10 text-[#FAF6EE] justify-center items-center lg:items-start">
         <Card
           image="/images/woman-1.png"
           position="Managing Partner"
@@ -77,9 +77,9 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
           spotify="https://open.spotify.com/playlist/0bnRvoIhusZO9nWQwKRQIp"
         />
       </div>
-      <div className="flex justify-center text-[12px] sm:text-xs md:text-sm tracking-[2px] w-full pb-4 max-md:mt-10 px-4 sm:px-6">
+      {/* <div className="flex justify-center text-[12px] sm:text-xs md:text-sm tracking-[2px] w-full pb-4 max-md:mt-10 px-4 sm:px-6">
         KEEP SCROLLING
-      </div>
+      </div> */}
     </motion.div>
   );
 };

@@ -140,7 +140,7 @@ const LandingView: FC<Props> = ({ setShowSite }) => {
           }
         >
           <div className="lg:flex justify-center text-[12px] sm:text-xs md:text-sm tracking-[2px] w-full pb-4 max-md:mt-10 px-4 sm:px-6">
-            KEEP SCROLLING
+            SCROLL
           </div>
         </div>
       </motion.div>

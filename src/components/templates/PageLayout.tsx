@@ -17,6 +17,7 @@ interface Props {
   headerType?: string;
   assets?: boolean[];
   pageIndex?: Number;
+  header?: boolean;
 }
 
 const PageLayout: FC<Props> = (props: Props) => {
@@ -28,6 +29,7 @@ const PageLayout: FC<Props> = (props: Props) => {
     children,
     assets = [],
     pageIndex = -1,
+    header = true,
   } = props;
 
   //context for splash screen & modals
@@ -42,45 +44,45 @@ const PageLayout: FC<Props> = (props: Props) => {
 
   return (
     <>
-    <div
-      className={`flex flex-col min-h-[100svh] h-full justify-between overflow-x-hidden ${
-        fixed ? "fixed inset-0" : absolute ? "absolute inset-0" : "relative"
-      }`}
-    >
-      <PageHead
-        title="Monarch"
-        description="Accelerating Equity in Global Sports"
-        url="https://addurl.xyz" // no backslash at the end
-        twitter="Monarch_Coll"
-      />
-      <ViewContext.Provider value={value}>
-        {/* header */}
-        {/* <Header pageIndex={props.pageIndex} /> */}
+      <div
+        className={`flex flex-col min-h-[100svh] h-full justify-between overflow-x-hidden ${
+          fixed ? "fixed inset-0" : absolute ? "absolute inset-0" : "relative"
+        }`}
+      >
+        <PageHead
+          title="Monarch"
+          description="Accelerating Equity in Global Sports"
+          url="https://addurl.xyz" // no backslash at the end
+          twitter="Monarch_Coll"
+        />
+        <ViewContext.Provider value={value}>
+          {/* header */}
+          {header && <Header type={headerType} />}
 
-        {/* body */}
-        <motion.main
-          className={`flex flex-col h-full w-full overflow-x-clip`}
-          {...enterAnimation}
-        >
-          {children}
-        </motion.main>
+          {/* body */}
+          <motion.main
+            className={`flex flex-col h-full w-full overflow-x-clip`}
+            {...enterAnimation}
+          >
+            {children}
+          </motion.main>
 
-        {/* footer */}
-        {footer && <Footer />}
+          {/* footer */}
+          {footer && <Footer />}
 
-        {/* modals */}
-        {/* {assets && <SplashScreen assets={assets} />} */}
-        <AnimatePresence mode="wait">
-          {ImageModalId !== -1 && (
-            <ImageModal
-              key="gallery-modal"
-              imageId={ImageModalId}
-              setImageId={setImageModalId}
-            />
-          )}
-        </AnimatePresence>
-      </ViewContext.Provider>
-    </div>
+          {/* modals */}
+          {/* {assets && <SplashScreen assets={assets} />} */}
+          <AnimatePresence mode="wait">
+            {ImageModalId !== -1 && (
+              <ImageModal
+                key="gallery-modal"
+                imageId={ImageModalId}
+                setImageId={setImageModalId}
+              />
+            )}
+          </AnimatePresence>
+        </ViewContext.Provider>
+      </div>
     </>
   );
 };
