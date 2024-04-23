@@ -68,7 +68,7 @@ const NewsItem: FC<Props> = (props: Props) => {
               : ""
           }`}
       >
-        <p className="line-clamp-2 pb-0.5 overflow-hidden">
+        <p className="line-clamp-2 overflow-hidden leading-8">
           {layout === 2 ? capitalizeFirstLetter(article.type) : article.title}
         </p>
       </div>
