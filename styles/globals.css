@@ -19,9 +19,9 @@ html{
   overflow-x: hidden;
 }
 
-body{
+/* body{
   overflow: hidden !important;
-}
+} */
 
 .fp-overflow{
   overflow-x: hidden;

@@ -4,7 +4,7 @@ import { CloseIcon, IconBar, NavItem } from "@components";
 import Link from "next/link";
 import { useWindowSize } from "@hooks";
 import { fadeVariants } from "@constants";
-import { useOutsideAlerter } from "@hooks";
+// import { useOutsideAlerter } from "@hooks";
 
 interface Props {
   toggleMenu: Dispatch<SetStateAction<boolean>>;
@@ -19,7 +19,7 @@ const Menu: FC<Props> = (props: Props) => {
   const [winWidth] = useWindowSize();
   const ref = useRef(null);
 
-  useOutsideAlerter(ref, () => toggleMenu(false));
+  // useOutsideAlerter(ref, () => toggleMenu(false));
   //stop page scroll (when modal or menu open)
   useEffect(() => {
     if (open) document.body.style.overflow = "hidden";
@@ -39,49 +39,43 @@ const Menu: FC<Props> = (props: Props) => {
             opacity: 1,
           }}
           transition={{ duration: 0.7 }}
-          className="fixed top-0 right-0 z-50 max-w-screen h-screen overflow-y-hidden bg-custom-black"
+          className="fixed top-0 right-0 z-50 max-w-screen h-screen overflow-hidden bg-custom-black"
           onClick={() => toggleMenu(false)}
           ref={ref}
         >
           <div
             key="close-icon"
             onClick={() => toggleMenu(false)}
-            className="cursor-pointer absolute right-4 top-3"
+            className="cursor-pointer absolute right-4 top-3 z-10"
           >
             <CloseIcon />
           </div>
           <motion.div
-            className={`px-4 sm:px-6 lg:px-10 py-6 h-screen relative`}
+            className={`mx-8 lg:mx-10  relative flex flex-col items-start text-2xl mt-32 pt-6 gap-6 border-t border-mon-purple`}
             variants={fadeVariants}
             initial="closed"
             animate="open"
             exit="closed"
           >
-            <div className="flex flex-col items-center text-2xl mt-32 gap-10 h-full w-full">
-              <div
-                onClick={() => navigate(2)}
-                className={
-                  currentPage === "team" ? "text-mon-purple" : "text-mon-purple"
-                }
-              >
-                MEET THE TEAM
-              </div>
-              <div
-                onClick={() => navigate(3)}
-                className={
-                  currentPage === "news" ? "text-mon-purple" : "text-mon-purple"
-                }
-              >
-                NEWS
-              </div>
-              <Link
-                target="_blank"
-                href="https://monarch.arkpes.com/login"
-                className="text-mon-purple"
-              >
-                INVESTOR PORTAL
-              </Link>
+            <div
+              onClick={() => navigate(2)}
+              className="cursor-pointer text-mon-purple border-b border-mon-purple w-full pb-6"
+            >
+              MEET THE TEAM
             </div>
+            <div
+              onClick={() => navigate(3)}
+              className="cursor-pointer text-mon-purple border-b border-mon-purple w-full pb-6"
+            >
+              NEWS
+            </div>
+            <Link
+              target="_blank"
+              href="https://monarch.arkpes.com/login"
+              className="text-mon-purple border-b border-mon-purple w-full pb-6"
+            >
+              INVESTOR PORTAL
+            </Link>
           </motion.div>
         </motion.aside>
       )}

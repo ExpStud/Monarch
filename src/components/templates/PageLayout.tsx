@@ -60,7 +60,7 @@ const PageLayout: FC<Props> = (props: Props) => {
 
           {/* body */}
           <motion.main
-            className={`flex flex-col h-full w-full overflow-x-clip`}
+            className={`flex flex-col h-full w-full overflow-hidden`}
             {...enterAnimation}
           >
             {children}
