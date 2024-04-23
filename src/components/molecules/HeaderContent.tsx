@@ -80,7 +80,7 @@ const HeaderContent = ({ section }: { section: number }) => {
         />
       </div>
 
-      <div className=" md:top-auto md:relative  h-[1px] bg-black opacity-[20%] mx-3 lg:mx-10"></div>
+      <div className=" md:top-auto md:relative  h-[1px] bg-custom-black opacity-[20%] mx-3 lg:mx-10"></div>
     </div>
   );
 };

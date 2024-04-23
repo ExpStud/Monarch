@@ -99,7 +99,7 @@ const Article: NextPage = () => {
               {content.imageCaption}
             </div> */}
 
-            <div className="border-x-[1.5px] px-10 max-md:px-3 mt-10 border-black border-opacity-[20%]">
+            <div className="border-x-[1.5px] px-10 max-md:px-3 mt-10 border-custom-black border-opacity-[20%]">
               {content?.paragraphs?.map((p, i) => (
                 <p key={i} className="mb-5">
                   {p}

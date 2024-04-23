@@ -110,15 +110,15 @@ const Podcast: NextPage = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col border-x border-black border-opacity-[30%] px-4 max-lg:px-2 py-1">
+              <div className="flex flex-col border-x border-custom-black border-opacity-[30%] px-4 max-lg:px-2 py-1">
                 {/* top border */}
-                <div className="w-[103%] right-[1.5%] h-[1px] opacity-[30%] bg-black relative bottom-3"></div>
+                <div className="w-[103%] right-[1.5%] h-[1px] opacity-[30%] bg-custom-black relative bottom-3"></div>
 
                 <div className="font-mon-bold text-xl ">{article.title}</div>
                 <div className="text-[#4A0A8A] font-mon-semibold">
                   {content.subTitle}
                 </div>
-                <div className="h-[1px] opacity-[10%] bg-black my-3"></div>
+                <div className="h-[1px] opacity-[10%] bg-custom-black my-3"></div>
                 <div>
                   {content?.paragraphs?.map((p, i) => (
                     <p
@@ -128,7 +128,7 @@ const Podcast: NextPage = () => {
                     ></p>
                   ))}
                 </div>
-                <div className="h-[1px] opacity-[30%] bg-black my-3"></div>
+                <div className="h-[1px] opacity-[30%] bg-custom-black my-3"></div>
                 <a
                   href={content?.url}
                   rel="noreferrer"
@@ -140,7 +140,7 @@ const Podcast: NextPage = () => {
                     <img src="images/link.png" alt="" />
                   </div>
                 </a>
-                <div className="h-[1px] opacity-[30%] bg-black my-3"></div>
+                <div className="h-[1px] opacity-[30%] bg-custom-black my-3"></div>
                 <a
                   href={content?.url2}
                   rel="noreferrer"
@@ -151,7 +151,7 @@ const Podcast: NextPage = () => {
                 </a>
 
                 {/* bottom border */}
-                <div className="w-[103%] right-[1.5%] h-[1px] opacity-[10%] bg-black relative top-3"></div>
+                <div className="w-[103%] right-[1.5%] h-[1px] opacity-[10%] bg-custom-black relative top-3"></div>
               </div>
             </div>
           </div>

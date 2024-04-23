@@ -30,7 +30,7 @@ const Footer: FC<Props> = (props: Props) => {
 
   return (
     <footer
-      className="px-10 xl:px-10 w-full bg-black z-0 text-[#CDB7F6] py-20 lg:py-12 text-sm"
+      className="px-10 xl:px-10 w-full bg-custom-black z-0 text-[#CDB7F6] py-20 lg:py-12 text-sm"
       key="footer"
     >
       <div className="flex max-[1000px]:flex-wrap gap-10 lg:gap-20 xl:gap-36 pl-16 max-[1000px]:pl-0 sm:items-center sm:justify-evenly">

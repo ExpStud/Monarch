@@ -200,8 +200,8 @@ html {
 }
 
 .active-tab {
-  @apply px-[8px] md:px-[16px] py-[3px] rounded-[4px] text-mon-purple bg-black ;
+  @apply px-[8px] md:px-[16px] py-[3px] rounded-[4px] text-mon-purple bg-custom-black ;
 }
 .inactive-tab {
-  @apply px-[8px] md:px-[16px] py-[3px] rounded-[4px] cursor-pointer md:hover:bg-mon-purple  text-black transition-500;
+  @apply px-[8px] md:px-[16px] py-[3px] rounded-[4px] cursor-pointer md:hover:bg-mon-purple  text-custom-black transition-500;
 }

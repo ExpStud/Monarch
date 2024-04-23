@@ -103,7 +103,7 @@ const Card: FC<Props> = ({
         </div>
 
         {/* back side */}
-        <div className="w-[100%] h-full flip-card-back border border-black bg-mon-cream px-2.5 py-2.5 rounded-[4px] text-custom-black">
+        <div className="w-[100%] h-full flip-card-back border border-custom-black bg-mon-cream px-2.5 py-2.5 rounded-[4px] text-custom-black">
           <div
             className="flex cursor-pointer "
             // onClick={(event) => event.stopPropagation()}
