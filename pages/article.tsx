@@ -10,14 +10,14 @@ import Image from "next/image";
 const Article: NextPage = () => {
   const [article, setArticle] = useState<NewsArticle | null>(null);
   const [content, setContent] = useState<ArticleContent | null>(null);
-  const { query } = useRouter();
+  const router = useRouter();
 
   //set article data
   useEffect(() => {
-    if (query?.id && !isNaN(query.id as unknown as number)) {
-      setArticle(NEWS_ARTICLES[query.id as unknown as number]);
+    if (router.query?.id && !isNaN(router.query.id as unknown as number)) {
+      setArticle(NEWS_ARTICLES[router.query.id as unknown as number]);
     }
-  }, [query.id]);
+  }, [router.query.id]);
 
   //set article content data to avoid TS errors for other content types
   useEffect(() => {
@@ -25,6 +25,20 @@ const Article: NextPage = () => {
       setContent(article?.content as ArticleContent);
     }
   }, [article]);
+
+  //browser back button
+  useEffect(() => {
+    const handlePopState = () => {
+      router.push({ pathname: "/", query: { to: "news" } }, "/");
+    };
+
+    window.onpopstate = handlePopState;
+
+    // Clean up by removing the event listener when the component unmounts
+    return () => {
+      window.onpopstate = null;
+    };
+  }, []);
 
   return (
     <PageLayout pageIndex={1} footer={true}>
