@@ -13,7 +13,10 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
       {...enterAnimation}
     >
       {/* <Header menuType="relative" pageIndex={0} section={0} /> */}
-      <h1 className="text-3xl tracking-[6px] py-10 md:py-20">OUR TEAM</h1>
+      <div className="flex flex-col items-center gap-2 py-10 md:py-20">
+        <h1 className="text-3xl tracking-[6px]">OUR TEAM</h1>
+        <div className="w-full h-0.5 bg-mon-purple" />
+      </div>
 
       <div className="h-full flex flex-col lg:flex-row w-[90%] gap-10 text-[#FAF6EE] justify-center items-center lg:items-start">
         <Card

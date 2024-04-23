@@ -23,7 +23,7 @@ const Home: NextPage = () => {
     <PageLayout
       // header={!isInView && scrollDirection === "up"}
       // header={true}
-      headerType="scroll"
+      headerType="fixed"
     >
       <div ref={inViewRef}>
         <LandingView setShowSite={setShowSite} />
