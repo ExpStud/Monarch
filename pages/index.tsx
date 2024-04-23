@@ -58,10 +58,6 @@ const Home: NextPage = () => {
 
   // console.log(homeInView, teamInView, newsInView);
 
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
-  }, []);
-
   return (
     <PageLayout
       headerType="fixed"
