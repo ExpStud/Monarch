@@ -55,11 +55,11 @@ const LandingView: FC<Props> = ({ setShowSite }) => {
   }, [isInView]);
 
   return (
-    <div className="h-[100svh] overflow-hidden" ref={mainRef}>
+    <div className="h-screen overflow-hidden" ref={mainRef}>
       <motion.div
         key="landing"
         className={`relative w-full ${
-          mobileView ? "h-[100svh]" : "h-screen"
+          mobileView ? "h-screen" : "h-screen"
         } flex flex-col items-center justify-end`}
         // {...exitAnimation}
       >

@@ -38,8 +38,8 @@ const HeaderContent = ({ section }: { section: number }) => {
     router.push({ pathname: "/", query: { to: "home" } }, "/");
   };
 
-  console.log("pageIndex", pageIndex);
-  console.log("section", section);
+  // console.log("pageIndex", pageIndex);
+  // console.log("section", section);
 
   return (
     <div className="relative bg-mon-cream " ref={ref}>
