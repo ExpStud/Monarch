@@ -28,7 +28,7 @@ const NewsItem: FC<Props> = (props: Props) => {
     <div
       className={`relative overflow-hidden cursor-pointer rounded-[4px] w-[90vw] h-[350px] ${
         layout === 0
-          ? "md:w-[498px] md:h-[498px]"
+          ? "md:w-[759px] md:h-[498px] lg:min-w-[300px]"
           : layout === 1
           ? "md:w-[759px] md:h-[243px]"
           : "md:w-[243px] md:h-[243px]"
@@ -60,7 +60,7 @@ const NewsItem: FC<Props> = (props: Props) => {
         onLoadingComplete={() => setImageLoaded(true)}
       />
       <div
-        className={`absolute font-mon-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4 text-[28px]  
+        className={`absolute  tracking-[2px] top-4 left-4 rounded-[4px] py-2 px-4 text-[28px]  
           ${
             layout === 0
               ? "w-[90%] max-h-[721px]"
@@ -73,15 +73,11 @@ const NewsItem: FC<Props> = (props: Props) => {
           {layout === 2 ? capitalizeFirstLetter(article.type) : article.title}
         </p>
       </div>
-      <div className="flex w-full justify-between absolute bottom-0 rounded-[4px] bg-black py-2 px-4">
-        <div className="text-[15px] font-mon-semibold tracking-[2px]">
+      <div className="flex w-full justify-between items-center absolute -bottom-1 rounded-[4px] py-2 px-4">
+        <div className="text-[15px] self-center tracking-[2px]">
           {article.readTime} MIN {article.type === "article" && "READ"}
         </div>
-        <div className="flex items-center">
-          {article.type === "video" && <PlayIcon />}
-          {article.type === "article" && <BookIcon />}
-          {article.type === "podcast" && <PodcastIcon />}
-        </div>
+        <div className="flex items-center w-4 h-4 rounded-full bg-mon-purple"></div>
       </div>
     </div>
   );

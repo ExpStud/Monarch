@@ -25,7 +25,7 @@ const Home: NextPage = () => {
   const scrollDirection = useScrollDirection();
 
   const getSection = (): number => {
-    if (scrollDirection === "up") {
+    if (scrollDirection === "down") {
       return homeInView ? 0 : teamInView ? 1 : newsInView ? 2 : -1;
     } else {
       return newsInView ? 2 : teamInView ? 1 : homeInView ? 0 : -1;
