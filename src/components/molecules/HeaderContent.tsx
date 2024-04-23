@@ -20,8 +20,10 @@ const HeaderContent = ({ section }: { section: number }) => {
       if (pageId === 1) {
       } else if (pageId === 2) {
         scrollToSection("team");
+        section = 1;
       } else if (pageId === 3) {
         scrollToSection("news");
+        section = 2;
       }
     } else {
       //from news item page
@@ -48,12 +50,12 @@ const HeaderContent = ({ section }: { section: number }) => {
           <HeaderItem
             text="MEET THE TEAM"
             callback={() => navigate(2)}
-            active={pageIndex == 0 && section === 0}
+            active={pageIndex == 0 && section === 1}
           />
           <HeaderItem
             text="NEWS"
             callback={() => navigate(3)}
-            active={pageIndex == 1 || (pageIndex == 0 && section === 1)}
+            active={pageIndex == 1 || (pageIndex == 0 && section === 2)}
           />
           <HeaderItem
             text="INVESTOR PORTAL"
