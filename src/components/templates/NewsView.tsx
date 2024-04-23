@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const NewsView: FC = () => {
   return (
     <motion.div className="flex flex-col items-center" {...enterAnimation}>
-      <div className="flex flex-col items-center gap-2 py-10 md:py-20 lg:mt-20">
+      <div className="flex flex-col items-center gap-1 py-10 md:py-20 lg:mt-20">
         <h1 className="text-3xl tracking-[6px]">NEWS</h1>
         <div className="w-full h-0.5 bg-mon-purple" />
       </div>

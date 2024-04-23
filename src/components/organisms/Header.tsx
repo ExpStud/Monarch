@@ -10,12 +10,11 @@ import {
 interface Props {
   showHeader?: boolean;
   type?: string;
-  pageIndex?: number;
-  section?: number;
+  section: number;
 }
 
 const Header: FC<Props> = (props: Props) => {
-  const { type = "fixed", showHeader = true, pageIndex = -1, section } = props;
+  const { type = "fixed", showHeader = true, section } = props;
 
   const [animateHeader, setAnimateHeader] = useState<boolean>(true);
 
@@ -87,14 +86,14 @@ const Header: FC<Props> = (props: Props) => {
 `}
     >
       {type !== "scroll" ? (
-        <HeaderContent pageIndex={pageIndex} section={section} />
+        <HeaderContent section={section} />
       ) : (
         <motion.aside
           variants={headerVariants}
           initial={showHeader ? "show" : "hidden"}
           animate={animateHeader ? "show" : "hidden"}
         >
-          <HeaderContent pageIndex={pageIndex} section={section} />
+          <HeaderContent section={section} />
         </motion.aside>
       )}
     </header>

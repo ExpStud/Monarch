@@ -15,8 +15,9 @@ import { useScrollDirection } from "src/hooks";
 const Home: NextPage = () => {
   const [showSite, setShowSite] = useState(false);
 
-  const inViewRef = useRef(null);
-  const isInView = useInView(inViewRef);
+  const newsRef = useRef<HTMLDivElement>(null);
+  const newsInView = useInView(newsRef);
+
   const scrollDirection = useScrollDirection();
 
   return (
@@ -24,10 +25,10 @@ const Home: NextPage = () => {
       // header={!isInView && scrollDirection === "up"}
       // header={true}
       headerType="fixed"
+      pageIndex={0}
+      section={newsInView ? 1 : 0}
     >
-      <div ref={inViewRef}>
-        <LandingView setShowSite={setShowSite} />
-      </div>
+      <LandingView setShowSite={setShowSite} />
       <div
         style={{ opacity: showSite ? "1" : "0" }}
         className="section"
@@ -41,7 +42,9 @@ const Home: NextPage = () => {
         id="news"
       >
         {/* <Header menuType="relative" pageIndex={0} section={1} /> */}
-        <NewsView />
+        <div ref={newsRef}>
+          <NewsView />
+        </div>
         {/* <Footer page="landing" /> */}
       </div>
     </PageLayout>

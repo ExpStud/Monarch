@@ -18,6 +18,7 @@ interface Props {
   assets?: boolean[];
   pageIndex?: Number;
   header?: boolean;
+  section: number;
 }
 
 const PageLayout: FC<Props> = (props: Props) => {
@@ -30,6 +31,7 @@ const PageLayout: FC<Props> = (props: Props) => {
     assets = [],
     pageIndex = -1,
     header = true,
+    section,
   } = props;
 
   //context for splash screen & modals
@@ -57,7 +59,7 @@ const PageLayout: FC<Props> = (props: Props) => {
         />
         <ViewContext.Provider value={value}>
           {/* header */}
-          {header && <Header type={headerType} />}
+          {header && <Header type={headerType} section={section} />}
 
           {/* body */}
           <motion.main

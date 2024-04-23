@@ -24,6 +24,7 @@ const LoadCircle = dynamic(() => import("./atoms/LoadCircle"));
 const TabBarItem = dynamic(() => import("./atoms/TabBarItem"));
 const ImageShimmer = dynamic(() => import("./atoms/ImageShimmer"));
 const Logo = dynamic(() => import("./atoms/Logo"));
+const Underline = dynamic(() => import("./atoms/Underline"));
 //molecules
 const PageHead = dynamic(() => import("./molecules/PageHead"));
 const Dropdown = dynamic(() => import("./molecules/Dropdown"));
@@ -94,4 +95,5 @@ export {
   BookIcon,
   PlayIcon,
   PodcastIcon,
+  Underline
 }

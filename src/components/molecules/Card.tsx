@@ -126,7 +126,6 @@ const Card: FC<Props> = ({
           <div
             className="text-sm py-2 h-[150px] xl:h-[165px] overflow-y-auto pr-3 leading-5"
             onWheel={(event) => {
-              window.open(interestsUrl[0], "_blank");
               event.stopPropagation();
             }}
           >
@@ -138,8 +137,8 @@ const Card: FC<Props> = ({
             <div
               className="flex cursor-pointer hover:underline"
               onClick={(event) => {
-                window.open(interestsUrl[0], "_blank");
                 event.stopPropagation();
+                window.open(interestsUrl[0], "_blank");
               }}
             >
               <div className="h-[66] my-[4px] w-[1px] bg-custom-black"></div>
@@ -157,8 +156,8 @@ const Card: FC<Props> = ({
             <div
               className="flex cursor-pointer hover:underline"
               onClick={(event) => {
-                window.open(interestsUrl[1], "_blank");
                 event.stopPropagation();
+                window.open(interestsUrl[1], "_blank");
               }}
             >
               <div className="h-[66] my-[4px] w-[1px] bg-custom-black"></div>

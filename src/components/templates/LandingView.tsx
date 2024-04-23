@@ -26,7 +26,6 @@ const LandingView: FC<Props> = ({ setShowSite }) => {
   //stay on news page if from news item
   useEffect(() => {
     if (query?.to === "home") {
-      // fullpageApi.fullpageApi.moveTo(1);
     } else if (query?.to === "team") {
       scrollToSection("team");
     } else if (query?.to === "news") {

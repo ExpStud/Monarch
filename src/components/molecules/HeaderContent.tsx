@@ -1,26 +1,28 @@
-import { useRef, useState } from "react";
-import { Logo, Menu, MenuIcon } from "@components";
+import { FC, useRef, useState } from "react";
+import { Header, Logo, Menu, MenuIcon, Underline } from "@components";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { scrollToSection } from "@utils";
 
-const HeaderContent = ({
-  pageIndex,
-  fullpageApi,
-  section,
-}: {
-  pageIndex: number | undefined;
-  fullpageApi?: any;
-  section?: number;
-}) => {
+const HeaderContent = ({ section }: { section: number }) => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   const router = useRouter();
+  const [pageIndex, setPageIndex] = useState<number>(
+    router.pathname === "/" ? 0 : 1
+  );
+
   const ref = useRef(null);
 
   const navigate = (pageId: number) => {
     //from landing page
-    if (pageIndex !== undefined && pageIndex < 3 && fullpageApi) {
-      fullpageApi.fullpageApi.moveTo(pageId);
+    if (pageIndex === 0) {
+      if (pageId === 1) {
+      } else if (pageId === 2) {
+        scrollToSection("team");
+      } else if (pageId === 3) {
+        scrollToSection("news");
+      }
     } else {
       //from news item page
       router.push(
@@ -34,37 +36,32 @@ const HeaderContent = ({
     router.push({ pathname: "/", query: { to: "home" } }, "/");
   };
 
+  console.log("pageIndex", pageIndex);
+  console.log("section", section);
+
   return (
     <div className="relative bg-mon-cream " ref={ref}>
       <div className="w-screen gap-5 flex items-center justify-between px-5 md:px-10 py-3 md:py-6 z-20 relative">
         <Logo callback={() => handleLogoClick()} />
 
         <div className="max-md:hidden flex font-light tracking-[0.11rem] justify-center gap-2 lg:gap-10 text-sm h-[100%] ">
-          <div
-            className={
-              pageIndex == 0 && section === 0 ? "active-tab" : "inactive-tab"
-            }
-            onClick={() => navigate(2)}
-          >
-            MEET THE TEAM
-          </div>
-          <div
-            className={
-              pageIndex == 1 || (pageIndex == 0 && section === 1)
-                ? "active-tab"
-                : "inactive-tab"
-            }
-            onClick={() => navigate(3)}
-          >
-            NEWS
-          </div>
-          <Link
-            target="_blank"
-            href="https://monarch.arkpes.com/login"
-            className="inactive-tab"
-          >
-            INVESTOR PORTAL
-          </Link>
+          <HeaderItem
+            text="MEET THE TEAM"
+            callback={() => navigate(2)}
+            active={pageIndex == 0 && section === 0}
+          />
+          <HeaderItem
+            text="NEWS"
+            callback={() => navigate(3)}
+            active={pageIndex == 1 || (pageIndex == 0 && section === 1)}
+          />
+          <HeaderItem
+            text="INVESTOR PORTAL"
+            callback={() => {
+              window.open("https://monarch.arkpes.com/login", "_blank");
+            }}
+            active={false}
+          />
         </div>
 
         <div
@@ -85,4 +82,31 @@ const HeaderContent = ({
     </div>
   );
 };
+
+interface Props {
+  text: string;
+  callback: () => void;
+  active: boolean;
+}
+
+const HeaderItem: FC<Props> = (props: Props) => {
+  const { text, callback, active } = props;
+
+  const [hover, setHover] = useState<boolean>(false);
+
+  return (
+    <div
+      className={`cursor-pointer flex flex-col gap-1 mt-1 items-center ${
+        active ? "" : ""
+      }`}
+      onClick={callback}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      <p>{text}</p>
+      <Underline animate={active || hover} />
+    </div>
+  );
+};
+
 export default HeaderContent;
