@@ -11,9 +11,9 @@ const Logo: FC<Props> = (props: Props) => {
   const { callback } = props;
   const router = useRouter();
   return (
-    <motion.div
+    <div
       className="my-0 flex items-center gap-2 cursor-pointer"
-      {...enterAnimation}
+      // {...enterAnimation}
       onClick={() => {
         if (callback) {
           callback();
@@ -29,7 +29,7 @@ const Logo: FC<Props> = (props: Props) => {
         alt="Logo"
         priority
       />
-    </motion.div>
+    </div>
   );
 };
 export default Logo;
