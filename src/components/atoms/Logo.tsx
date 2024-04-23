@@ -28,7 +28,6 @@ const Logo: FC<Props> = (props: Props) => {
         width={149}
         alt="Logo"
         priority
-        className="transition-all duration-300 opacity-80 hover:opacity-100"
       />
     </motion.div>
   );

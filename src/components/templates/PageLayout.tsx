@@ -44,7 +44,7 @@ const PageLayout: FC<Props> = (props: Props) => {
   return (
     <>
       <div
-        className={`flex flex-col min-h-screen h-full justify-between overflow-x-hidden ${
+        className={`flex flex-col min-h-screen h-full justify-between overflow-x-hidden bg-mon-cream ${
           fixed ? "fixed inset-0" : absolute ? "absolute inset-0" : "relative"
         }`}
       >

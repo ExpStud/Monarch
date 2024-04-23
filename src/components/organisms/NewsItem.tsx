@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { NewsArticle, NewsLayout } from "@types";
 import { capitalizeFirstLetter } from "@utils";
-import { BookIcon, ImageShimmer, PlayIcon, PodcastIcon } from "@components";
 import { imageLoadAnimation } from "src/constants";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -60,7 +59,7 @@ const NewsItem: FC<Props> = (props: Props) => {
         onLoadingComplete={() => setImageLoaded(true)}
       />
       <div
-        className={`absolute  tracking-[2px] top-4 left-4 rounded-[4px] py-2 px-4 text-[28px]  
+        className={`absolute tracking-[2px] top-4 left-0 rounded-[4px] py-2 px-4 text-[28px]  
           ${
             layout === 0
               ? "w-[90%] max-h-[721px]"
@@ -69,7 +68,7 @@ const NewsItem: FC<Props> = (props: Props) => {
               : ""
           }`}
       >
-        <p className="line-clamp-2 pb-0.5">
+        <p className="line-clamp-2 pb-0.5 overflow-hidden">
           {layout === 2 ? capitalizeFirstLetter(article.type) : article.title}
         </p>
       </div>

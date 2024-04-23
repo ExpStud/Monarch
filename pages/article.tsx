@@ -41,10 +41,9 @@ const Article: NextPage = () => {
   }, []);
 
   return (
-    <PageLayout footer={true}>
-      {/* <HeaderContent pageIndex={3} section={-1} /> */}
+    <PageLayout footer={true} headerType="fixed">
       {content && (
-        <div className="relative w-screen h-auto mt-[77px] aspect-[3.5/1]">
+        <div className="relative w-screen h-auto mt-[70px] lg:mt-[77px] aspect-[1.5/1] md:aspect-[2.5/1] lg:aspect-[3.5/1]">
           <Image
             src={`/images${content.image}`}
             alt="Article"
