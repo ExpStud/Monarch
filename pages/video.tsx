@@ -40,7 +40,7 @@ const Video: NextPage = () => {
   }, []);
 
   return (
-    <PageLayout section={1} footer={true}>
+    <PageLayout footer={true}>
       {/* <HeaderContent pageIndex={3} section={-1} /> */}
       <div className="mt-32 flex flex-col items-center px-20 max-md:px-6 tracking-widest">
         <BackButton className="self-start mt-[2rem] " />

@@ -41,7 +41,7 @@ const Article: NextPage = () => {
   }, []);
 
   return (
-    <PageLayout section={1} footer={true}>
+    <PageLayout footer={true}>
       {/* <HeaderContent pageIndex={3} section={-1} /> */}
       {content && (
         <div className="relative w-screen h-auto mt-[77px] aspect-[3.5/1]">

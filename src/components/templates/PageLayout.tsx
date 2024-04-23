@@ -16,9 +16,8 @@ interface Props {
   absolute?: boolean; //allows scroll
   headerType?: string;
   assets?: boolean[];
-  pageIndex?: Number;
   header?: boolean;
-  section: number;
+  section?: number;
 }
 
 const PageLayout: FC<Props> = (props: Props) => {
@@ -28,10 +27,8 @@ const PageLayout: FC<Props> = (props: Props) => {
     absolute = false,
     headerType = "",
     children,
-    assets = [],
-    pageIndex = -1,
     header = true,
-    section,
+    section = -1,
   } = props;
 
   //context for splash screen & modals

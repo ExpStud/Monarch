@@ -60,10 +60,9 @@ const Home: NextPage = () => {
 
   return (
     <PageLayout
-      section={1}
       headerType="fixed"
-      pageIndex={0}
-      section={getSection()}
+      section={0}
+      // section={getSection()}
     >
       <div ref={homeRef}>
         <LandingView setShowSite={setShowSite} />
