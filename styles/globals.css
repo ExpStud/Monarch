@@ -16,16 +16,11 @@
 html{
   background-color:#FAF6EE;
   color: black;
-  overflow-x: hidden;
 }
 
 /* body{
   overflow: hidden !important;
-} */
-
-.fp-overflow{
-  overflow-x: hidden;
-}
+} */ 
 
 .fp-watermark {
   display: none;
