@@ -11,26 +11,26 @@ import { useScrollDirection } from "src/hooks";
 
 const Home: NextPage = () => {
   const [showSite, setShowSite] = useState(false);
-  const [inView, setInView] = useState<0 | 1 | 2>(0);
+  // const [inView, setInView] = useState<0 | 1 | 2>(0);
 
   const homeRef = useRef<HTMLDivElement>(null);
-  const homeInView = useInView(homeRef);
+  // const homeInView = useInView(homeRef);
 
   const teamRef = useRef<HTMLDivElement>(null);
-  const teamInView = useInView(teamRef);
+  // const teamInView = useInView(teamRef);
 
   const newsRef = useRef<HTMLDivElement>(null);
-  const newsInView = useInView(newsRef);
+  // const newsInView = useInView(newsRef);
 
-  const scrollDirection = useScrollDirection();
+  // const scrollDirection = useScrollDirection();
 
-  const getSection = (): number => {
-    if (scrollDirection === "down") {
-      return homeInView ? 0 : teamInView ? 1 : newsInView ? 2 : -1;
-    } else {
-      return newsInView ? 2 : teamInView ? 1 : homeInView ? 0 : -1;
-    }
-  };
+  // const getSection = (): number => {
+  //   if (scrollDirection === "down") {
+  //     return homeInView ? 0 : teamInView ? 1 : newsInView ? 2 : -1;
+  //   } else {
+  //     return newsInView ? 2 : teamInView ? 1 : homeInView ? 0 : -1;
+  //   }
+  // };
 
   // useEffect(() => {
   //   if (scrollDirection === "down") {
@@ -56,7 +56,7 @@ const Home: NextPage = () => {
   //   }
   // }, [homeInView, teamInView, newsInView, scrollDirection]);
 
-  console.log(homeInView, teamInView, newsInView);
+  // console.log(homeInView, teamInView, newsInView);
 
   return (
     <PageLayout
@@ -67,20 +67,10 @@ const Home: NextPage = () => {
       <div ref={homeRef}>
         <LandingView setShowSite={setShowSite} />
       </div>
-      <div
-        style={{ opacity: showSite ? "1" : "0" }}
-        className="section"
-        id="team"
-        ref={teamRef}
-      >
+      <div className="section" id="team" ref={teamRef}>
         <MeetTheTeamView />
       </div>
-      <div
-        style={{ opacity: showSite ? "1" : "0" }}
-        className="section"
-        id="news"
-        ref={newsRef}
-      >
+      <div className="section" id="news" ref={newsRef}>
         <NewsView />
       </div>
     </PageLayout>
