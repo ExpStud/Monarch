@@ -43,10 +43,10 @@ const HeaderContent = ({ section }: { section: number }) => {
 
   return (
     <div className="relative bg-mon-cream " ref={ref}>
-      <div className="w-screen gap-5 flex items-center justify-between px-5 md:px-10 py-3 md:py-6 z-20 relative">
+      <div className="w-screen gap-5 flex items-center justify-between px-5 md:px-10 lg:px-14 py-3 md:py-6 z-20 relative">
         <Logo callback={() => handleLogoClick()} />
 
-        <div className="max-md:hidden flex font-light tracking-[0.11rem] justify-center gap-6 lg:gap-12 text-sm h-[100%] ">
+        <div className="max-md:hidden flex font-light tracking-[0.11rem] justify-center gap-6 lg:gap-12 text-sm h-[100%] pr-1.5">
           <HeaderItem
             text="MEET THE TEAM"
             callback={() => navigate(2)}
