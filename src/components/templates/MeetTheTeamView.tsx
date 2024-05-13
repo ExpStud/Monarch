@@ -17,7 +17,7 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
         <div className="w-full h-0.5 bg-mon-purple" />
       </div>
 
-      <div className="h-full flex flex-col lg:flex-row w-[90%] gap-10 text-[#FAF6EE] justify-center items-center lg:items-start">
+      <div className="h-full flex flex-col lg:flex-row w-[90%] gap-10 lg:gap-4 xl:gap-10 text-[#FAF6EE] justify-center items-center lg:items-start mx-32">
         <Card
           image="/images/woman-1.png"
           position="Managing Partner"
@@ -42,7 +42,7 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
           image="/images/woman-3.png"
           position="Managing Partner"
           name="Jasmine Robinson"
-          description="Christine is an Investor at Monarch Collective, an investment platform dedicated to accelerating equity in global sport. Previously, Christine was Director of Media at Major League Soccer where she supported all aspects of MLS's landmark partnership with Apple TV in her role as lead project manager for broadcast production and content. Prior to that, she worked on MLS's League Growth & Operations team where she focused on league expansion via new teams, stadiums, and properties, including the launch of MLS NEXT Pro, MLS's professional development league. Before MLS, Christine held strategy roles at the Premier Lacrosse League, the Philadelphia 76ers/HBSE, and Bain & Company. Christine received her MBA from Harvard Business School and her BS from MIT, where she was a member of the varsity women's lacrosse team. Originally from Michigan, she now resides in Brooklyn, New York."
+          description="Jasmine is a Managing Partner at Monarch Collective, a fund investing in women's sports teams, leagues, and rights. Prior to Monarch, Jasmine was a Partner at Causeway, a growth stage fund investing in sports, media, gaming and fitness. While at Causeway, Jasmine partnered with companies including Tracksmith, Niantic, Volley, FloSports, and QuintEvents. Prior to Causeway, Jasmine held investing and strategy roles at the San Francisco 49ers, Bain & Company, and The Raine Group. Jasmine received her BA from Harvard University, graduating Magna Cum Laude, and her MBA from Stanford University where she was an Arjay Miller Scholar."
           interests={[
             "Favorite Activity",
             "Favorite Restaurant",
@@ -62,7 +62,7 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
           image="/images/jiang.png"
           position="Investor"
           name="Christine Jiang"
-          description="Jasmine is Managing Partner at Monarch Collective, a fund investing in women's sports teams, leagues, and rights. Prior to Monarch, Jasmine was a Partner at Causeway, a growth stage fund investing in sports, media, gaming and fitness. While at Causeway, Jasmine partnered with companies including Tracksmith, Niantic, Volley, FloSports, and QuintEvents. Prior to Causeway, Jasmine held investing and strategy roles at the San Francisco 49ers, Bain & Company, and The Raine Group. Jasmine received her BA from Harvard University, graduating Magna Cum Laude, and her MBA from Stanford University where she was an Arjay Miller Scholar."
+          description="Christine is an Investor at Monarch Collective, an investment platform dedicated to accelerating equity in global sport. Previously, Christine was Director of Media at Major League Soccer where she supported all aspects of MLS's landmark partnership with Apple TV in her role as lead project manager for broadcast production and content. Prior to that, she worked on MLS's League Growth & Operations team where she focused on league expansion via new teams, stadiums, and properties, including the launch of MLS NEXT Pro, MLS's professional development league. Before MLS, Christine held strategy roles at the Premier Lacrosse League, the Philadelphia 76ers/HBSE, and Bain & Company. Christine received her MBA from Harvard Business School and her BS from MIT, where she was a member of the varsity women's lacrosse team. Originally from Michigan, she now resides in Brooklyn, New York."
           interests={[
             "Favorite Movie",
             "Favorite Restaurant",

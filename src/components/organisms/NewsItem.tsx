@@ -27,7 +27,7 @@ const NewsItem: FC<Props> = (props: Props) => {
     <div
       className={`relative overflow-hidden cursor-pointer rounded-[4px] w-[90vw] h-[350px] ${
         layout === 0
-          ? "md:w-[759px] md:h-[498px] lg:w-[498px] lg:min-w-[300px]"
+          ? "md:w-[759px] md:h-[498px] lg:w-[759px] xl:w-[498px]  lg:min-w-[300px] xl:min-w-[490px]"
           : layout === 1
           ? "md:w-[759px] md:h-[243px]"
           : "md:w-[243px] md:h-[243px]"

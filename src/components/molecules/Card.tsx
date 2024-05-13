@@ -144,7 +144,7 @@ const Card: FC<Props> = ({
               <div className="h-[66] my-[4px] w-[1px] bg-custom-black"></div>
 
               <div className="border-y border-y-1 border-custom-black py-[4px] mx-1 w-[62px] xl:w-[69px] overflow-hidden">
-                <div className="flex items-center justify-center h-[74px] text-[10px] lg:text-[11px] text-center bg-[#4A0A8A]">
+                <div className="flex items-center justify-center h-[74px] text-[10px] lg:text-[11px] text-center bg-[#CDB7F6]">
                   {interests[0]}
                 </div>
               </div>
@@ -163,7 +163,7 @@ const Card: FC<Props> = ({
               <div className="h-[66] my-[4px] w-[1px] bg-custom-black"></div>
 
               <div className="border-y border-y-1 border-custom-black py-[4px] mx-1 w-[62px] xl:w-[69px] overflow-hidden">
-                <div className="flex items-center justify-center h-[74px] text-[10px] lg:text-[11px] text-center bg-[#87817B]">
+                <div className="flex items-center justify-center h-[74px] text-[10px] lg:text-[11px] text-center bg-[#E1D6F7]">
                   {interests[1]}
                 </div>
               </div>
@@ -182,7 +182,7 @@ const Card: FC<Props> = ({
               <div className="h-[66] my-[4px] w-[1px] bg-custom-black"></div>
 
               <div className="border-y border-y-1 border-custom-black py-[4px] mx-1 w-[62px] xl:w-[69px] overflow-hidden">
-                <div className="flex items-center justify-center h-[74px] text-[10px] lg:text-[11px] text-center bg-[#006388]">
+                <div className="flex items-center justify-center h-[74px] text-[10px] lg:text-[11px] text-center bg-[#CDB7F6]">
                   {interests[2]}
                 </div>
               </div>
@@ -201,7 +201,7 @@ const Card: FC<Props> = ({
               <div className="h-[66] my-[4px] w-[1px] bg-custom-black"></div>
 
               <div className="border-y border-y-1 border-custom-black py-[4px] mx-1 w-[62px] xl:w-[69px]">
-                <div className="flex items-center justify-center h-[74px] text-[10px] lg:text-[11px] text-center bg-[#87817B]">
+                <div className="flex items-center justify-center h-[74px] text-[10px] lg:text-[11px] text-center bg-[#E1D6F7]">
                   {interests[3]}
                 </div>
               </div>
