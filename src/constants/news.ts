@@ -2,7 +2,7 @@ import { ArticleContent, NewsArticle, PodcastContent, VideoContent } from "@type
 
 
 const articleContent_0: ArticleContent = {
-   author: "AJ HESS",
+   author: "FAST COMPANY",
    pfp: "hess.jpg",
    date: "03/27/2023",
    image: "/news/article-000.jpg",
@@ -38,7 +38,7 @@ const articleContent_0: ArticleContent = {
     "“There is tremendous value in women's leagues, teams, and athletes,that can positively impact the bottom line,” says Leighton of the Women's Sports Foundation. “It's high time for women's sports investments to shift from being a ‘trend' to being standard practice—that's just smart business, period.”",
   ],
    twitter: "https://twitter.com/AbigailJHess",
-   linkedin: "https://www.fastcompany.com/user/ajhess",
+   linkedin: "https://www.fastcompany.com/user/ajhess"
 }
 const articleContent_1: ArticleContent = {
   author: "MONARCH COLLECTIVE",
@@ -118,7 +118,7 @@ const articleContent_2: ArticleContent = {
   linkedin: "https://karanortman.medium.com/",
 }
 const articleContent_3: ArticleContent = {
-  author: "KAMARON LEACH",
+  author: "BLOOMBERG",
   pfp: "pfp.png",
   date: "07/26/2023",
   image: "/news/ballon.jpg",
@@ -181,7 +181,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
   },
   {
     id: 3,
-    title: "'Bloomberg' Writes: Caleb Williams Invests - Monarch's Focus on Collaboration",
+    title: "Caleb Williams Invests - Monarch's Focus on Collaboration",
     content: articleContent_3,
     type: "article",
     readTime: 7,
@@ -190,7 +190,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
   },
   {
     id: 4,
-    title: "'Fast Company' Writes: The Monarch Collective unveils $150 million fund to bring equity to women's sports",
+    title: "The Monarch Collective unveils $150 million fund to bring equity to women's sports",
     content: articleContent_0,
     type: "article",
     readTime: 7,
