@@ -9,7 +9,7 @@ const articleContent_0: ArticleContent = {
    imageCaption: "(Source images: Marvin Dott/Getty Images, Milad Fakurian/Unsplash)",
    paragraphs: [
     "Companies founded by women received less than 2% of venture capital funding in 2022—a decline from the year before. However, when women-led startups are funded, research has shown that they generate more in cumulative returns, compared to those led by men. A new VC fund aims to take this lesson to women's sports.",
-    "On Monday, venture capitalists Kara Nortman and Jasmine Robinson announced the close of a $100 million fund, the Monarch Collective, with a mission to “accelerate equity in global sport.” Nortman is a former partner at the Los Angeles-based venture capital firm Upfront Ventures. Robinson was a partner at Causeway, a fund focused on sports, media, and entertainment.",
+    "On Monday, venture capitalists Kara Nortman and Jasmine Robinson announced the close of a $150 million fund, the Monarch Collective, with a mission to “accelerate equity in global sport.” Nortman is a former partner at the Los Angeles-based venture capital firm Upfront Ventures. Robinson was a partner at Causeway, a fund focused on sports, media, and entertainment.",
     "The Monarch Collective, founded in January, will focus on investing in women's teams and leagues, along with adjacent industries, such as media and gaming. The duo say they are initially considering investments in women's soccer teams in the U.S., and in women's teams and leagues in sports such as basketball, cycling, and rugby internationally.",
     "Last spring, Nortman cofounded Angel City FC, the Los Angeles-based National Women's Soccer League team—and the first majority female-owned professional sports franchise in the U.S. According to Nortman, professional women's sports—which are just starting to break through on television, with sponsors, and among fans—present an opportunity for large returns. Nortman calls it “an arbitrage on sexism.”",
     "“There's an opportunity to get in at what should be historically low valuations in teams and leagues, that are at the beginning of a media rights cycle—which is a very well understood revenue stream,” Nortman says. “So, if you're disciplined, if you have the right fund size, if you're showing up and actually doing work, you can get venture-like returns with very low risk.”",
@@ -41,27 +41,26 @@ const articleContent_0: ArticleContent = {
    linkedin: "https://www.fastcompany.com/user/ajhess",
 }
 const articleContent_1: ArticleContent = {
-  author: "SHLOMO SPRUNG",
+  author: "MONARCH COLLECTIVE",
   pfp: "/images/news/Shlomo-1.jpg",
-  date: "09/20/2023",
+  date: "10/10/2023",
   image: "/news/article-001.jpg",
-  imageCaption: "(Maja Hitij / FIFA via Getty Images)",
+  imageCaption: "",
   paragraphs: [
-    "A minority stake in the newly awarded NWSL expansion club in Boston is Monarch's first investment. Boardroom catches up with collective co-founder Kara Nortman.",
-    "Kara Nortman co-founded the NWSL's Angel City soccer club in Los Angeles in 2020, quickly helping the team build to a $100 million valuation in a historically successful launch. Now, in 2023, it attempts to become the first-ever $1 billion women's sports team",
-    "Earlier this year, Nortman spoke with Boardroom upon launching Monarch Collective alongside Jasmine Robinson, a $100 million investment fund solely focused on women's sports with backing from power players like Billie Jean King. Monarch's first investment is a minority stake in a new NWSL club in Boston announced Tuesday, set to launch in 2026 with only the second US professional stadium specifically constructed with women's soccer in mind.",
-    "Boston Unity Soccer Partners consists of an all-female core ownership group led by Juno Equity Founder and Boston Celtics minority stakeholder Jennifer Epstein as controlling partner, with 95% of the invested capital from women and 40% from women of color. In July 2022, Nortman had a tech-related meeting with Flybridge Capital General Partner Anna Palmer, another member of the Boston core ownership group, but all Kara & Anna could talk about was soccer. That conversation led Palmer to form a group looking to bid on an NWSL expansion team, helping in the process before she even knew Monarch Collective would launch.",
-    "“My upbringing on the investor side was through soccer, and it woke me up to what was possible in building Angel City. It started from a place of passion and purpose, and then it moved to the fastest growing revenue business I've ever seen, even including those in tech,” Nortman told Boardroom.",
-    "“So it just felt natural that our first investment would end up in soccer.”",
-    "Nortman said she worked collaboratively with the league on a policy to ensure there's no conflict of interest, as she now serves as a minority investor for two NWSL clubs, Angel City and the to-be-named Boston expansion project. Nortman is not the controlling owner of either team, nor will she be involved in their sporting decisions, she said. For the former Upfront Ventures managing partner, it's about bringing the right people and the right capital to the NWSL and women's sports, building a pipeline of talent through Monarch Collective to send to many teams to help leagues thrive.",
-    "That mindset is part of what Kara Nortman called open source models for women's sports success. That means sharing best practices to get teams and leagues better media deals, grow attendance numbers, attract better ownership groups, and increase franchise valuations across the board.",
-    "“At Angel City, anybody who wants to call me, I'll get on the phone and share high level numbers, our model, the kinds of key hires we made in the beginning,” Nortman said.",
-    "Robinson spent more than three years as an investments and business operations manager with the San Francisco 49ers, helping the team move from the antiquated Candlestick Park to Levi's Stadium. She was in charge, Nortman said, of everything from the new stadium's wine program to negotiating an on-site merch contract with Fanatics and how much season ticket holders should pay for seats at a new stadium. These are types of elements that Monarch will bring to the Boston club as it looks to build a modernized new venue at George R. White Stadium in Franklin Park.",
-    "Like Los Angeles, Boston is a historic sports town with so many entrenched champions with followings that span generations, making building a team from scratch a unique challenge. The biggest keys to building up an NWSL franchise, Nortman said, is building community, finding talent, and showing up with strength. It'll be vital to not only find the right people to grow the team but also build a stadium accessible to the demographics and populations that are lined up with the modern fan base. Nortman said she found the first two Angel City fans at an LAFC game, and it'll be up to women's soccer diehards like Palmer to attract fans and build up a diverse set of revenue streams.",
-    "Showing up with strength means believing in the product you're selling, getting a fan base to buy in and help write the first chapter in the team's history together while taking best practices from teams like the Celtics and Red Sox who have executives in the new ownership group. It's about bringing in the right heads of revenue, heads of community, and executing on everything from best ticketing practices, building a supporters group, finding the right margin structures and sponsorship deals. Nortman believes women's teams actually have an advantage in sponsorships, with new brands in beauty, supplements, and alcohol focused on women's consumption gravitating toward them in addition to the influx of traditional sponsors.",
-    "Of course, this Boston club is just the first of what promises to be many Monarch Collective investments in women's sports, with the fund closed and the group's first hires coming soon. Nortman said Monarch is looking at global soccer, women's basketball, golf, tennis, and media rights, striking a balance between being disciplined, thoughtful, collaborative, intentional, and bullish.",
-    "“The dollars are so big and people are having to make such big moves on the men's side that there should be more room to just innovate on the women's side,” she said. “But it takes focus and purpose to do it.”",
-    "With this investment in the NWSL's 15th and newest club, Kara Nortman is hopeful that this is only the beginning of Monarch's reign.",
+    "Today, we’re excited to announce Monarch Collective’s first investment: bringing the NWSL back to Boston alongside Boston Unity Soccer Partners.",
+    "This is a natural first investment for us–a storied sports town like Boston, a league with incredible momentum in the NWSL, and the largest sport in the world. Just as important, the founding team has deep connections to their community and is aligned with our values at Monarch–they care about winning and proving women’s sports is a great investment and also believe that doing so requires investing with players, fans, and the broader community at the forefront.",
+    "NWSL Boston was founded by four incredible women–Jennifer Epstein, Stephanie Connaughton, Ami Danoff, and Anna Palmer. They came together around a shared passion for soccer, women’s sports, and their city. Having this clear ‘why’ is a critical ingredient for success when launching an expansion team. It informs how you make the decisions, big and small, that ultimately shape who the team is at launch and beyond.",
+    "The other thing that stood out to me right away from this group was their diversity of thought and experience. In working closely with them for the past few months, the strength of each of their unique perspectives has continued to shine. This diversity will be a key driver of the team’s success.",
+    "Jennifer has expertise across sports, real estate, investing, and hospitality that come together daily to navigate launching the team. Alongside that expertise, Jennifer’s superpower is community building. Her ability to set the right strategy combined with her authentic passion to attract the right group of collaborators to join on this journey is truly unique.",
+    "It takes someone like Anna with that next level soccer fandom coupled with practical operating experience to craft a gameday experience that’s engaging for all types of fans. Ami’s network of relationships spanning from finance to nonprofits has helped us connect with the right resources and partners. In designing the brand, mission, and vision, Stephanie has pragmatic expertise on how to use data and brand-building best practices to inform decisions.",
+    "I love collaborating with this group because of the different ways each person shows up to help this team to win and deliver for the city of Boston.",
+    "Boston is a sports town. The energy from the loudest moments of fan euphoria in TD Garden during a Celtics game is unlike anything I’ve ever experienced in sports.",
+    "I fell in love with baseball going to Red Sox games in college and seeing the community amongst season ticket holders that had grown up together and whose kids had now become friends. It’s a special place. We’re excited to build another fan community in Boston and create new history in a place with deep tradition.",
+    "White Stadium is the space to build this history. I love how it has its own story and tradition that we can learn from and build on. It was originally built in 1949 as a venue for the community. Whether it was high school football games or concerts like Sly and the Family Stone, it was frequently filled to capacity and a space for gathering.",
+    "Kara and I visited White Stadium with the founders earlier this year. We stood at the top of the seating bowl imagining what the stadium would be like, revamped and full of fans. We walked through the gates imagining how supporters would enter and how we’d create the right community gathering spaces on gameday. You can’t help but get energized about building this team, with this group, in this city.",
+    "An expansion team is a unique opportunity to custom-build an experience for a market and fan base. Building in women’s sports at this moment in time is especially purposeful. At Monarch, we aim to partner with women’s sports teams and leagues that we think can create the most value and drive systems change in women’s sports for decades to come.",
+    "We choose to build with groups who are committed to a capital base and leadership team that reflects the diversity of the fan base and athletes because we believe that’s critical to drive the best financial outcomes.",
+    "And we do it with people who share our values that we’re proud to partner with. Boston Unity embodies everything we look for in a partnership. We couldn’t be more proud to announce this investment and to be a part of bringing the newest team to title town.",
   ],
   twitter: "https://twitter.com",
   linkedin: "https://boardroom.tv/author/shlomo-sprung/",
@@ -119,20 +118,18 @@ const articleContent_2: ArticleContent = {
   linkedin: "https://karanortman.medium.com/",
 }
 const articleContent_3: ArticleContent = {
-  author: "STEPH YANG",
+  author: "KAMARON LEACH",
   pfp: "pfp.png",
-  date: "09/20/2023",
+  date: "07/26/2023",
   image: "/news/ballon.jpg",
-  imageCaption: "",
+  imageCaption: "Caleb Williams Photographer: Harry How/Getty Images North America",
   paragraphs: [
-    "On a bright, blustery day in front of Boston City Hall, the primary ownership group of the newest NWSL expansion team gathered alongside Mayor Michelle Wu to announce its intentions to operate a professional women’s soccer team in the city. Joining the group for the event was Monarch Collective managing partner Jasmine Robinson, a former San Francisco 49ers investment and business operations manager and someone with experience in venture capital funding in sports and media. Monarch Collective, an investment fund that includes Angel City co-founder Kara Nortman among its members, counts this Boston expansion team as its first investment.",
-    "Robinson spoke to The Athletic before the announcement to discuss why she and Monarch decided to come on board as investors, her view of the evolving women’s soccer landscape and Boston’s next moves as it prepares for its 2026 debut.",
-    "This interview has been lightly edited for length and clarity.",
-    "How did you get involved with Monarch and then with Boston? ",
+    "University of Southern California star quarterback Caleb Williams is vying to be much more than a premier pick in next year’s National Football League draft.",
+    "Briefly trading in his football uniform, the Heisman Trophy winner put on his finance hat to become one of the latest backers of a new",
     "(Open article to read more)",
   ],
-  twitter: "https://twitter.com/thrace",
-  linkedin: "https://theathletic.com/author/steph-yang/",
+  twitter: "",
+  linkedin: "https://www.bloomberg.com/authors/ATlFdEXmswc/kamaron-leach",
 }
 const videoContent: VideoContent = {
   author: "Samantha Musanga",
@@ -156,22 +153,22 @@ const podcastContent_1: PodcastContent = {
 export const NEWS_ARTICLES: NewsArticle[] = [
   {
     id: 0,
-    title: "Introducing Monarch Collective: Going All-In on Women's Sports",
+    title: "Introducing Monarch Collective - Our Why",
     content: articleContent_2,
     type: "article",
     readTime: 7,
     image: "monarch.jpg",
-    externalUrl: "https://ventureinside.com/introducing-monarch-collective-going-all-in-on-womens-sports-c009cc393448"
+    externalUrl: "https://ventureinside.com/introducing-monarch-collective-going-all-in-on-womens-sports-c009cc393448?source=user_profile---------0----------------------------"
   },
   {
     id: 1,
     title:
-      "Kara Nortman & Monarch Begin Reign with NWSL Boston Investment",
+      "Announcing Monarch's Boston Investment",
     content: articleContent_1,
     type: "article",
     readTime: 5,
     image: "article-001.jpg",
-    externalUrl: "https://boardroom.tv/kara-nortman-monarch-nwsl-boston-expansion/"
+    externalUrl: "https://www.linkedin.com/posts/monarch-collective-llc_announcing-monarchs-first-investment-nwsl-activity-7109638065236705280-rjlg/?utm_source=share&utm_medium=member_desktop"
   },
   {
     id: 2,
@@ -184,16 +181,16 @@ export const NEWS_ARTICLES: NewsArticle[] = [
   },
   {
     id: 3,
-    title: "Boston's NWSL ownership made 'full sprint' for its bid: An investor explains how it came together",
+    title: "'Bloomberg' Writes: Caleb Williams Invests - Monarch's Focus on Collaboration",
     content: articleContent_3,
     type: "article",
     readTime: 7,
     image: "ballon.jpg",
-    externalUrl: "https://theathletic.com/4882270/2023/09/20/boston-nwsl-2026/"
+    externalUrl: "https://www.bloomberg.com/news/articles/2023-07-26/usc-star-quarterback-caleb-williams-backs-women-focused-sports-fund-monarch?embedded-checkout=true"
   },
   {
     id: 4,
-    title: "The Monarch Collective unveils $100 million fund to bring equity to women's sports",
+    title: "'Fast Company' Writes: The Monarch Collective unveils $150 million fund to bring equity to women's sports",
     content: articleContent_0,
     type: "article",
     readTime: 7,
