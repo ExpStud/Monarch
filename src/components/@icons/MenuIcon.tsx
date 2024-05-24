@@ -12,7 +12,7 @@ const MenuIcon: FC<Props> = (props: Props) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={`transition-all duration-300 stroke-gray-300 hover:stroke-[#000000CC] stroke-light-gray cursor-pointer ${className}`}
+      className={`transition-all duration-300 stroke-custom-black cursor-pointer ${className}`}
       {...componentProps}
     >
       <path d="M5 7H19" strokeWidth="2" strokeLinecap="round" />

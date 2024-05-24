@@ -1,19 +1,20 @@
 import { FC, useEffect, useRef, useState } from "react";
+
+import { HeaderContent } from "@components";
 import {
-  motion,
-  useMotionValueEvent,
   useScroll,
   Variants,
+  useMotionValueEvent,
+  motion,
 } from "framer-motion";
-import { HeaderContent } from "@components";
 interface Props {
   showHeader?: boolean;
-  menuType?: string;
-  pageIndex?: Number
+  type?: string;
+  section: number;
 }
 
 const Header: FC<Props> = (props: Props) => {
-  const { menuType = "absolute", showHeader = true, pageIndex = -1 } = props;
+  const { type = "fixed", showHeader = true, section } = props;
 
   const [animateHeader, setAnimateHeader] = useState<boolean>(true);
 
@@ -42,7 +43,7 @@ const Header: FC<Props> = (props: Props) => {
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     // if (latest > 0.95) setAnimateHeader(true);
-    if (latest < 0.1) setAnimateHeader(true);
+    if (latest < 0.01) setAnimateHeader(true);
   });
 
   //hide header on scroll down, show on scroll up
@@ -79,17 +80,20 @@ const Header: FC<Props> = (props: Props) => {
 
   return (
     <header
-      className={`top-0 z-10 transition-all duration-500 bg-[#FAF6EE] z-50`}
+      className={`top-0 z-50 transition-all duration-500 w-full h-0 ${
+        type === "scroll" ? "fixed" : type
+      } 
+`}
     >
-      {false ? (
-        <HeaderContent menuType={menuType} pageIndex={props.pageIndex} />
+      {type !== "scroll" ? (
+        <HeaderContent section={section} />
       ) : (
         <motion.aside
           variants={headerVariants}
           initial={showHeader ? "show" : "hidden"}
           animate={animateHeader ? "show" : "hidden"}
         >
-          <HeaderContent menuType={menuType} pageIndex={props.pageIndex}/>
+          <HeaderContent section={section} />
         </motion.aside>
       )}
     </header>

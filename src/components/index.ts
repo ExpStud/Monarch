@@ -9,6 +9,9 @@ const ExchangeIcon = dynamic(() => import("./@icons/ExchangeIcon"));
 const MenuIcon = dynamic(() => import("./@icons/MenuIcon"));
 const CloseIcon = dynamic(() => import("./@icons/CloseIcon"));
 const DownloadIcon = dynamic(() => import("./@icons/DownloadIcon"));
+const BookIcon = dynamic(() => import("./@icons/BookIcon"));
+const PlayIcon = dynamic(() => import("./@icons/PlayIcon"));
+const PodcastIcon = dynamic(() => import("./@icons/PodcastIcon"));
 //atoms
 const DropdownButton = dynamic(() => import("./atoms/DropdownButton"));
 const DropdownItem = dynamic(() => import("./atoms/DropdownItem"));
@@ -21,6 +24,7 @@ const LoadCircle = dynamic(() => import("./atoms/LoadCircle"));
 const TabBarItem = dynamic(() => import("./atoms/TabBarItem"));
 const ImageShimmer = dynamic(() => import("./atoms/ImageShimmer"));
 const Logo = dynamic(() => import("./atoms/Logo"));
+const Underline = dynamic(() => import("./atoms/Underline"));
 //molecules
 const PageHead = dynamic(() => import("./molecules/PageHead"));
 const Dropdown = dynamic(() => import("./molecules/Dropdown"));
@@ -31,11 +35,14 @@ const IconBar = dynamic(() => import("./molecules/IconBar"));
 const SplashScreen = dynamic(() => import("./molecules/SplashScreen"));
 const HeaderContent = dynamic(() => import("./molecules/HeaderContent"));
 const Card = dynamic(() => import("./molecules/Card"));
+const BackButton = dynamic(() => import("./molecules/BackButton"));
 //organisms
 const Header = dynamic(() => import("./organisms/Header"));
 const Footer = dynamic(() => import("./organisms/Footer"));
 const ImageModal = dynamic(() => import("./organisms/ImageModal"));
 const Menu = dynamic(() => import("./organisms/Menu"));
+const NewsItem = dynamic(() => import("./organisms/NewsItem"));
+const LandingHeader = dynamic(() => import("./organisms/LandingHeader"));
 //templates
 const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
@@ -81,5 +88,12 @@ export {
   AboutView,
   MeetTheTeamView,
   NewsView,
-  Card
+  Card,
+  BackButton,
+  NewsItem,
+  LandingHeader,
+  BookIcon,
+  PlayIcon,
+  PodcastIcon,
+  Underline
 }

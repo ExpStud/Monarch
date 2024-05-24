@@ -44,7 +44,7 @@ const ImageShimmer: FC<Props> = (props: Props) => {
   } = props;
 
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
-
+  console.log("imageLoaded", imageLoaded);
   return (
     <motion.div
       className={`relative rounded overflow-hidden ${className}`}

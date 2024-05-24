@@ -1,114 +1,28 @@
+import { FC } from "react";
+import { NEWS_ARTICLES, enterAnimation } from "@constants";
+import { NewsItem } from "@components";
 import { motion } from "framer-motion";
-import { Dispatch, SetStateAction, FC, useContext } from "react";
-import { ViewContext, slideLeft, slideRight } from "@constants";
-import { handleAssetLoad } from "@utils";
-import Image from "next/image";
-import {Card} from "@components";
-import Link from "next/link";
 
-const MeetTheTeamView: FC= () => {
-
+const NewsView: FC = () => {
   return (
-    <>
-    <div className="flex flex-col items-center mt-6">
-      <h1 className="text-3xl tracking-[6px]">NEWS</h1>
-
-      <div className="w-[90%] flex gap-3 max-[1100px]:flex-col justify-center items-center text-[#FAF6EE] pb-[100px] pt-[45px] text-[#CDB7F6] text-xl">
-        <div className="relative">
-          <img className="object-cover max-md:max-w-[400px] w-[100%]" src="images/n-1.png" alt="" />
-          <div className="absolute font-semibold top-8 left-8 rounded-[4px] bg-black py-2 px-4 w-[75%]">
-            <div className="line-clamp-3">
-              Announcing Monarch’s first investment...
-            </div>
-          </div>
-          <div className="flex justify-between absolute w-[98%] left-[1%] bottom-2 rounded-[4px] bg-black py-2 px-4">
-            <div className="text-sm font-bold tracking-[2px]">
-              10 MIN READ
-            </div>
-            <div className="flex items-center">
-              <img src="images/article.png" alt="" />
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col gap-3 items-center relative bottom-1">
-          <div className="relative max-md:max-w-[500px]">
-            <img className="max-md:min-h-[300px] object-cover" src="images/n-2.png" alt="" />
-
-            <div className="absolute font-semibold top-8 left-8 rounded-[4px] bg-black py-2 px-4 w-[65%]">
-              <div className="line-clamp-3">
-                First came Angel City FC. Now, meet Monarch Collective...
-              </div>
-            </div>
-            <div className="flex justify-between absolute w-full bottom-0 rounded-[4px] bg-black py-2 px-4">
-              <div className="text-sm font-bold tracking-[2px]">
-                10 MIN READ
-              </div>
-              <div className="flex items-center">
-                <img src="images/article.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="flex gap-3 max-md:flex-wrap justify-center">
-            <Link href="/podcast">
-              <div className="relative">
-                <img className="grow" src="images/n-3.png" alt="" />
-
-                <div className="absolute font-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4">
-                  Podcast
-                </div>
-                <div className="flex justify-between absolute w-full bottom-0 rounded-[4px] bg-black py-2 px-4">
-                  <div className="text-sm font-bold tracking-[2px]">
-                    15:34 MIN
-                  </div>
-                  <div className="flex items-center">
-                    <img src="images/podcast.png" alt="" />
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/video">
-              <div className="relative">
-                <img className="grow" src="images/n-4.png" alt="" />
-
-                <div className="absolute font-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4">
-                  Video
-                </div>
-                <div className="flex justify-between absolute w-full bottom-0 rounded-[4px] bg-black py-2 px-4">
-                  <div className="text-sm font-bold tracking-[2px]">
-                    15:34 MIN
-                  </div>
-                  <div className="flex items-center">
-                    <img src="images/video.png" alt="" />
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/article">
-              <div className="relative">
-                <img className="grow" src="images/n-5.png" alt="" />
-
-                <div className="absolute font-semibold tracking-[2px] top-4 left-4 rounded-[4px] bg-black py-2 px-4">
-                  Article
-                </div>
-                <div className="flex justify-between absolute w-full bottom-0 rounded-[4px] bg-black py-2 px-4">
-                  <div className="text-sm font-bold tracking-[2px]">
-                    10 MIN READ
-                  </div>
-                  <div className="flex items-center">
-                    <img src="images/article.png" alt="" />
-                  </div>
-                </div>
-              </div>
-            </Link>
+    <motion.div className="flex flex-col items-center" {...enterAnimation}>
+      <div className="flex flex-col items-center gap-1 py-10 md:py-20 lg:mt-20">
+        <h1 className="text-3xl tracking-[6px]">NEWS</h1>
+        <div className="w-full h-0.5 bg-mon-purple" />
+      </div>
+      <div className="w-[90%] flex gap-3 max-[1100px]:flex-col justify-center items-center  text-[#CDB7F6] text-xl lg:text-[28px] pb-[100px]">
+        <NewsItem layout={0} article={NEWS_ARTICLES[0]} />
+        <div className="flex flex-col gap-3 items-center relative">
+          <NewsItem layout={1} article={NEWS_ARTICLES[1]} />
+          <div className="flex gap-3 max-md:flex-col w-full justify-center">
+            <NewsItem layout={2} article={NEWS_ARTICLES[2]} />
+            <NewsItem layout={2} article={NEWS_ARTICLES[3]} />
+            <NewsItem layout={2} article={NEWS_ARTICLES[4]} />
           </div>
         </div>
       </div>
-    </div>
-    </>
+    </motion.div>
   );
 };
 
-export default MeetTheTeamView;
-
+export default NewsView;

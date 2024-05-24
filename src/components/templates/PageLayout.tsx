@@ -16,7 +16,8 @@ interface Props {
   absolute?: boolean; //allows scroll
   headerType?: string;
   assets?: boolean[];
-  pageIndex?: Number
+  header?: boolean;
+  section?: number;
 }
 
 const PageLayout: FC<Props> = (props: Props) => {
@@ -26,8 +27,8 @@ const PageLayout: FC<Props> = (props: Props) => {
     absolute = false,
     headerType = "",
     children,
-    assets = [],
-    pageIndex = -1
+    header = true,
+    section = -1,
   } = props;
 
   //context for splash screen & modals
@@ -41,25 +42,24 @@ const PageLayout: FC<Props> = (props: Props) => {
   };
 
   return (
-    <>
-    <div
-      className={`flex flex-col min-h-[100svh] h-full justify-between overflow-x-hidden ${
-        fixed ? "fixed inset-0" : absolute ? "absolute inset-0" : "relative"
-      }`}
-    >
-      <PageHead
-        title="Name"
-        description="Description"
-        url="https://addurl.xyz" // no backslash at the end
-        twitter="twitterhandle"
-      />
-      <ViewContext.Provider value={value}>
+    <ViewContext.Provider value={value}>
+      <div
+        className={`flex flex-col min-h-screen h-full justify-between overflow-x-hidden bg-mon-cream ${
+          fixed ? "fixed inset-0" : absolute ? "absolute inset-0" : "relative"
+        }`}
+      >
+        <PageHead
+          title="Monarch"
+          description="Accelerating Equity in Global Sports"
+          url="https://addurl.xyz" // no backslash at the end
+          twitter="Monarch_Coll"
+        />
         {/* header */}
-        <Header pageIndex={props.pageIndex} />
+        {header && <Header type={headerType} section={section} />}
 
         {/* body */}
         <motion.main
-          className={`flex flex-col h-full w-full overflow-x-clip`}
+          className={`flex flex-col h-full w-full overflow-hidden`}
           {...enterAnimation}
         >
           {children}
@@ -69,7 +69,7 @@ const PageLayout: FC<Props> = (props: Props) => {
         {footer && <Footer />}
 
         {/* modals */}
-        {assets && <SplashScreen assets={assets} />}
+        {/* {assets && <SplashScreen assets={assets} />} */}
         <AnimatePresence mode="wait">
           {ImageModalId !== -1 && (
             <ImageModal
@@ -79,9 +79,8 @@ const PageLayout: FC<Props> = (props: Props) => {
             />
           )}
         </AnimatePresence>
-      </ViewContext.Provider>
-    </div>
-    </>
+      </div>
+    </ViewContext.Provider>
   );
 };
 export default PageLayout;
