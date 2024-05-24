@@ -63,7 +63,7 @@ const articleContent_1: ArticleContent = {
     "And we do it with people who share our values that we’re proud to partner with. Boston Unity embodies everything we look for in a partnership. We couldn’t be more proud to announce this investment and to be a part of bringing the newest team to title town.",
   ],
   twitter: "https://twitter.com",
-  linkedin: "https://boardroom.tv/author/shlomo-sprung/",
+  linkedin: "https://www.linkedin.com/company/monarch-collective-llc/posts/?feedView=all",
   instagram: "https://instagram.com",  
   email: "example@email.com",  
 }
