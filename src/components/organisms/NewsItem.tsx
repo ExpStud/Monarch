@@ -69,7 +69,7 @@ const NewsItem: FC<Props> = (props: Props) => {
           }`}
       >
         <p className="line-clamp-2 overflow-hidden leading-8">
-          {layout === 2 ? capitalizeFirstLetter(article.type) : article.title}
+          {article.title}
         </p>
       </div>
       <div className="flex w-full justify-between items-center absolute -bottom-1 rounded-[4px] py-2 px-4">
