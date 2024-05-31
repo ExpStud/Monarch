@@ -172,7 +172,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
   },
   {
     id: 2,
-    title: "Soccer Mom to Sports Magnate",
+    title: "For Limited Partners",
     content: podcastContent_1,
     type: "podcast",
     readTime: 45,
@@ -190,7 +190,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
   },
   {
     id: 4,
-    title: "The Monarch Collective unveils $150 million fund to bring equity to women's sports",
+    title: "Monarch Closes $150M - Women's Sports Market",
     content: articleContent_0,
     type: "article",
     readTime: 7,
