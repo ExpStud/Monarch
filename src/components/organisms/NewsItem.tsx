@@ -64,13 +64,13 @@ const NewsItem: FC<Props> = (props: Props) => {
             layout === 0
               ? "w-[90%] max-h-[721px] leading-8 h-[96px]"
               : layout === 1
-              ? "w-[80%] ] max-h-[721px] leading-8 h-[70px]"
+              ? "w-[80%] ] max-h-[721px] leading-8 h-[96px]"
               : "text-sm h-[60px]"
           }`}
       >
         <p className="line-clamp-2 overflow-hidden  ">{article.title}</p>
       </div>
-      <div className="flex w-full justify-between items-center absolute -bottom-1 rounded-[4px] py-2 px-4">
+      <div className="flex w-full justify-between items-center absolute -bottom-1 rounded-[0px] pb-1 px-4 bg-black bg-opacity-70">
         <div className="text-[15px] self-center tracking-[2px]">
           {article.readTime} MIN {article.type === "article" && "READ"}
         </div>

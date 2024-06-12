@@ -141,7 +141,7 @@ const podcastContent_1: PodcastContent = {
   author: "FEG Insight Bridge",
   date: "10/10/2023",
   image: "/news/soccer-mom.jpg",
-  subTitle:"Full Time with Meg Linehan: A Show about women's soccer",
+  subTitle:"FEG Insight Bridge",
   paragraphs: [
    "Immerse yourself in the world of investing in sports as Greg Dowling sits down with prominent American venture capitalist, Kara Nortman.",
    "Kara, shares her journey in becoming a co-founder of Angels City FC, as well as her role at  Monarch Collective, a venture capital firm investing in women's sports, teams, leagues, and adjacent revenue streams. Discover investment strategies, challenges, and triumphs that shaped these groundbreaking women-led sports ventures. Kara breaks down underwriting, expanding media rights, commercialization, and maximizing returns, providing insight for investors. Kara provides raw and unfiltered insights into the dynamic world of sports investing. Join us, we hope you get a kick out of it.   ",
@@ -181,7 +181,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
   },
   {
     id: 3,
-    title: "Caleb Williams Invests - Monarch's Focus on Collaboration",
+    title: "Caleb Williams Invests",
     content: articleContent_3,
     type: "article",
     readTime: 7,
@@ -190,7 +190,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
   },
   {
     id: 4,
-    title: "Monarch Closes $150M - Women's Sports Market",
+    title: "$150 Million Womens Sports Fund Closes",
     content: articleContent_0,
     type: "article",
     readTime: 7,
