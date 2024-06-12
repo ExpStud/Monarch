@@ -59,18 +59,16 @@ const NewsItem: FC<Props> = (props: Props) => {
         onLoadingComplete={() => setImageLoaded(true)}
       />
       <div
-        className={`absolute tracking-[2px] top-4 left-0 rounded-[4px] py-2 px-4 text-[28px]  
+        className={`absolute flex items-center tracking-[2px] top-0 left-0 right-0 w-full  px-4 text-[28px]  bg-black bg-opacity-70 
           ${
             layout === 0
-              ? "w-[90%] max-h-[721px]"
+              ? "w-[90%] max-h-[721px] leading-8 h-[96px]"
               : layout === 1
-              ? "w-[80%] ] max-h-[721px]"
-              : ""
+              ? "w-[80%] ] max-h-[721px] leading-8 h-[70px]"
+              : "text-sm h-[60px]"
           }`}
       >
-        <p className="line-clamp-2 overflow-hidden leading-8">
-          {article.title}
-        </p>
+        <p className="line-clamp-2 overflow-hidden  ">{article.title}</p>
       </div>
       <div className="flex w-full justify-between items-center absolute -bottom-1 rounded-[4px] py-2 px-4">
         <div className="text-[15px] self-center tracking-[2px]">
