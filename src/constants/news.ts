@@ -71,7 +71,7 @@ const articleContent_2: ArticleContent = {
   author: "KARA NORTMAN",
   pfp: "pfp.png",
   date: "03/27/2023",
-  image: "/news/monarch.jpg",
+  image: "/news/monarch-long.jpg",
   imageCaption: "",
   paragraphs: [
     "Today we announce Monarch Collective, an investment fund exclusively focused on investing in women's sports.", 
