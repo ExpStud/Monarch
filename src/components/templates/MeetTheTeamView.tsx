@@ -22,7 +22,7 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
           image="/images/woman-1.png"
           position="Managing Partner"
           name="Kara Nortman"
-          description="Kara is Managing Partner of Monarch Collective, an investment platform dedicated to accelerating equity in global sport. Kara is a co-founder of Angel City Football Club, which has quickly risen to become the most valuable women's soccer team in the world. Prior to Monarch, Kara was a Managing Partner at Upfront Ventures, where she worked for eight years. Before joining Upfront, Kara spent close to seven years at IAC where she co-headed the M&A group and later served in operating capacities as the SVP and General Manager of Urbanspoon and Citysearch. She served on the board of IAC's mobile technology incubator (Hatch Labs), where she incubated Tinder in their seed round. Earlier in her career Kara worked at Battery Ventures, Microsoft and Morgan Stanley. Kara is also a founding member of All Raise, a VC-led Nonprofit dedicated to increased diversity in funders and founders, and she advised  the Women's National Soccer Team Players Association during their pay equity fight. Kara earned an AB in Politics from Princeton University and an MBA from Stanford University. Kara resides in Los Angeles with her husband and three daughters."
+          description="Kara is Managing Partner of Monarch Collective, the first investment platform exclusively dedicated to investing in women's sports. Kara is a co-founder of Angel City Football Club, which has quickly risen to become the most valuable women's soccer team in the world. Prior to Monarch, Kara was a Managing Partner at Upfront Ventures, where she worked for eight years. Before joining Upfront, Kara spent close to seven years at IAC where she co-headed the M&A group and later served in operating capacities as the SVP and General Manager of Urbanspoon and Citysearch. She served on the board of IAC's mobile technology incubator (Hatch Labs), where she incubated Tinder in their seed round. Earlier in her career Kara worked at Battery Ventures, Microsoft and Morgan Stanley. Kara is also a founding member of All Raise, a VC-led Nonprofit dedicated to increased diversity in funders and founders, and she advised the Women’s National Soccer Team Players Association during their pay equity fight. Kara earned an AB in Politics from Princeton University and an MBA from Stanford University. Kara resides in Los Angeles with her husband and three daughters."
           interests={[
             "Favorite Sneaker",
             "Favorite Song",
@@ -31,8 +31,8 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
           ]}
           interestsUrl={[
             "https://www.nikesb.com/the-vault/sail-box-era/rayssa",
-            "https://open.spotify.com/track/17phhZDn6oGtzMe56NuWvj?si=QqOctg52TmynNQ819ZaL_Q&nd=1&dlsi=91854fe6f37243cb",
-            "https://www.amazon.com/dp/1524854026?_encoding=UTF8&psc=1&ref_=cm_sw_r_cp_ud_dp_98FZZBHN7D2RJYWCMSEN",
+            "https://open.spotify.com/track/6oJ6le65B3SEqPwMRNXWjY?si=0737a5c765de4692",
+            "https://www.amazon.com/15-Commitments-Conscious-Leadership-Sustainable-ebook/dp/B00R3MHWUE",
             "https://tests.enneagraminstitute.com/",
           ]}
           linkedin="https://www.linkedin.com/in/karanortman/"
