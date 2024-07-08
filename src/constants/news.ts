@@ -197,4 +197,49 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     image: "article-000.jpg",
     externalUrl: "https://www.fastcompany.com/90871005/monarch-collective-100-million-fund-equity-womens-sports"
   },
+  {
+    id: 5,
+    title: "$150 Million Womens Sports Fund Closes",
+    content: articleContent_0,
+    type: "article",
+    readTime: 7,
+    image: "article-000.jpg",
+    externalUrl: "https://www.fastcompany.com/90871005/monarch-collective-100-million-fund-equity-womens-sports"
+  },
+  {
+    id: 6,
+    title: "$150 Million Womens Sports Fund Closes",
+    content: articleContent_0,
+    type: "article",
+    readTime: 7,
+    image: "article-000.jpg",
+    externalUrl: "https://www.fastcompany.com/90871005/monarch-collective-100-million-fund-equity-womens-sports"
+  },
+  {
+    id: 7,
+    title: "$150 Million Womens Sports Fund Closes",
+    content: articleContent_0,
+    type: "article",
+    readTime: 7,
+    image: "article-000.jpg",
+    externalUrl: "https://www.fastcompany.com/90871005/monarch-collective-100-million-fund-equity-womens-sports"
+  },
+  {
+    id: 8,
+    title: "$150 Million Womens Sports Fund Closes",
+    content: articleContent_0,
+    type: "article",
+    readTime: 7,
+    image: "article-000.jpg",
+    externalUrl: "https://www.fastcompany.com/90871005/monarch-collective-100-million-fund-equity-womens-sports"
+  },
+  {
+    id: 9,
+    title: "$150 Million Womens Sports Fund Closes",
+    content: articleContent_0,
+    type: "article",
+    readTime: 7,
+    image: "article-000.jpg",
+    externalUrl: "https://www.fastcompany.com/90871005/monarch-collective-100-million-fund-equity-womens-sports"
+  },
 ];
