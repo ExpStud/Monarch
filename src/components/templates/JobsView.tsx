@@ -10,13 +10,13 @@ const NewsView: FC = () => {
         <h1 className="text-3xl tracking-[6px] uppercase">Jobs</h1>
         <div className="w-full h-0.5 bg-mon-purple" />
       </div>
-      <p className="pb-10 md:pb-20 mt-5 tracking-wider text-center mx-5">
+      <p className="pb-10 md:pb-14 mt-5 tracking-wider text-center mx-5">
         Take a look at some of our available careers and opportunities.
       </p>
       <div className="w-[90%] flex gap-3 max-[1100px]:flex-col justify-center items-center  pb-[100px]">
         {jobPositions.map((job, index) => (
           <div
-            className="flex flex-col justify-between w-[425px] h-[543px] rounded border border-black/40 p-4"
+            className="flex flex-col justify-between lg:w-[425px] lg:h-[543px] min-h-[543px] max-w-[425px] rounded border border-black/40 p-4"
             key={index}
           >
             <div className="bg-[#E9DEFF] rounded flex flex-col gap-2 w-full px-5 py-8">
@@ -49,7 +49,7 @@ const NewsView: FC = () => {
               <p className="mt-4 line-clamp-6 text-base">{job.description}</p>
             </div>
             <a
-              className="flex w-full self-end justify-end"
+              className="flex w-full self-end justify-end mt-3"
               href={job.url}
               target="_blank"
               rel="noreferrer"
@@ -69,7 +69,7 @@ const NewsView: FC = () => {
                   stroke-linejoin="round"
                 />
               </svg>
-              <p className="font-mon-regular">Interested in more details?</p>
+              <p className="font-mon-regular ">Interested in more details?</p>
             </a>
           </div>
         ))}
