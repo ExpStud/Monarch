@@ -1,10 +1,9 @@
 import { Dispatch, FC, SetStateAction, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { CloseIcon, IconBar, NavItem } from "@components";
+import { CloseIcon } from "@components";
 import Link from "next/link";
 import { useWindowSize } from "@hooks";
 import { fadeVariants } from "@constants";
-// import { useOutsideAlerter } from "@hooks";
 
 interface Props {
   toggleMenu: Dispatch<SetStateAction<boolean>>;

@@ -31,7 +31,7 @@ const Home: NextPage = () => {
       <div className="section" id="news" ref={newsRef}>
         <NewsView />
       </div>
-      <div className="section" id="jobs" ref={newsRef}>
+      <div className="section" id="jobs" ref={jobsRef}>
         <JobsView />
       </div>
     </PageLayout>
