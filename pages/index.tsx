@@ -3,6 +3,7 @@ import {
   NewsView,
   MeetTheTeamView,
   PageLayout,
+  JobsView,
 } from "@components";
 import { NextPage } from "next";
 import { useRef, useState } from "react";
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
   const homeRef = useRef<HTMLDivElement>(null);
   const teamRef = useRef<HTMLDivElement>(null);
   const newsRef = useRef<HTMLDivElement>(null);
+  const jobsRef = useRef<HTMLDivElement>(null);
 
   return (
     <PageLayout
@@ -28,6 +30,9 @@ const Home: NextPage = () => {
       </div>
       <div className="section" id="news" ref={newsRef}>
         <NewsView />
+      </div>
+      <div className="section" id="jobs" ref={newsRef}>
+        <JobsView />
       </div>
     </PageLayout>
   );
