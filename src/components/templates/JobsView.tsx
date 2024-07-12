@@ -45,11 +45,11 @@ const NewsView: FC = () => {
               </div>
             </div>
             <div className="flex flex-col">
-              <p className="mt-8 text-base font-mon-regular">Overview:</p>
-              <p className="mt-4 line-clamp-6 text-base">{job.description}</p>
+              <p className="mt-2 text-base font-mon-regular">Overview:</p>
+              <p className="mt-2 line-clamp-6 text-base">{job.description}</p>
             </div>
             <a
-              className="flex w-full self-end justify-end mt-3"
+              className="flex w-full self-end justify-end mt-3 hover:underline"
               href={job.url}
               target="_blank"
               rel="noreferrer"
