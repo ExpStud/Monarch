@@ -15,6 +15,7 @@ const HeaderContent = ({ section }: { section: number }) => {
   const ref = useRef(null);
 
   const navigate = (pageId: number) => {
+    console.log("pageId ", pageIndex, pageId);
     //from landing page
     if (pageIndex === 0) {
       if (pageId === 1) {
@@ -24,11 +25,17 @@ const HeaderContent = ({ section }: { section: number }) => {
       } else if (pageId === 3) {
         scrollToSection("news");
         section = 2;
+      } else if (pageId === 4) {
+        scrollToSection("jobs");
+        section = 3;
       }
     } else {
       //from news item page
       router.push(
-        { pathname: "/", query: { to: pageId === 2 ? "team" : "news" } },
+        {
+          pathname: "/",
+          query: { to: pageId === 2 ? "team" : pageId === 3 ? "news" : "jobs" },
+        },
         "/"
       );
     }
@@ -56,6 +63,11 @@ const HeaderContent = ({ section }: { section: number }) => {
             text="NEWS"
             callback={() => navigate(3)}
             active={pageIndex == 1 || (pageIndex == 0 && section === 2)}
+          />
+          <HeaderItem
+            text="Jobs"
+            callback={() => navigate(4)}
+            active={pageIndex == 0 && section === 3}
           />
           <HeaderItem
             text="INVESTOR PORTAL"
@@ -98,7 +110,7 @@ const HeaderItem: FC<Props> = (props: Props) => {
 
   return (
     <div
-      className={`cursor-pointer flex flex-col gap-1 mt-1 items-center ${
+      className={`cursor-pointer flex flex-col gap-1 mt-1 items-center uppercase ${
         active ? "" : ""
       }`}
       onClick={callback}

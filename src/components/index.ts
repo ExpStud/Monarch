@@ -49,6 +49,7 @@ const LandingView = dynamic(() => import("./templates/LandingView"));
 const AboutView = dynamic(() => import("./templates/AboutView"));
 const MeetTheTeamView = dynamic(() => import("./templates/MeetTheTeamView"));
 const NewsView = dynamic(() => import("./templates/NewsView"));
+const JobsView = dynamic(() => import("./templates/JobsView"));
 
 
 export {
@@ -95,5 +96,6 @@ export {
   BookIcon,
   PlayIcon,
   PodcastIcon,
-  Underline
+  Underline,
+  JobsView
 }

@@ -19,6 +19,8 @@ const Footer: FC<Props> = (props: Props) => {
         scrollToSection("team");
       } else if (pageId === 3) {
         scrollToSection("news");
+      } else if (pageId === 4) {
+        scrollToSection("jobs");
       }
     } else {
       router.push(
@@ -34,7 +36,7 @@ const Footer: FC<Props> = (props: Props) => {
       key="footer"
     >
       <div className="flex max-[1000px]:flex-wrap gap-10 lg:gap-20 xl:gap-36 pl-16 max-[1000px]:pl-0 sm:items-center sm:justify-evenly">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 uppercase">
           <div className="font-mon-bold  tracking-[2px]">ABOUT </div>
           <div
             className="tracking-[2px] font-light cursor-pointer "
@@ -47,6 +49,12 @@ const Footer: FC<Props> = (props: Props) => {
             onClick={() => navigate(3)}
           >
             NEWS
+          </div>
+          <div
+            className="tracking-[2px] font-light cursor-pointer"
+            onClick={() => navigate(4)}
+          >
+            Jobs
           </div>
         </div>
 
