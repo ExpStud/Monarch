@@ -8,14 +8,12 @@ const HeaderContent = ({ section }: { section: number }) => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   const router = useRouter();
-  const [pageIndex, setPageIndex] = useState<number>(
-    router.pathname === "/" ? 0 : 1
-  );
+  const pageIndex =
+    router.pathname === "/" ? 0 : router.pathname === "/jobs" ? 2 : 1;
 
   const ref = useRef(null);
 
   const navigate = (pageId: number) => {
-    console.log("pageId ", pageIndex, pageId);
     //from landing page
     if (pageIndex === 0) {
       if (pageId === 1) {
@@ -30,7 +28,7 @@ const HeaderContent = ({ section }: { section: number }) => {
         section = 3;
       }
     } else {
-      //from news item page
+      if (pageId === 4 && router.pathname === "/jobs") return;
       router.push(
         {
           pathname: "/",
@@ -62,12 +60,12 @@ const HeaderContent = ({ section }: { section: number }) => {
           <HeaderItem
             text="NEWS"
             callback={() => navigate(3)}
-            active={pageIndex == 1 || (pageIndex == 0 && section === 2)}
+            active={pageIndex == 1}
           />
           <HeaderItem
             text="Jobs"
             callback={() => navigate(4)}
-            active={pageIndex == 0 && section === 3}
+            active={pageIndex == 2}
           />
           <HeaderItem
             text="INVESTOR PORTAL"
