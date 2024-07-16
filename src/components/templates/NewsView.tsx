@@ -5,16 +5,12 @@ import { motion } from "framer-motion";
 
 const NewsView: FC = () => {
   return (
-    <motion.div className="flex flex-col items-center" {...enterAnimation}>
+    <div className="flex flex-col items-center" {...enterAnimation}>
       <div className="flex flex-col items-center gap-1 py-10 md:py-20 lg:mt-20">
         <h1 className="text-3xl tracking-[6px]">NEWS</h1>
         <div className="w-full h-0.5 bg-mon-purple" />
       </div>
-<<<<<<< HEAD
       <div className="w-[90%] flex gap-3 max-[1100px]:flex-col justify-center items-center  text-[#CDB7F6] text-xl lg:text-[28px] pb-[15px]">
-=======
-      <div className="w-[90%] flex gap-3 max-[1100px]:flex-col justify-center items-center  text-[#CDB7F6] text-xl lg:text-[28px] pb-[20px]">
->>>>>>> main
         <NewsItem layout={0} article={NEWS_ARTICLES[0]} />
         <div className="flex flex-col gap-3 items-center relative">
           <NewsItem layout={1} article={NEWS_ARTICLES[1]} />
@@ -36,7 +32,7 @@ const NewsView: FC = () => {
         </div>
         <NewsItem layout={0} article={NEWS_ARTICLES[9]} />
         </div>
-    </motion.div>
+    </div>
   );
 };
 
