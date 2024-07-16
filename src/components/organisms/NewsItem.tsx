@@ -65,7 +65,7 @@ const NewsItem: FC<Props> = (props: Props) => {
               ? "w-[90%] max-h-[721px] leading-8 h-[96px]"
               : layout === 1
               ? "w-[80%] ] max-h-[721px] leading-8 h-[96px]"
-              : "text-sm h-[60px]"
+              : "md:text-sm  h-[96px] md:h-[60px]"
           }`}
       >
         <p className="line-clamp-2 overflow-hidden  ">{article.title}</p>

@@ -1,16 +1,15 @@
 import { Dispatch, FC, SetStateAction, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { CloseIcon, IconBar, NavItem } from "@components";
+import { CloseIcon } from "@components";
 import Link from "next/link";
 import { useWindowSize } from "@hooks";
 import { fadeVariants } from "@constants";
-// import { useOutsideAlerter } from "@hooks";
 
 interface Props {
   toggleMenu: Dispatch<SetStateAction<boolean>>;
   open: boolean;
   navigate: (pageId: number) => void;
-  currentPage: "team" | "news" | "home";
+  currentPage: "team" | "news" | "home" | "jobs";
 }
 
 const Menu: FC<Props> = (props: Props) => {
@@ -68,6 +67,12 @@ const Menu: FC<Props> = (props: Props) => {
               className="cursor-pointer text-mon-purple border-b border-mon-purple w-full pb-6"
             >
               NEWS
+            </div>
+            <div
+              onClick={() => navigate(4)}
+              className="cursor-pointer text-mon-purple border-b border-mon-purple w-full pb-6"
+            >
+              JOBS
             </div>
             <Link
               target="_blank"
