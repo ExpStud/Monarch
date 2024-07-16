@@ -11,7 +11,6 @@ const NewsView: FC = () => {
         <div className="w-full h-0.5 bg-mon-purple" />
       </div>
       <p className="pb-10 md:pb-14 mt-5 tracking-wider text-center mx-5">
-        Take a look at some of our available careers and opportunities.
       </p>
       <div className="w-[90%] flex gap-3 max-[1100px]:flex-col justify-center items-center  pb-[100px]">
         {jobPositions.map((job, index) => (
