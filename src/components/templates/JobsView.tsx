@@ -12,7 +12,7 @@ const NewsView: FC = () => {
       </div>
       <p className="pb-10 md:pb-14 mt-5 tracking-wider text-center mx-5">
       </p>
-      <div className="w-[90%] flex gap-3 max-[1100px]:flex-col justify-center items-center  pb-[100px]">
+      <div className="w-[90%] flex gap-10 lg:gap-4 xl:gap-10 max-[1100px]:flex-col justify-center items-center  pb-[100px]">
         {jobPositions.map((job, index) => (
           <div
             className="flex flex-col justify-between lg:w-[425px] lg:h-[543px] min-h-[543px] max-w-[425px] rounded border border-black/40 p-4"
