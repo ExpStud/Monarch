@@ -199,47 +199,47 @@ export const NEWS_ARTICLES: NewsArticle[] = [
   },
   {
     id: 5,
-    title: "$150 Million Womens Sports Fund Closes",
+    title: "SuperReturn International",
     content: articleContent_0,
-    type: "article",
-    readTime: 7,
-    image: "article-000.jpg",
-    externalUrl: "https://www.fastcompany.com/90871005/monarch-collective-100-million-fund-equity-womens-sports"
+    type: "video",
+    readTime: 36,
+    image: "superreturn.jpg",
+    externalUrl: "https://youtu.be/y_7IS45KD-c?feature=shared"
   },
   {
     id: 6,
-    title: "$150 Million Womens Sports Fund Closes",
+    title: "Podcast: The Deal with Alex Rodriguez and Jason Kelly",
     content: articleContent_0,
-    type: "article",
+    type: "podcast",
     readTime: 7,
-    image: "article-000.jpg",
-    externalUrl: "https://www.fastcompany.com/90871005/monarch-collective-100-million-fund-equity-womens-sports"
+    image: "arodmonarch.jpg",
+    externalUrl: "https://podcasts.apple.com/us/podcast/going-all-in-on-womens-sports-with-monarch-collectives/id1732117270?i=1000662613447"
   },
   {
     id: 7,
-    title: "$150 Million Womens Sports Fund Closes",
+    title: "Masters of Scale",
     content: articleContent_0,
-    type: "article",
-    readTime: 7,
-    image: "article-000.jpg",
-    externalUrl: "https://www.fastcompany.com/90871005/monarch-collective-100-million-fund-equity-womens-sports"
+    type: "video",
+    readTime: 11,
+    image: "mastersofscale.jpg",
+    externalUrl: "https://youtu.be/6dzZl7PAd9U?feature=shared"
   },
   {
     id: 8,
-    title: "$150 Million Womens Sports Fund Closes",
+    title: " The RE-CAP Show",
     content: articleContent_0,
-    type: "article",
+    type: "video",
     readTime: 7,
-    image: "article-000.jpg",
-    externalUrl: "https://www.fastcompany.com/90871005/monarch-collective-100-million-fund-equity-womens-sports"
+    image: "therecap.png",
+    externalUrl: "https://www.youtube.com/embed/ARu44B99q_0?si=RfgJd41vuM0rZVHk"
   },
   {
     id: 9,
-    title: "$150 Million Womens Sports Fund Closes",
+    title: "Forbes",
     content: articleContent_0,
-    type: "article",
-    readTime: 7,
-    image: "article-000.jpg",
-    externalUrl: "https://www.fastcompany.com/90871005/monarch-collective-100-million-fund-equity-womens-sports"
+    type: "video",
+    readTime: 36,
+    image: "forbes.png",
+    externalUrl: "https://www.forbes.com/video/e862b819-d072-4c76-a5e1-0d2c17ac5d2c/kara-nortman-on-unlocking-the-billiondollar-potential-of-womens-sports/"
   },
 ];

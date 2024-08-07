@@ -51,7 +51,7 @@ const PageLayout: FC<Props> = (props: Props) => {
         <PageHead
           title="Monarch"
           description="Accelerating Equity in Global Sports"
-          url="https://addurl.xyz" // no backslash at the end
+          url="https://monarchcoll.com/" // no backslash at the end
           twitter="Monarch_Coll"
         />
         {/* header */}

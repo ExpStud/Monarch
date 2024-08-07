@@ -74,7 +74,7 @@ const Video: NextPage = () => {
 
             <iframe
               className="w-full aspect-[16/8] mt-3"
-              src="https://www.youtube.com/embed/KnumAWWWgUE?si=Sf5Y9SltT-HCZfDz"
+              src={article.externalUrl}
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen

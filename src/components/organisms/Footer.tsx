@@ -66,7 +66,7 @@ const Footer: FC<Props> = (props: Props) => {
             </Link>
           </div>
           <div className="tracking-[2px] font-light">
-            <Link href="mailto:info@xyz.dev">INQUIRY FORM</Link>
+            <Link href="mailto:admin@monarchcoll.com">INQUIRY FORM</Link>
           </div>
         </div>
 
