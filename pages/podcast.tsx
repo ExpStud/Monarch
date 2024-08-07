@@ -80,7 +80,7 @@ const Podcast: NextPage = () => {
               <div>{article.content.date}</div>
             </div>
 
-            <div className="flex max-lg:flex-col max-lg:items-center mt-10 px-6 max-lg:px-0 gap-4 cursor-pointer">
+            <div className="flex max-lg:flex-col max-lg:items-center mt-10 px-6 max-lg:px-0 gap-4">
               <div className="shrink-0 max-lg:mb-3">
                 <img
                   className="w-[400px] lg:w-[300px]"
@@ -94,7 +94,7 @@ const Podcast: NextPage = () => {
                   // style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
                   className="w-full h-full max-h-[225px]  mt-4"
                   sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-                  src="https://embed.podcasts.apple.com/us/podcast/soccer-mom-to-sports-magnate/id1572017407?i=1000630808166"
+                  src={content.podcastEmbed}
                 ></iframe>
                 <div className="flex text-xs tracking-[2px] mt-1.5">
                   {/* <div className="grow">10 MIN</div>
@@ -119,7 +119,7 @@ const Podcast: NextPage = () => {
                   {content.subTitle}
                 </div>
                 <div className="h-[1px] opacity-[10%] bg-custom-black my-3"></div>
-                <div>
+                <div className="flex-grow">
                   {content?.paragraphs?.map((p, i) => (
                     <p
                       key={i}

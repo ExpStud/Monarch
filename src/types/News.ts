@@ -24,6 +24,7 @@ export interface PodcastContent {
   paragraphs: string[];
   url: string;
   url2?: string;
+  podcastEmbed: string;
 }
 
 export interface VideoContent {

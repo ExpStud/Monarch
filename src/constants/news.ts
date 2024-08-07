@@ -131,11 +131,7 @@ const articleContent_3: ArticleContent = {
   twitter: "",
   linkedin: "https://www.bloomberg.com/authors/ATlFdEXmswc/kamaron-leach",
 }
-const videoContent: VideoContent = {
-  author: "Samantha Musanga",
-  date: "03/27/2023",
-  url: "https://www.youtube.com/embed/KnumAWWWgUE?si=Sf5Y9SltT-HCZfDz"
-}
+
 
 const podcastContent_1: PodcastContent = {
   author: "FEG Insight Bridge",
@@ -149,7 +145,45 @@ const podcastContent_1: PodcastContent = {
  ],
   url: "https://podcasts.apple.com/us/podcast/soccer-mom-to-sports-magnate/id1572017407?i=1000630808166",
   url2: "https://podcasts.apple.com/us/podcast/feg-insight-bridge/id1572017407",
+  podcastEmbed: "https://embed.podcasts.apple.com/us/podcast/soccer-mom-to-sports-magnate/id1572017407?i=1000630808166"
 }
+
+const superReturnVideo: VideoContent = {
+  author: "SuperReturnTV",
+  date: "6/13/2024",
+  url: "https://www.youtube.com/embed/y_7IS45KD-c?si=-azW9IGOJFkncTe8"
+}
+const podcastVideo: PodcastContent = {
+  author: "Bloomberg",
+  date: "7/18/2024",
+  image: "/news/arod.jpg",
+  subTitle: "Going All In on Women's Sports with Monarch Collective's Jasmine Robinson",
+  paragraphs: ["In this episode of The Deal, Monarch Collective's Jasmine Robinson tells Alex Rodriguez and Jason Kelly about the business case for investing in women's sports leagues. Jasmine explains how her $150 million fund decided to invest in the NWSL and how she sees future growth opportunities for women's sports."],
+  url: "https://podcasts.apple.com/us/podcast/going-all-in-on-womens-sports-with-monarch-collectives/id1732117270?i=1000662613447",
+  url2: "https://podcasts.apple.com/us/podcast/the-deal-with-alex-rodriguez-and-jason-kelly/id1732117270",
+  podcastEmbed: "https://embed.podcasts.apple.com/us/podcast/going-all-in-on-womens-sports-with-monarch-collectives/id1732117270?i=1000662613447",
+}
+const scaleVideo: VideoContent = {
+  author: "Master of Scale",
+  date: "5/11/2024",
+  url: "https://www.youtube.com/embed/6dzZl7PAd9U?si=eLy3JJaVds-Pov9E"
+}
+const recapVideo: VideoContent = {
+  author: "RE-INT",
+  date: "7/23/2024",
+  url: "https://www.youtube.com/embed/ARu44B99q_0?si=RfgJd41vuM0rZVHk"
+}
+const forbesArticle: ArticleContent = {
+  author: "Forbes",
+  date: "6/25/2024",
+  // url: "https://www.forbes.com/video/e862b819-d072-4c76-a5e1-0d2c17ac5d2c/kara-nortman-on-unlocking-the-billiondollar-potential-of-womens-sports/"
+  pfp: "",
+  image: "/news/forbes.png",
+  imageCaption: "",
+  linkedin: "https://www.forbes.com/video/e862b819-d072-4c76-a5e1-0d2c17ac5d2c/kara-nortman-on-unlocking-the-billiondollar-potential-of-womens-sports/",
+  paragraphs: ["Kara Nortman, Managing Partner of Monarch Collective and Cofounder of Angel City FC, talks to Moira Forbes, EVP of Forbes, about her finance background, how Angel City came to fruition, and the profitability of women's sports."],   
+}
+
 export const NEWS_ARTICLES: NewsArticle[] = [
   {
     id: 0,
@@ -200,16 +234,16 @@ export const NEWS_ARTICLES: NewsArticle[] = [
   {
     id: 5,
     title: "SuperReturn International",
-    content: articleContent_0,
+    content: superReturnVideo,
     type: "video",
-    readTime: 36,
+    readTime: 11,
     image: "superreturn.jpg",
     externalUrl: "https://youtu.be/y_7IS45KD-c?feature=shared"
   },
   {
     id: 6,
     title: "Podcast: The Deal with Alex Rodriguez and Jason Kelly",
-    content: articleContent_0,
+    content: podcastVideo,
     type: "podcast",
     readTime: 7,
     image: "arodmonarch.jpg",
@@ -218,7 +252,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
   {
     id: 7,
     title: "Masters of Scale",
-    content: articleContent_0,
+    content: scaleVideo,
     type: "video",
     readTime: 11,
     image: "mastersofscale.jpg",
@@ -226,8 +260,8 @@ export const NEWS_ARTICLES: NewsArticle[] = [
   },
   {
     id: 8,
-    title: " The RE-CAP Show",
-    content: articleContent_0,
+    title: "The RE-CAP Show",
+    content: recapVideo,
     type: "video",
     readTime: 7,
     image: "therecap.png",
@@ -235,9 +269,9 @@ export const NEWS_ARTICLES: NewsArticle[] = [
   },
   {
     id: 9,
-    title: "Forbes",
-    content: articleContent_0,
-    type: "video",
+    title: "Kara Nortman On Unlocking The Billion-Dollar Potential Of Women's Sports",
+    content: forbesArticle,
+    type: "article",
     readTime: 36,
     image: "forbes.png",
     externalUrl: "https://www.forbes.com/video/e862b819-d072-4c76-a5e1-0d2c17ac5d2c/kara-nortman-on-unlocking-the-billiondollar-potential-of-womens-sports/"

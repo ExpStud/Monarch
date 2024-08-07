@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { NEWS_ARTICLES } from "src/constants";
 import { NewsArticle, VideoContent } from "src/types";
-import Image from "next/image";
 
 const Video: NextPage = () => {
   const [article, setArticle] = useState<NewsArticle | null>(null);
@@ -65,16 +64,14 @@ const Video: NextPage = () => {
               </div>
               <div className="flex lg:pl-2">
                 WRITTEN BY:
-                <div className="underline ml-2 uppercase">
-                  {article.content.author}
-                </div>
+                <div className="underline ml-2 uppercase">{content.author}</div>
               </div>
-              <div className="lg:pl-2">{article.content.date}</div>
+              <div className="lg:pl-2">{content.date}</div>
             </div>
 
             <iframe
               className="w-full aspect-[16/8] mt-3"
-              src={article.externalUrl}
+              src={content.url}
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
