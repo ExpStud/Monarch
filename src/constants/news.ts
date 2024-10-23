@@ -206,12 +206,12 @@ export const NEWS_ARTICLES: NewsArticle[] = [
   },
   {
     id: 2,
-    title: "For Limited Partners",
-    content: podcastContent_1,
-    type: "podcast",
-    readTime: 45,
-    image: "soccer-mom.jpg",
-    externalUrl: "https://podcasts.apple.com/us/podcast/feg-insight-bridge/id1572017407"
+    title: "SuperReturn International",
+    content: superReturnVideo,
+    type: "video",
+    readTime: 11,
+    image: "superreturn.jpg",
+    externalUrl: "https://youtu.be/y_7IS45KD-c?feature=shared"
   },
   {
     id: 3,
@@ -233,12 +233,12 @@ export const NEWS_ARTICLES: NewsArticle[] = [
   },
   {
     id: 5,
-    title: "SuperReturn International",
-    content: superReturnVideo,
-    type: "video",
-    readTime: 11,
-    image: "superreturn.jpg",
-    externalUrl: "https://youtu.be/y_7IS45KD-c?feature=shared"
+    title: "For Limited Partners",
+    content: podcastContent_1,
+    type: "podcast",
+    readTime: 45,
+    image: "soccer-mom.jpg",
+    externalUrl: "https://podcasts.apple.com/us/podcast/feg-insight-bridge/id1572017407"
   },
   {
     id: 6,
