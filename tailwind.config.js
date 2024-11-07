@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
         primary: ["Monsterrat Light, sans-serif"],
         "mon-regular": ["Monsterrat, sans-serif"],
+        "mon-medium": ["Monsterrat Medium, sans-serif"],
         "mon-bold": ["Monsterrat Bold, sans-serif"],
         "mon-semibold": ["Monsterrat SemiBold, sans-serif"],
       },

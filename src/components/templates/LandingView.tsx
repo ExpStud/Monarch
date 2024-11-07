@@ -92,18 +92,41 @@ const LandingView: FC<Props> = ({ setShowSite }) => {
           )}
           {animationEnded && (
             <motion.div
-              className="absolute left-1/2 top-[54.5%] transform -translate-x-1/2 -translate-y-1/2 col-centered gap-14 lg:gap-8"
+              className="absolute left-1/2 top-[54.5%] transform -translate-x-1/2 -translate-y-1/2 col-centered gap-10 lg:gap-8"
               key="image"
               {...longExitAnimation}
             >
               <Image
-                src="/images/logo-mission-bold.svg"
+                src="/images/logo-m.png"
                 width={458}
                 height={354}
                 alt="Monarch Logo"
-                className="scale-125 md:scale-100 lg:px-6 -z-[11]"
+                className="scale-100 lg:px-6 -z-[11] px-12 lg:px-0"
               />
-              <p className="text-center text-sm lg:text-[14px]  tracking-[2px] w-full  min-w-[300px] max-w-[750px]">
+              <p className="row-centered gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-mon-medium">
+                PLAY THE GAME{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2"
+                  height="2"
+                  viewBox="0 0 2 2"
+                  fill="none"
+                >
+                  <circle cx="1" cy="1" r="1" fill="black" />
+                </svg>{" "}
+                CHANGE THE GAME{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2"
+                  height="2"
+                  viewBox="0 0 2 2"
+                  fill="none"
+                >
+                  <circle cx="1" cy="1" r="1" fill="black" />
+                </svg>{" "}
+                GROW THE GAME
+              </p>
+              <p className="text-center text-sm lg:text-[14px]  tracking-[2px] w-[90vw] md:w-[750px]">
                 Our mission is to build women&apos;s sports institutions as
                 modern communities with the belief that we can learn from sports
                 best practices while building electrifying experiences that feel
