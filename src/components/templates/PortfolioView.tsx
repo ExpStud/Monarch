@@ -27,7 +27,7 @@ const PortfolioView: FC = () => {
             href={item.url}
             rel="noreferrer"
             target="_blank"
-            className="portfolio-border flex flex-col items-center justify-end gap-3 w-[368px] h-[329px] pb-3"
+            className="portfolio-border flex flex-col items-center justify-end gap-3 max-md:w-full max-md:min-w-[280px] max-md:max-w-[320px] md:w-[368px] h-[329px] pb-3"
             // onMouseDown={() => handleClick(index)}
             // onMouseOut={() => setClickedIndex(null)}
             // onMouseLeave={() => setClickedIndex(null)}
