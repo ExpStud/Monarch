@@ -20,7 +20,7 @@ const PortfolioView: FC = () => {
         <div className="w-full h-0.5 bg-mon-purple" />
       </div>
       <hr className="pb-10 md:pb-14 mt-5 mx-5" />
-      <div className="w-[90%] flex gap-10 lg:gap-6 xl:gap-10 max-[1100px]:flex-col justify-center items-center">
+      <div className="w-[90%] flex gap-6 xl:gap-10 max-[1100px]:flex-col justify-center items-center">
         {portfolioData.map((item, index) => (
           <motion.a
             key={index}
