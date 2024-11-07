@@ -9,7 +9,7 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
   const {} = props;
   return (
     <motion.div
-      className=" flex flex-col items-center mt-10"
+      className=" flex flex-col items-center mt-10 pb-[100px]"
       {...enterAnimation}
     >
       <div className="flex flex-col items-center gap-1 py-10 md:py-20">

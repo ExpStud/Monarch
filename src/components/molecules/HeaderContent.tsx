@@ -68,11 +68,6 @@ const HeaderContent = ({ section }: { section: number }) => {
             active={pageIndex == 1 || (pageIndex == 0 && section === 2)}
           />
           <HeaderItem
-            text="Jobs"
-            callback={() => navigate(4)}
-            active={pageIndex == 0 && section === 3}
-          />
-          <HeaderItem
             text="Portfolio"
             callback={() => navigate(5)}
             active={pageIndex == 0 && section === 4}
@@ -83,6 +78,11 @@ const HeaderContent = ({ section }: { section: number }) => {
               window.open("https://monarch.arkpes.com/login", "_blank");
             }}
             active={false}
+          />
+          <HeaderItem
+            text="Jobs"
+            callback={() => navigate(4)}
+            active={pageIndex == 0 && section === 3}
           />
         </div>
 

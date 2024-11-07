@@ -23,11 +23,11 @@ const Home: NextPage = () => {
       <div className="section" id="news">
         <NewsView />
       </div>
-      <div className="section" id="jobs">
-        <JobsView />
-      </div>
       <div className="section" id="portfolio">
         <PortfolioView />
+      </div>
+      <div className="section" id="jobs">
+        <JobsView />
       </div>
     </PageLayout>
   );

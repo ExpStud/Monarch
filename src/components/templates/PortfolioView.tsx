@@ -12,7 +12,7 @@ const PortfolioView: FC = () => {
 
   return (
     <motion.div
-      className="flex flex-col items-center min-h-screen 3xl:min-h-0 pb-[100px] lg:pb-[250px] pc-10"
+      className="flex flex-col items-center pb-[100px] lg:pb-[250px]"
       {...enterAnimation}
     >
       <div className="flex flex-col items-center gap-1 pt-10 md:pt-20 lg:mt-20">

@@ -53,15 +53,15 @@ const Footer: FC<Props> = (props: Props) => {
           </div>
           <div
             className="tracking-[2px] font-light cursor-pointer"
-            onClick={() => navigate(4)}
-          >
-            Jobs
-          </div>
-          <div
-            className="tracking-[2px] font-light cursor-pointer"
             onClick={() => navigate(5)}
           >
             Portfolio
+          </div>
+          <div
+            className="tracking-[2px] font-light cursor-pointer"
+            onClick={() => navigate(4)}
+          >
+            Jobs
           </div>
         </div>
 
