@@ -4,35 +4,30 @@ import {
   MeetTheTeamView,
   PageLayout,
   JobsView,
+  PortfolioView,
 } from "@components";
 import { NextPage } from "next";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 const Home: NextPage = () => {
   const [showSite, setShowSite] = useState(false);
 
-  const homeRef = useRef<HTMLDivElement>(null);
-  const teamRef = useRef<HTMLDivElement>(null);
-  const newsRef = useRef<HTMLDivElement>(null);
-  const jobsRef = useRef<HTMLDivElement>(null);
-
   return (
-    <PageLayout
-      headerType="fixed"
-      section={0}
-      // section={getSection()}
-    >
-      <div ref={homeRef}>
+    <PageLayout headerType="fixed" section={0}>
+      <div>
         <LandingView setShowSite={setShowSite} />
       </div>
-      <div className="section" id="team" ref={teamRef}>
+      <div className="section" id="team">
         <MeetTheTeamView />
       </div>
-      <div className="section" id="news" ref={newsRef}>
+      <div className="section" id="news">
         <NewsView />
       </div>
-      <div className="section" id="jobs" ref={jobsRef}>
+      <div className="section" id="jobs">
         <JobsView />
+      </div>
+      <div className="section" id="portfolio">
+        <PortfolioView />
       </div>
     </PageLayout>
   );

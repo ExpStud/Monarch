@@ -28,6 +28,9 @@ const HeaderContent = ({ section }: { section: number }) => {
       } else if (pageId === 4) {
         scrollToSection("jobs");
         section = 3;
+      } else if (pageId === 5) {
+        scrollToSection("portfolio");
+        section = 4;
       }
     } else {
       //from news item page
@@ -68,6 +71,11 @@ const HeaderContent = ({ section }: { section: number }) => {
             text="Jobs"
             callback={() => navigate(4)}
             active={pageIndex == 0 && section === 3}
+          />
+          <HeaderItem
+            text="Portfolio"
+            callback={() => navigate(5)}
+            active={pageIndex == 0 && section === 4}
           />
           <HeaderItem
             text="INVESTOR PORTAL"

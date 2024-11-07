@@ -31,6 +31,8 @@ const LandingView: FC<Props> = ({ setShowSite }) => {
       scrollToSection("news");
     } else if (query?.to === "jobs") {
       scrollToSection("jobs");
+    } else if (query?.to === "portfolio") {
+      scrollToSection("portfolio");
     }
   }, [query]);
 

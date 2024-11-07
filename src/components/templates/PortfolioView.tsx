@@ -3,14 +3,13 @@ import { jobPositions, enterAnimation } from "@constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const JobsView: FC = () => {
+const PortfolioView: FC = () => {
   return (
     <motion.div className="flex flex-col items-center" {...enterAnimation}>
       <div className="flex flex-col items-center gap-1 pt-10 md:pt-20 lg:mt-20">
-        <h1 className="text-3xl tracking-[6px] uppercase">Jobs</h1>
+        <h1 className="text-3xl tracking-[6px] uppercase">Portfolio</h1>
         <div className="w-full h-0.5 bg-mon-purple" />
       </div>
-
       <hr className="pb-10 md:pb-14 mt-5 mx-5" />
       <div className="w-[90%] flex gap-10 lg:gap-4 xl:gap-10 max-[1100px]:flex-col justify-center items-center  pb-[100px]">
         {jobPositions.map((job, index) => (
@@ -77,4 +76,4 @@ const JobsView: FC = () => {
   );
 };
 
-export default JobsView;
+export default PortfolioView;

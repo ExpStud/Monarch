@@ -13,20 +13,21 @@ const Footer: FC<Props> = (props: Props) => {
   const router = useRouter();
 
   const navigate = (pageId: number) => {
-    if (page === "landing") {
-      if (pageId === 1) {
-      } else if (pageId === 2) {
-        scrollToSection("team");
-      } else if (pageId === 3) {
-        scrollToSection("news");
-      } else if (pageId === 4) {
-        scrollToSection("jobs");
-      }
+    const section =
+      pageId === 2
+        ? "team"
+        : pageId === 3
+        ? "news"
+        : pageId === 4
+        ? "jobs"
+        : pageId === 5
+        ? "portfolio"
+        : "";
+
+    if (router.asPath === "/") {
+      scrollToSection(section);
     } else {
-      router.push(
-        { pathname: "/", query: { to: pageId === 2 ? "team" : "news" } },
-        "/"
-      );
+      router.push({ pathname: "/", query: { to: section } }, "/");
     }
   };
 
@@ -55,6 +56,12 @@ const Footer: FC<Props> = (props: Props) => {
             onClick={() => navigate(4)}
           >
             Jobs
+          </div>
+          <div
+            className="tracking-[2px] font-light cursor-pointer"
+            onClick={() => navigate(5)}
+          >
+            Portfolio
           </div>
         </div>
 
