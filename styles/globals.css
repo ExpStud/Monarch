@@ -206,3 +206,9 @@ html {
 .inactive-tab {
   @apply px-[8px] md:px-[16px] py-[3px] rounded-[4px] cursor-pointer md:hover:bg-mon-purple  text-custom-black transition-500;
 }
+
+.portfolio-border {
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25); */
+}
