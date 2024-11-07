@@ -4,20 +4,23 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const PortfolioView: FC = () => {
-  const [clickedIndex, setClickedIndex] = useState<number | null>(null);
+  // const [clickedIndex, setClickedIndex] = useState<number | null>(null);
 
-  const handleClick = (index: number) => {
-    setClickedIndex(index);
-  };
+  // const handleClick = (index: number) => {
+  //   setClickedIndex(index);
+  // };
 
   return (
-    <motion.div className="flex flex-col items-center" {...enterAnimation}>
+    <motion.div
+      className="flex flex-col items-center min-h-screen 3xl:min-h-0 pb-[100px] lg:pb-[250px] pc-10"
+      {...enterAnimation}
+    >
       <div className="flex flex-col items-center gap-1 pt-10 md:pt-20 lg:mt-20">
         <h1 className="text-3xl tracking-[6px] uppercase">Portfolio</h1>
         <div className="w-full h-0.5 bg-mon-purple" />
       </div>
       <hr className="pb-10 md:pb-14 mt-5 mx-5" />
-      <div className="w-[90%] flex gap-10 lg:gap-4 xl:gap-10 max-[1100px]:flex-col justify-center items-center  pb-[100px]">
+      <div className="w-[90%] flex gap-10 lg:gap-6 xl:gap-10 max-[1100px]:flex-col justify-center items-center">
         {portfolioData.map((item, index) => (
           <motion.a
             key={index}
@@ -25,9 +28,9 @@ const PortfolioView: FC = () => {
             rel="noreferrer"
             target="_blank"
             className="portfolio-border flex flex-col items-center justify-end gap-3 w-[368px] h-[329px] pb-3"
-            onMouseDown={() => handleClick(index)}
-            onMouseOut={() => setClickedIndex(null)}
-            onMouseLeave={() => setClickedIndex(null)}
+            // onMouseDown={() => handleClick(index)}
+            // onMouseOut={() => setClickedIndex(null)}
+            // onMouseLeave={() => setClickedIndex(null)}
             animate={{
               boxShadow:
                 // clickedIndex === index
