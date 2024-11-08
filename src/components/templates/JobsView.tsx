@@ -3,16 +3,16 @@ import { jobPositions, enterAnimation } from "@constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const NewsView: FC = () => {
+const JobsView: FC = () => {
   return (
     <motion.div className="flex flex-col items-center" {...enterAnimation}>
       <div className="flex flex-col items-center gap-1 pt-10 md:pt-20 lg:mt-20">
         <h1 className="text-3xl tracking-[6px] uppercase">Jobs</h1>
         <div className="w-full h-0.5 bg-mon-purple" />
       </div>
-      <p className="pb-10 md:pb-14 mt-5 tracking-wider text-center mx-5">
-      </p>
-      <div className="w-[90%] flex gap-10 lg:gap-4 xl:gap-10 max-[1100px]:flex-col justify-center items-center  pb-[100px]">
+
+      <hr className="pb-10 md:pb-14 mt-5 mx-5" />
+      <div className="w-[90%] flex gap-10 lg:gap-4 xl:gap-10 max-[1100px]:flex-col justify-center items-center  pb-[100px] lg:pb-[250px]">
         {jobPositions.map((job, index) => (
           <div
             className="flex flex-col justify-between lg:w-[425px] lg:h-[543px] min-h-[543px] max-w-[425px] rounded border border-black/40 p-4"
@@ -77,4 +77,4 @@ const NewsView: FC = () => {
   );
 };
 
-export default NewsView;
+export default JobsView;

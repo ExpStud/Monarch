@@ -28,6 +28,9 @@ const HeaderContent = ({ section }: { section: number }) => {
       } else if (pageId === 4) {
         scrollToSection("jobs");
         section = 3;
+      } else if (pageId === 5) {
+        scrollToSection("portfolio");
+        section = 4;
       }
     } else {
       //from news item page
@@ -65,9 +68,9 @@ const HeaderContent = ({ section }: { section: number }) => {
             active={pageIndex == 1 || (pageIndex == 0 && section === 2)}
           />
           <HeaderItem
-            text="Jobs"
-            callback={() => navigate(4)}
-            active={pageIndex == 0 && section === 3}
+            text="Portfolio"
+            callback={() => navigate(5)}
+            active={pageIndex == 0 && section === 4}
           />
           <HeaderItem
             text="INVESTOR PORTAL"
@@ -75,6 +78,11 @@ const HeaderContent = ({ section }: { section: number }) => {
               window.open("https://monarch.arkpes.com/login", "_blank");
             }}
             active={false}
+          />
+          <HeaderItem
+            text="Jobs"
+            callback={() => navigate(4)}
+            active={pageIndex == 0 && section === 3}
           />
         </div>
 

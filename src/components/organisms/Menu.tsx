@@ -74,6 +74,12 @@ const Menu: FC<Props> = (props: Props) => {
             >
               JOBS
             </div>
+            <div
+              onClick={() => navigate(5)}
+              className="cursor-pointer text-mon-purple border-b border-mon-purple w-full pb-6"
+            >
+              PORTFOLIO
+            </div>
             <Link
               target="_blank"
               href="https://monarch.arkpes.com/login"
