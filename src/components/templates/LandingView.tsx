@@ -127,10 +127,9 @@ const LandingView: FC<Props> = ({ setShowSite }) => {
                 GROW THE GAME
               </p>
               <p className="text-center text-sm lg:text-[14px]  tracking-[2px] w-[90vw] md:w-[750px]">
-                Our mission is to build women&apos;s sports institutions as
-                modern communities with the belief that we can learn from sports
-                best practices while building electrifying experiences that feel
-                different and representative of this time in history.{" "}
+                Monarch&apos;s mission is to build leading women&apos;s sports
+                institutions that inspire and unite, powered by communities that
+                feel representative of this time in history.
               </p>
             </motion.div>
           )}
