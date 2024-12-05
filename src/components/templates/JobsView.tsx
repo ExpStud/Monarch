@@ -5,7 +5,10 @@ import Image from "next/image";
 
 const JobsView: FC = () => {
   return (
-    <motion.div className="flex flex-col items-center" {...enterAnimation}>
+    <motion.div
+      className="flex flex-col items-center min-h-[85vh]"
+      {...enterAnimation}
+    >
       <div className="flex flex-col items-center gap-1 pt-10 md:pt-20 lg:mt-20">
         <h1 className="text-3xl tracking-[6px] uppercase">Jobs</h1>
         <div className="w-full h-0.5 bg-mon-purple" />
