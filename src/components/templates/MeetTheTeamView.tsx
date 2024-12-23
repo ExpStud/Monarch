@@ -17,7 +17,7 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
         <div className="w-full h-0.5 bg-mon-purple" />
       </div>
 
-      <div className="h-full flex flex-col lg:flex-row w-[90%] gap-10 lg:gap-4 xl:gap-10 text-[#FAF6EE] justify-center items-center lg:items-start mx-32">
+      <div className="h-full flex flex-col md:flex-row flex-wrap w-[90%] gap-10 xl:gap-8 text-[#FAF6EE] justify-center items-center lg:items-start mx-32">
         <Card
           image="/images/woman-1.png"
           position="Managing Partner"
@@ -77,6 +77,21 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
           ]}
           linkedin="https://www.linkedin.com/in/christinejiang0/"
           spotify="https://open.spotify.com/playlist/0bnRvoIhusZO9nWQwKRQIp"
+        />
+        <Card
+          image="/images/unnamed.jpg"
+          position="Head of Operations"
+          name="Caitlin McGrath"
+          description='Caitlin is the Head of Operations at Monarch Collective. Caitlin was a Managing Director and Head of Fund Allocations at Schusterman Interests LLC, the investment office for the Schusterman family as well as for Charles and Lynn Schusterman. Prior to joining the Schusterman Family, she worked at Soros Fund Management LLC ("SFM") for almost a decade. Caitlin was a member of the Manager Selection Team at SFM where she performed due diligence on and allocated to external funds varying in strategy and asset classes.Caitlin graduated from Princeton University in 2009 where she earned an AB in History. She currently resides is New York City with her husband and four young children.'
+          interests={[
+            "Favorite Sneaker",
+            "Favorite Song",
+            "Favorite Book ",
+            "Best Enneagram Test",
+          ]}
+          interestsUrl={["", "", "", ""]}
+          linkedin="https://www.linkedin.com/in/caitlin-mcgrath-142036a6/"
+          // spotify="https://open.spotify.com/playlist/0bnRvoIhusZO9nWQwKRQIp"
         />
       </div>
       {/* <div className="flex justify-center text-[12px] sm:text-xs md:text-sm tracking-[2px] w-full pb-4 max-md:mt-10 px-4 sm:px-6">

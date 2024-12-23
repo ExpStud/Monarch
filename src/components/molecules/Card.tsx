@@ -13,7 +13,7 @@ interface Props {
   interests: string[];
   interestsUrl: string[];
   linkedin: string;
-  spotify: string;
+  spotify?: string;
 }
 
 const Card: FC<Props> = ({
@@ -37,7 +37,7 @@ const Card: FC<Props> = ({
   }
   return (
     <div
-      className="flip-card min-w-[320px] max-lg:max-w-[340px]  xl:w-[360px] h-[470px] xl:h-[487px] rounded-md cursor-pointer"
+      className="flip-card w-[360px] min-w-[360px] h-[470px] xl:h-[487px] rounded-md cursor-pointer"
       onClick={() => handleFlip()}
     >
       <motion.div
@@ -54,7 +54,13 @@ const Card: FC<Props> = ({
         {/* front side */}
         <div className="w-[100%] h-full flip-card-front border border-custom-black bg-mon-cream px-2.5 py-2.5 rounded-[4px] text-custom-black">
           {/* <img className="w-full" src={image} /> */}
-          <Image src={image} width={500} height={500} alt={name} />
+          <Image
+            src={image}
+            width={500}
+            height={500}
+            alt={name}
+            className="rounded"
+          />
           <div className="mt-4 text-[15px]">{position}</div>
           <div className="flex justify-between items-end mt-[-2px]">
             <div className="font-mon-bold text-xl text-ellipsis ">{name}</div>
@@ -66,7 +72,7 @@ const Card: FC<Props> = ({
             </div>
           </div>
           <div className="h-[1px] bg-custom-black my-2"></div>
-          <div className="flex gap-4 mt-3.5">
+          <div className="flex gap-4 mt-3.5 self-end">
             <AnimatePresence>
               {!isFlipped && (
                 <>
@@ -83,19 +89,21 @@ const Card: FC<Props> = ({
                       <img src="images/linkedIn-b.png" alt="Linkedin" />
                     </div>
                   </motion.a>
-                  <motion.a
-                    href={spotify}
-                    target="_blank"
-                    rel="noreferrer"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1, transition: { duration: 0.4 } }}
-                    exit={{ opacity: 0, transition: { duration: 0.4 } }}
-                    onClick={(event) => event.stopPropagation()}
-                  >
-                    <div className="h-8 w-8 border border-custom-black rounded-full p-1 flex items-center justify-center transition-300 hover:scale-110">
-                      <img src="images/spotify-b.png" alt="Spotify" />
-                    </div>
-                  </motion.a>
+                  {spotify && (
+                    <motion.a
+                      href={spotify}
+                      target="_blank"
+                      rel="noreferrer"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1, transition: { duration: 0.4 } }}
+                      exit={{ opacity: 0, transition: { duration: 0.4 } }}
+                      onClick={(event) => event.stopPropagation()}
+                    >
+                      <div className="h-8 w-8 border border-custom-black rounded-full p-1 flex items-center justify-center transition-300 hover:scale-110">
+                        <img src="images/spotify-b.png" alt="Spotify" />
+                      </div>
+                    </motion.a>
+                  )}
                 </>
               )}
             </AnimatePresence>
