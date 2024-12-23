@@ -15,67 +15,74 @@ const JobsView: FC = () => {
       </div>
 
       <hr className="pb-10 md:pb-14 mt-5 mx-5" />
-      <div className="w-[90%] flex gap-10 lg:gap-4 xl:gap-10 max-[1100px]:flex-col justify-center items-center  pb-[100px] lg:pb-[250px]">
-        {jobPositions.map((job, index) => (
-          <div
-            className="flex flex-col justify-between lg:w-[425px] lg:h-[543px] min-h-[543px] max-w-[425px] rounded border border-black/40 p-4"
-            key={index}
-          >
-            <div className="bg-[#E9DEFF] rounded flex flex-col gap-2 w-full px-5 py-8">
-              <div className="flex justify-between w-full">
-                <p className="rounded-3xl bg-white py-1 px-3 font-mon-regular tracking-wider">
-                  {job.date}
-                </p>
-                <Image
-                  src="/images/icons/monarch-sm.png"
-                  width={43}
-                  height={33}
-                  alt="Monarch"
-                />
-              </div>
-              <p className="font-mon-regular mt-4">Monarch Collective</p>
-              <p className="text-2xl font-mon-bold -mt-2 mb-3">{job.title}</p>
-              <div className="flex gap-2 mt-1">
-                {job.tags.map((tag, index) => (
-                  <div
-                    key={index}
-                    className="rounded-3xl border border-black py-1 px-3 text-xs font-mon-regular"
-                  >
-                    {tag}
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <p className="mt-2 text-base font-mon-regular">Overview:</p>
-              <p className="mt-2 line-clamp-6 text-base">{job.description}</p>
-            </div>
-            <a
-              className="flex w-full self-end justify-end mt-3 hover:underline"
-              href={job.url}
-              target="_blank"
-              rel="noreferrer"
+      {jobPositions.length > 0 && (
+        <div className="w-[90%] flex gap-10 lg:gap-4 xl:gap-10 max-[1100px]:flex-col justify-center items-center  pb-[100px] lg:pb-[250px]">
+          {jobPositions.map((job, index) => (
+            <div
+              className="flex flex-col justify-between lg:w-[425px] lg:h-[543px] min-h-[543px] max-w-[425px] rounded border border-black/40 p-4"
+              key={index}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
+              <div className="bg-[#E9DEFF] rounded flex flex-col gap-2 w-full px-5 py-8">
+                <div className="flex justify-between w-full">
+                  <p className="rounded-3xl bg-white py-1 px-3 font-mon-regular tracking-wider">
+                    {job.date}
+                  </p>
+                  <Image
+                    src="/images/icons/monarch-sm.png"
+                    width={43}
+                    height={33}
+                    alt="Monarch"
+                  />
+                </div>
+                <p className="font-mon-regular mt-4">Monarch Collective</p>
+                <p className="text-2xl font-mon-bold -mt-2 mb-3">{job.title}</p>
+                <div className="flex gap-2 mt-1">
+                  {job.tags.map((tag, index) => (
+                    <div
+                      key={index}
+                      className="rounded-3xl border border-black py-1 px-3 text-xs font-mon-regular"
+                    >
+                      {tag}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="flex flex-col">
+                <p className="mt-2 text-base font-mon-regular">Overview:</p>
+                <p className="mt-2 line-clamp-6 text-base">{job.description}</p>
+              </div>
+              <a
+                className="flex w-full self-end justify-end mt-3 hover:underline"
+                href={job.url}
+                target="_blank"
+                rel="noreferrer"
               >
-                <path
-                  d="M4 12H20M20 12L14 6M20 12L14 18"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <p className="font-mon-regular ">Interested in more details?</p>
-            </a>
-          </div>
-        ))}
-      </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M4 12H20M20 12L14 6M20 12L14 18"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p className="font-mon-regular ">Interested in more details?</p>
+              </a>
+            </div>
+          ))}
+        </div>
+      )}
+      {jobPositions.length === 0 && (
+        <div className="flex-grow h-full flex items-center justify-center pb-14 md:pb-40">
+          More postings soon...
+        </div>
+      )}
     </motion.div>
   );
 };
