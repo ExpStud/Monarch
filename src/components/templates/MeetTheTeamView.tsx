@@ -82,14 +82,19 @@ const MeetTheTeamView: FC<Props> = (props: Props) => {
           image="/images/unnamed.jpg"
           position="Head of Operations"
           name="Caitlin McGrath"
-          description='Caitlin is the Head of Operations at Monarch Collective. Caitlin was a Managing Director and Head of Fund Allocations at Schusterman Interests LLC, the investment office for the Schusterman family as well as for Charles and Lynn Schusterman. Prior to joining the Schusterman Family, she worked at Soros Fund Management LLC ("SFM") for almost a decade. Caitlin was a member of the Manager Selection Team at SFM where she performed due diligence on and allocated to external funds varying in strategy and asset classes.Caitlin graduated from Princeton University in 2009 where she earned an AB in History. She currently resides is New York City with her husband and four young children.'
+          description='Caitlin is the Head of Operations and Marketing at Monarch Collective. Previously, Caitlin was a Managing Director and Head of Fund Allocations at Schusterman Interests LLC, the investment office for the Schusterman family as well as for Charles and Lynn Schusterman Family Philanthropies. Prior to joining the Schusterman Family, she worked at Soros Fund Management LLC ("SFM") for almost a decade. Caitlin was a member of the Manager Selection Team at SFM where she performed due diligence on and allocated to external funds varying in strategy and asset classes. Caitlin graduated from Princeton University in 2009 where she earned an AB in History. She currently resides in New York City with her husband and four young children.'
           interests={[
-            "Favorite Sneaker",
-            "Favorite Song",
+            "Favorite Restaurant",
+            "Favorite Workout Class",
             "Favorite Book ",
-            "Best Enneagram Test",
+            "Favorite Dessert",
           ]}
-          interestsUrl={["", "", "", ""]}
+          interestsUrl={[
+            "https://www.rubirosanyc.com/",
+            "https://www.barrys.com/",
+            "https://www.blinkist.com/en/books/thinking-in-bets-en",
+            "https://www.caffepanna.com/",
+          ]}
           linkedin="https://www.linkedin.com/in/caitlin-mcgrath-142036a6/"
           // spotify="https://open.spotify.com/playlist/0bnRvoIhusZO9nWQwKRQIp"
         />

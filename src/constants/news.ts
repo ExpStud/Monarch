@@ -132,7 +132,6 @@ const articleContent_3: ArticleContent = {
   linkedin: "https://www.bloomberg.com/authors/ATlFdEXmswc/kamaron-leach",
 }
 
-
 const podcastContent_1: PodcastContent = {
   author: "FEG Insight Bridge",
   date: "10/10/2023",
@@ -184,6 +183,70 @@ const forbesArticle: ArticleContent = {
   paragraphs: ["Kara Nortman, Managing Partner of Monarch Collective and Cofounder of Angel City FC, talks to Moira Forbes, EVP of Forbes, about her finance background, how Angel City came to fruition, and the profitability of women's sports."],   
 }
 
+const LookingBeyongArticle: ArticleContent = {
+  author: "Kara Nortman",
+  date: "6/25/2024",
+  // url: "https://www.forbes.com/video/e862b819-d072-4c76-a5e1-0d2c17ac5d2c/kara-nortman-on-unlocking-the-billiondollar-potential-of-womens-sports/"
+  pfp: "",
+  image: "/news/lookingbeyond.jpg",
+  imageCaption: "",
+  // linkedin: "https://www.forbes.com/video/e862b819-d072-4c76-a5e1-0d2c17ac5d2c/kara-nortman-on-unlocking-the-billiondollar-potential-of-womens-sports/",
+  paragraphs: [
+    `As we conclude an extraordinary year in women's sports, reflection comes naturally. When we launched Monarch Collective in January 2023 to focus exclusively on women's sports, we faced both fervent supporters and skeptics – particularly those whose investing experience came from long-matured markets. `,
+    `As I think about all that’s happened in 2024, I find my mind drifting back to 1999, when I was a second year analyst at Morgan Stanley. While my peers gravitated toward opportunities in established industries like healthcare and energy, I was captivated by the promise of tech. I left Morgan Stanley to chase tech's potential and instead of being told to build an Excel model and stay in my lane, I found myself studying introductory engineering books and learning to cold call.  Tech’s explosive growth over the next couple of decades proved that I had made the right decision.`,
+    `The parallels between women’s sports and tech are illuminating, albeit, not perfect. Like the early days of tech, women's sports has shown both consistent market growth and the need for hands-on operational work. It is also an industry where the emerging leaders of the ecosystem have set best practices – each team/business has the opportunity to set the new bar and perhaps become the future “Magnificent Seven.” `,
+    `And, even in our growth, we're still discovering the true Total Addressable Market, with current numbers that are a fraction of their future potential (think new sponsors catering to women and younger demographics becoming women’s sports fans). `,
+    `Perhaps most importantly, like the tech industry changed the way that we interact with the world, those on the ground in women’s sports have the opportunity to transform the business of sports. `,
+    `This year delivered defining moments that accelerated our trajectory, highlighted by Caitlin Clark and Angel Reese in peak NCAA March Madness and an incredible WNBA season. While Clark and Reese's impact on women's basketball has been extraordinary, its effects ripple far beyond – driving NIL deals, sponsorship interest, and fan engagement across women's sports. When someone's assumptions shift, the impact extends beyond any single athlete or sport.`,
+    `This year also shifted the thinking for many brands.`,
+    `The brands that saw the growth and opportunity around women’s sports before 2022 were rewarded and many who held out are now reconsidering how to jump on the opportunity. It paid to be a first mover and it’s not too late to join the party.`,
+    `Wasserman recently published a report that 93% of brand decision-makers are optimistic about the future growth of women’s sports, with 88% of respondents aiming to reach women with their investment. `,
+    `Take Ally as an example, who has driven growth of awareness (+20%), brand likeability (+25%), and preference (+20%) among women’s sports fans since their announcement of the 50/50 Pledge in 2022.`,
+    `Women’s sports offers brands a unique and high ROI way to reach an engaged, motivated and high-spend consumer.`,
+    `As we know, Rome wasn’t built in a day. But its beginnings had a clear demarcation with the rise of Augustus in 27 BCE. It grew over the course of 150+ years. In women’s sports, we had Billie Jean King, Lisa Leslie, Annika Sorenstam, Mia Hamm, Serena Williams, and other “Augustuses.” `,
+    `And in the last couple of years, we’ve seen even more people rise, whether it be Caitlin Clark, Ilona Maher, A’ja Wilson, Willow Bay, Michele Kang, Angie Long, Ginny Gilder or Clara Wu-Tsai.`,
+    `Here are three topics we’re reflecting on as we wrap up this incredible year:`,
+    `UNDERSTANDING THE MOMENT OF INFLECTION`,
+    `It's tempting to mark 2024 as the year women's sports “arrived,” but that misses a crucial point: moments of inflection mark when the world takes notice, not when growth begins. Spikes reveal momentum, they don't create it.`,
+    `Consider two historical moments: In 1920, the Dick Kerr Ladies drew 60,000 fans to Liverpool, setting a women's football attendance record – only for the FA to ban women's football the following year. When Billie Jean King's 1973 Battle of the Sexes drew 90 million viewers, she and her fellow players leveraged that attention to successfully demand equal prize money at the U.S. Open, making it the first major tournament to achieve pay equity.`,
+    `One spike led to consistent action and investment, and the other the opposite. Spikes matter. What we do after spikes matters even more. `,
+    `The underlying data supporting the potential in women's sports has been here for years; what's changing is the market's recognition of this reality and the right amount of investment behind the right teams to build a consistent fan base coming out of these spikes. `,
+    `Over the past couple years, we've seen a series of remarkable spikes that have captured headlines and attention. The NCAA Women's Basketball Finals drawing 18.9 million viewers – outperforming the Men's Finals at 14.8 million viewers – stands out as particularly noteworthy.`,
+    `Though again, this trend has been in the making, with the Women’s Finals growing 90% year-over-year and the Men’s Finals shrinking the year prior.`,
+    `In football, the 2022 Euro Finals between England and Germany drew over 87,000 attendees at Wembley and 50 million viewers worldwide. Angel City FC launched in 2022 and set new commercial benchmarks as the first women’s team to cross $30 million in revenue, with a bespoke sponsorship model that focused on giving back to the community.`,
+    `The Euros performance inspired more activity in the UK and Europe more broadly, including the pioneering decision in England to create independent governance and funding for women’s leagues, standing up the WPLL this year. For Angel City, there was a new approach that changed perspectives around what is possible, bringing new fans and new types of sponsors into women’s sports.`,
+    `These spikes matter immensely, but not for the reasons many think. Their true value lies in shattering preconceptions about what's possible in women's sports. They allow us to dream bigger, raise capital more effectively, and most importantly, attract the kind of talent and sponsor partners that can transform these breakthrough moments into sustainable business models. `,
+    `At Monarch, we often hear from people across industries and stages of their career who are drawn to the opportunity to make a defining impact in women’s sports – whether it’s top men’s sports operators or the younger generations looking for a break in the industry, we know that this moment has been inspiring to talent in new ways.`,
+    `VALUATIONS ARE “HIGH,” AND GOING UP`,
+    `We often get asked how to interpret women's sports valuations, particularly from people who are new to sports. The answer is clear: they've grown dramatically, are still rising rapidly, and will continue upward.`,
+    `Our approach to pricing at Monarch is to look across the market with pricing acumen and a detailed understanding of how deals are getting done. We spend 100% of our time on women’s sports and spend much of that time analyzing the nuances that drive price: market size/opportunity, venue and training facility dynamics, strength of brand, proposition to brands/sponsors, media opportunity, and the amount/type of hands-on work required. `,
+    `It's important to get pricing and structure in the right place with the right partners. `,
+    `We are hyper-focused on fundamentals that will drive revenue growth. In NWSL, we now have six teams who have surpassed $10 million in revenue. That wasn’t the case even just two years ago. The valuations we are seeing reflect both the scarcity of assets and the opportunity to drive similar revenue to the big men’s leagues at both the league and team level.`,
+    `We continue to believe capital should flow fastest into teams that have strong fundamentals and that it can take time to build those fundamentals. The “work” is not to be underestimated and can be varied levels of hard, depending on the dynamics of that specific sport and market.`,
+    `The history of valuations for the top men’s leagues in the US are generally good indicators – they have consistently grown up and to the right as they have generated value for underlying investors over the last 30 years (and, notably, have been uncorrelated with the public markets).`,
+    `Once leagues grow into full stability through built-out management teams, balanced league economics and strong owner-operators around the table, they are typically set up to weather the most difficult periods.`,
+    `There is also a meaningful gap between the teams that built a leadership position early in their league’s development or come into an expansion process with a unique approach to building fandom and community.`,
+    `It’s crucial to note that women's sports is at a very different phase than men's sports. It requires a different playbook.`,
+    `It needs leaders who can dive in and provide hands-on operating expertise on how to build a team and fan base that's specific to that market. This is very different from traditional men’s sports – which are largely about inheriting a large, existing organization that is profitable and focused on optimizing and scaling operations.`,
+    `For those investors that are ready to roll up their sleeves, the water is warm and we are just getting started.`,
+    `PLAYERS ARE THE PRODUCT AND WE NEED TO GET THEM PAID (MORE)`,
+    `In any discussion about player compensation in women's sports, tennis provides both inspiration and a roadmap. Looking at the top 15 earning female athletes this year, nine were tennis players and 14 were from individual sports. This is similar to previous years, with the one meaningful change being Caitlin Clark at #10 this year. `,
+    `The tennis compensation story traces back to Billie Jean King's trailblazing efforts.There are elements of tennis that we can continue to learn from. As a result of King’s work, tennis reached mass-scale media distribution and levels of brand engagement faster than most other sports did. With it came higher athlete compensation in the form of endorsements, in addition to the increased prize money that they fought for.`,
+    `Interestingly, even where women’s tennis has yielded higher viewership, it has consistently received less coverage than men’s tennis. Between 2015 and 2021, women's tennis matches drew higher viewership than men's in five out of seven years. Despite this, media coverage of women's tennis lagged behind men's by 41% in 2019 – highlighting that even in tennis, there’s still more work to be done.`,
+    `As we do this work, we’ve seen that the landscape continues to shift. Caitlin Clark cracking the top ten was a meaningful change, and we expect to see more basketball players doing so. Today's reality is clear: players drive fan and sponsor engagement. Ask any young fan at a women's soccer or basketball game why they are there, and usually they have a specific player they love.`,
+    `A few thoughts coming out of the 2024 data:`,     
+    `The individual sports still dominate the top of the compensation charts – there are several reasons for this, including history (see tennis above) and more condensed player pools in golf. Importantly, across both tennis and golf, brands play an outsized role in the broader economic model – they directly sponsor the events that provide the cash winnings.`,
+    `We expect that at least three basketball players will enter the top 15 next year. Similar to how the 2023 NCAA Final Four was a leading indicator, Caitlin Clark’s entry onto the list should be seen as one, too.We expect that at least three basketball players will enter the top 15 next year. Similar to how the 2023 NCAA Final Four was a leading indicator, Caitlin Clark’s entry onto the list should be seen as one, too.`,
+    `Notably, there are no football or soccer players that appear on the women’s top 15 list. Compare this to five on Sportico’s male athletes list in 2023. The sport has work to do. Much of the men’s compensation is driven by salaries, which are separate from but correlated to the increasingly expensive transfer market. The global market has begun to evolve and both player salaries and transfer volume should build with it.`,
+    `As sponsors continue to flock to the women’s sports ecosystem, we expect prize money (and team sport salaries, although it may take a bit longer) to increase as well. The sponsorship market has more headroom in its expansion and the value assigned to women’s assets lags far below most men’s properties. With media distribution increasing across women’s major leagues, expect the flywheel to accelerate.`,
+    `LOOKING AHEAD `,
+    `At Monarch, we obsess over our mission and core values. As we head into 2025, we're grateful for the inspiring community that continues to grow around women's sports. The progress is tangible, with unprecedented attention on player value and brand engagement.`,     
+    `Our tagline play the game, change the game, grow the game reflects where we stand today. We're still writing the early chapters of women's sports, with each milestone setting new precedents. The fundamentals are strong, the on-field/court product is exceptional, and the market opportunity remains vastly untapped.`,
+    `This journey requires hard work, collaboration, and discipline. Yet as we've seen through every section of our analysis – from evolving valuations to player compensation to fan engagement – the ecosystem is building momentum in ways we could only imagine a few years ago.`,
+    `What are you most looking forward to seeing in 2025? Reach out if you are ready to jump in with us as an operator or an investor.`,     
+  ],   
+}
+
 export const NEWS_ARTICLES: NewsArticle[] = [
   {
     id: 0,
@@ -206,12 +269,12 @@ export const NEWS_ARTICLES: NewsArticle[] = [
   },
   {
     id: 2,
-    title: "SuperReturn International",
-    content: superReturnVideo,
-    type: "video",
-    readTime: 11,
-    image: "superreturn.jpg",
-    externalUrl: "https://youtu.be/y_7IS45KD-c?feature=shared"
+    title: "Looking Beyond 2024: The Real Business of Women's Sports",
+    content: LookingBeyongArticle,
+    type: "article",
+    readTime: 15,
+    image: "lookingbeyond.jpg",
+    externalUrl: ""
   },
   {
     id: 3,
@@ -259,13 +322,14 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     externalUrl: "https://youtu.be/6dzZl7PAd9U?feature=shared"
   },
   {
+   
     id: 8,
-    title: "The RE-CAP Show",
-    content: recapVideo,
+    title: "SuperReturn International",
+    content: superReturnVideo,
     type: "video",
-    readTime: 7,
-    image: "therecap.png",
-    externalUrl: "https://www.youtube.com/embed/ARu44B99q_0?si=RfgJd41vuM0rZVHk"
+    readTime: 11,
+    image: "superreturn.jpg",
+    externalUrl: "https://youtu.be/y_7IS45KD-c?feature=shared"
   },
   {
     id: 9,
