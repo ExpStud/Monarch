@@ -65,7 +65,7 @@ const Footer: FC<Props> = (props: Props) => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 self-start">
           <div className="font-mon-bold  tracking-[2px]">OTHER</div>
           <div className="tracking-[2px] font-light">
             <Link target="_blank" href="https://monarch.arkpes.com/login">
